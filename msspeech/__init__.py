@@ -12,6 +12,8 @@ bytes_or_str = Union[str, bytes]
 class MSSpeechError(Exception):
 	pass
 
+_voices_list:List = []
+
 class MSSpeech():
 	"""Microsoft speech online unofficial API
 	"""
@@ -49,7 +51,6 @@ class MSSpeech():
 	pitch:int = 0
 	volume:int = 0
 	rate:int = 0
-	_voices_list:List = []
 	def __init__(self):
 		"""Create class instance
 		"""
@@ -148,14 +149,15 @@ class MSSpeech():
 			```
 		"""
 
-		if len(self._voices_list) > 0:
-			return self._voices_list
+		global _voices_list
+		if len(_voices_list) > 0:
+			return _voices_list
 
 		async with aiohttp.ClientSession(headers = self.headers) as session:
 			async with session.get(self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
 					params={"trustedclienttoken":self.trustedclienttoken}) as resp:
-				self._voices_list = await resp.json()
-				return self._voices_list
+				_voices_list = await resp.json()
+				return _voices_list
 
 	async def synthesize(self, text:str, filename_or_buffer:Any)-> None:
 		if len(text.strip()) < 1:
