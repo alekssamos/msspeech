@@ -1,6 +1,7 @@
 """not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud"""
 
 import asyncio
+import os, os.path
 import html
 from typing import Any, List, Dict, Tuple, Union
 from urllib.parse import urlencode
@@ -85,7 +86,8 @@ class MSSpeech():
 			raise ValueError("voiceName is empty")
 		voices:List[Dict] = await self.get_voices_list()
 		voiceNames:List = [v["Name"] for v in voices if "FriendlyName" in v]
-		if not voiceName in voiceNames:
+		voiceShortNames:List = [v["ShortName"] for v in voices if "FriendlyName" in v]
+		if not voiceName in voiceNames+voiceShortNames:
 			raise ValueError("Unknown voice "+voiceName)
 		self.voiceName = voiceName
 
@@ -153,6 +155,11 @@ class MSSpeech():
 		if len(_voices_list) > 0:
 			return _voices_list
 
+		try: __file__
+		except NameError: __file__ = "."
+		voicesplusfilepath = os.path.join(os.path.dirname(__file__), "voices_list_plus.json")
+		if os.path.isfile(voicesplusfilepath):
+			with open(voicesplusfilepath) as f: return json.load(f)
 		async with aiohttp.ClientSession(headers = self.headers) as session:
 			async with session.get(self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
 					params={"trustedclienttoken":self.trustedclienttoken}) as resp:

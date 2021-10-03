@@ -1,0 +1,1238 @@
+﻿<table class="table"><caption class="visually-hidden">Neural voices</caption>
+<thead>
+<tr>
+<th>Language</th>
+<th>Locale</th>
+<th>Gender</th>
+<th>Voice name</th>
+<th>Style support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arabic (Egypt)</td>
+<td><code>ar-EG</code></td>
+<td>Female</td>
+<td><code>ar-EG-SalmaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Arabic (Egypt)</td>
+<td><code>ar-EG</code></td>
+<td>Male</td>
+<td><code>ar-EG-ShakirNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Arabic (Saudi Arabia)</td>
+<td><code>ar-SA</code></td>
+<td>Female</td>
+<td><code>ar-SA-ZariyahNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Arabic (Saudi Arabia)</td>
+<td><code>ar-SA</code></td>
+<td>Male</td>
+<td><code>ar-SA-HamedNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Bulgarian (Bulgaria)</td>
+<td><code>bg-BG</code></td>
+<td>Female</td>
+<td><code>bg-BG-KalinaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Bulgarian (Bulgaria)</td>
+<td><code>bg-BG</code></td>
+<td>Male</td>
+<td><code>bg-BG-BorislavNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Catalan (Spain)</td>
+<td><code>ca-ES</code></td>
+<td>Female</td>
+<td><code>ca-ES-AlbaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Catalan (Spain)</td>
+<td><code>ca-ES</code></td>
+<td>Female</td>
+<td><code>ca-ES-JoanaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Catalan (Spain)</td>
+<td><code>ca-ES</code></td>
+<td>Male</td>
+<td><code>ca-ES-EnricNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Chinese (Cantonese, Traditional)</td>
+<td><code>zh-HK</code></td>
+<td>Female</td>
+<td><code>zh-HK-HiuGaaiNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Chinese (Cantonese, Traditional)</td>
+<td><code>zh-HK</code></td>
+<td>Female</td>
+<td><code>zh-HK-HiuMaanNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Chinese (Cantonese, Traditional)</td>
+<td><code>zh-HK</code></td>
+<td>Male</td>
+<td><code>zh-HK-WanLungNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Female</td>
+<td><code>zh-CN-XiaoxiaoNeural</code></td>
+<td>General, multiple voice styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Female</td>
+<td><code>zh-CN-XiaoyouNeural</code></td>
+<td>Child voice, optimized for story narrating</td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Female</td>
+<td><code>zh-CN-XiaomoNeural</code></td>
+<td>General, multiple role-play and styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Female</td>
+<td><code>zh-CN-XiaoxuanNeural</code></td>
+<td>General, multiple role-play and styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Female</td>
+<td><code>zh-CN-XiaohanNeural</code></td>
+<td>General, multiple styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Female</td>
+<td><code>zh-CN-XiaoruiNeural</code></td>
+<td>Senior voice, multiple styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Male</td>
+<td><code>zh-CN-YunyangNeural</code></td>
+<td>Optimized for news reading,<br> multiple voice styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Male</td>
+<td><code>zh-CN-YunyeNeural</code></td>
+<td>Optimized for story narrating</td>
+</tr>
+<tr>
+<td>Chinese (Mandarin, Simplified)</td>
+<td><code>zh-CN</code></td>
+<td>Male</td>
+<td><code>zh-CN-YunxiNeural</code></td>
+<td>General, multiple styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Chinese (Taiwanese Mandarin)</td>
+<td><code>zh-TW</code></td>
+<td>Female</td>
+<td><code>zh-TW-HsiaoChenNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Chinese (Taiwanese Mandarin)</td>
+<td><code>zh-TW</code></td>
+<td>Female</td>
+<td><code>zh-TW-HsiaoYuNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Chinese (Taiwanese Mandarin)</td>
+<td><code>zh-TW</code></td>
+<td>Male</td>
+<td><code>zh-TW-YunJheNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Croatian (Croatia)</td>
+<td><code>hr-HR</code></td>
+<td>Female</td>
+<td><code>hr-HR-GabrijelaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Croatian (Croatia)</td>
+<td><code>hr-HR</code></td>
+<td>Male</td>
+<td><code>hr-HR-SreckoNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Czech (Czech)</td>
+<td><code>cs-CZ</code></td>
+<td>Female</td>
+<td><code>cs-CZ-VlastaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Czech (Czech)</td>
+<td><code>cs-CZ</code></td>
+<td>Male</td>
+<td><code>cs-CZ-AntoninNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Danish (Denmark)</td>
+<td><code>da-DK</code></td>
+<td>Female</td>
+<td><code>da-DK-ChristelNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Danish (Denmark)</td>
+<td><code>da-DK</code></td>
+<td>Male</td>
+<td><code>da-DK-JeppeNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Dutch (Belgium)</td>
+<td><code>nl-BE</code></td>
+<td>Female</td>
+<td><code>nl-BE-DenaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Dutch (Belgium)</td>
+<td><code>nl-BE</code></td>
+<td>Male</td>
+<td><code>nl-BE-ArnaudNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Dutch (Netherlands)</td>
+<td><code>nl-NL</code></td>
+<td>Female</td>
+<td><code>nl-NL-ColetteNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Dutch (Netherlands)</td>
+<td><code>nl-NL</code></td>
+<td>Female</td>
+<td><code>nl-NL-FennaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Dutch (Netherlands)</td>
+<td><code>nl-NL</code></td>
+<td>Male</td>
+<td><code>nl-NL-MaartenNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Australia)</td>
+<td><code>en-AU</code></td>
+<td>Female</td>
+<td><code>en-AU-NatashaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Australia)</td>
+<td><code>en-AU</code></td>
+<td>Male</td>
+<td><code>en-AU-WilliamNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Canada)</td>
+<td><code>en-CA</code></td>
+<td>Female</td>
+<td><code>en-CA-ClaraNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Canada)</td>
+<td><code>en-CA</code></td>
+<td>Male</td>
+<td><code>en-CA-LiamNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Hongkong)</td>
+<td><code>en-HK</code></td>
+<td>Female</td>
+<td><code>en-HK-YanNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Hongkong)</td>
+<td><code>en-HK</code></td>
+<td>Male</td>
+<td><code>en-HK-SamNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (India)</td>
+<td><code>en-IN</code></td>
+<td>Female</td>
+<td><code>en-IN-NeerjaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (India)</td>
+<td><code>en-IN</code></td>
+<td>Male</td>
+<td><code>en-IN-PrabhatNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Ireland)</td>
+<td><code>en-IE</code></td>
+<td>Female</td>
+<td><code>en-IE-EmilyNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Ireland)</td>
+<td><code>en-IE</code></td>
+<td>Male</td>
+<td><code>en-IE-ConnorNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (New Zealand)</td>
+<td><code>en-NZ</code></td>
+<td>Female</td>
+<td><code>en-NZ-MollyNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (New Zealand)</td>
+<td><code>en-NZ</code></td>
+<td>Male</td>
+<td><code>en-NZ-MitchellNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Philippines)</td>
+<td><code>en-PH</code></td>
+<td>Female</td>
+<td><code>en-PH-RosaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Philippines)</td>
+<td><code>en-PH</code></td>
+<td>Male</td>
+<td><code>en-PH-JamesNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Singapore)</td>
+<td><code>en-SG</code></td>
+<td>Female</td>
+<td><code>en-SG-LunaNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (Singapore)</td>
+<td><code>en-SG</code></td>
+<td>Male</td>
+<td><code>en-SG-WayneNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (South Africa)</td>
+<td><code>en-ZA</code></td>
+<td>Female</td>
+<td><code>en-ZA-LeahNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (South Africa)</td>
+<td><code>en-ZA</code></td>
+<td>Male</td>
+<td><code>en-ZA-LukeNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United Kingdom)</td>
+<td><code>en-GB</code></td>
+<td>Female</td>
+<td><code>en-GB-LibbyNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United Kingdom)</td>
+<td><code>en-GB</code></td>
+<td>Female</td>
+<td><code>en-GB-SoniaNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United Kingdom)</td>
+<td><code>en-GB</code></td>
+<td>Female</td>
+<td><code>en-GB-MiaNeural</code> <sup>Retires Oct 30, see below</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United Kingdom)</td>
+<td><code>en-GB</code></td>
+<td>Male</td>
+<td><code>en-GB-RyanNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-AriaNeural</code></td>
+<td>General, multiple voice styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-JennyNeural</code></td>
+<td>General, multiple voice styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Male</td>
+<td><code>en-US-GuyNeural</code></td>
+<td>General, multiple voice styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-SaraNeural</code> <sup>New</sup></td>
+<td>General, multiple voice styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-AmberNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-AshleyNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-CoraNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-ElizabethNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-MichelleNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Female</td>
+<td><code>en-US-MonicaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Kid</td>
+<td><code>en-US-AnaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Male</td>
+<td><code>en-US-BrandonNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Male</td>
+<td><code>en-US-ChristopherNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Male</td>
+<td><code>en-US-JacobNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>English (United States)</td>
+<td><code>en-US</code></td>
+<td>Male</td>
+<td><code>en-US-EricNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Estonian (Estonia)</td>
+<td><code>et-EE</code></td>
+<td>Female</td>
+<td><code>et-EE-AnuNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Estonian (Estonia)</td>
+<td><code>et-EE</code></td>
+<td>Male</td>
+<td><code>et-EE-KertNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Finnish (Finland)</td>
+<td><code>fi-FI</code></td>
+<td>Female</td>
+<td><code>fi-FI-NooraNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Finnish (Finland)</td>
+<td><code>fi-FI</code></td>
+<td>Female</td>
+<td><code>fi-FI-SelmaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Finnish (Finland)</td>
+<td><code>fi-FI</code></td>
+<td>Male</td>
+<td><code>fi-FI-HarriNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (Belgium)</td>
+<td><code>fr-BE</code></td>
+<td>Female</td>
+<td><code>fr-BE-CharlineNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (Belgium)</td>
+<td><code>fr-BE</code></td>
+<td>Male</td>
+<td><code>fr-BE-GerardNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (Canada)</td>
+<td><code>fr-CA</code></td>
+<td>Female</td>
+<td><code>fr-CA-SylvieNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (Canada)</td>
+<td><code>fr-CA</code></td>
+<td>Male</td>
+<td><code>fr-CA-AntoineNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (Canada)</td>
+<td><code>fr-CA</code></td>
+<td>Male</td>
+<td><code>fr-CA-JeanNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (France)</td>
+<td><code>fr-FR</code></td>
+<td>Female</td>
+<td><code>fr-FR-DeniseNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (France)</td>
+<td><code>fr-FR</code></td>
+<td>Male</td>
+<td><code>fr-FR-HenriNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (Switzerland)</td>
+<td><code>fr-CH</code></td>
+<td>Female</td>
+<td><code>fr-CH-ArianeNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>French (Switzerland)</td>
+<td><code>fr-CH</code></td>
+<td>Male</td>
+<td><code>fr-CH-FabriceNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>German (Austria)</td>
+<td><code>de-AT</code></td>
+<td>Female</td>
+<td><code>de-AT-IngridNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>German (Austria)</td>
+<td><code>de-AT</code></td>
+<td>Male</td>
+<td><code>de-AT-JonasNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>German (Germany)</td>
+<td><code>de-DE</code></td>
+<td>Female</td>
+<td><code>de-DE-KatjaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>German (Germany)</td>
+<td><code>de-DE</code></td>
+<td>Male</td>
+<td><code>de-DE-ConradNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>German (Switzerland)</td>
+<td><code>de-CH</code></td>
+<td>Female</td>
+<td><code>de-CH-LeniNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>German (Switzerland)</td>
+<td><code>de-CH</code></td>
+<td>Male</td>
+<td><code>de-CH-JanNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Greek (Greece)</td>
+<td><code>el-GR</code></td>
+<td>Female</td>
+<td><code>el-GR-AthinaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Greek (Greece)</td>
+<td><code>el-GR</code></td>
+<td>Male</td>
+<td><code>el-GR-NestorasNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Gujarati (India)</td>
+<td><code>gu-IN</code></td>
+<td>Female</td>
+<td><code>gu-IN-DhwaniNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Gujarati (India)</td>
+<td><code>gu-IN</code></td>
+<td>Male</td>
+<td><code>gu-IN-NiranjanNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Hebrew (Israel)</td>
+<td><code>he-IL</code></td>
+<td>Female</td>
+<td><code>he-IL-HilaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Hebrew (Israel)</td>
+<td><code>he-IL</code></td>
+<td>Male</td>
+<td><code>he-IL-AvriNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Hindi (India)</td>
+<td><code>hi-IN</code></td>
+<td>Female</td>
+<td><code>hi-IN-SwaraNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Hindi (India)</td>
+<td><code>hi-IN</code></td>
+<td>Male</td>
+<td><code>hi-IN-MadhurNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Hungarian (Hungary)</td>
+<td><code>hu-HU</code></td>
+<td>Female</td>
+<td><code>hu-HU-NoemiNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Hungarian (Hungary)</td>
+<td><code>hu-HU</code></td>
+<td>Male</td>
+<td><code>hu-HU-TamasNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Indonesian (Indonesia)</td>
+<td><code>id-ID</code></td>
+<td>Female</td>
+<td><code>id-ID-GadisNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Indonesian (Indonesia)</td>
+<td><code>id-ID</code></td>
+<td>Male</td>
+<td><code>id-ID-ArdiNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Irish (Ireland)</td>
+<td><code>ga-IE</code></td>
+<td>Female</td>
+<td><code>ga-IE-OrlaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Irish (Ireland)</td>
+<td><code>ga-IE</code></td>
+<td>Male</td>
+<td><code>ga-IE-ColmNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Italian (Italy)</td>
+<td><code>it-IT</code></td>
+<td>Female</td>
+<td><code>it-IT-ElsaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Italian (Italy)</td>
+<td><code>it-IT</code></td>
+<td>Female</td>
+<td><code>it-IT-IsabellaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Italian (Italy)</td>
+<td><code>it-IT</code></td>
+<td>Male</td>
+<td><code>it-IT-DiegoNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Japanese (Japan)</td>
+<td><code>ja-JP</code></td>
+<td>Female</td>
+<td><code>ja-JP-NanamiNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Japanese (Japan)</td>
+<td><code>ja-JP</code></td>
+<td>Male</td>
+<td><code>ja-JP-KeitaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Korean (Korea)</td>
+<td><code>ko-KR</code></td>
+<td>Female</td>
+<td><code>ko-KR-SunHiNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Korean (Korea)</td>
+<td><code>ko-KR</code></td>
+<td>Male</td>
+<td><code>ko-KR-InJoonNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Latvian (Latvia)</td>
+<td><code>lv-LV</code></td>
+<td>Female</td>
+<td><code>lv-LV-EveritaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Latvian (Latvia)</td>
+<td><code>lv-LV</code></td>
+<td>Male</td>
+<td><code>lv-LV-NilsNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Lithuanian (Lithuania)</td>
+<td><code>lt-LT</code></td>
+<td>Female</td>
+<td><code>lt-LT-OnaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Lithuanian (Lithuania)</td>
+<td><code>lt-LT</code></td>
+<td>Male</td>
+<td><code>lt-LT-LeonasNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Malay (Malaysia)</td>
+<td><code>ms-MY</code></td>
+<td>Female</td>
+<td><code>ms-MY-YasminNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Malay (Malaysia)</td>
+<td><code>ms-MY</code></td>
+<td>Male</td>
+<td><code>ms-MY-OsmanNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Maltese (Malta)</td>
+<td><code>mt-MT</code></td>
+<td>Female</td>
+<td><code>mt-MT-GraceNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Maltese (Malta)</td>
+<td><code>mt-MT</code></td>
+<td>Male</td>
+<td><code>mt-MT-JosephNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Marathi (India)</td>
+<td><code>mr-IN</code></td>
+<td>Female</td>
+<td><code>mr-IN-AarohiNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Marathi (India)</td>
+<td><code>mr-IN</code></td>
+<td>Male</td>
+<td><code>mr-IN-ManoharNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Norwegian (Bokmål, Norway)</td>
+<td><code>nb-NO</code></td>
+<td>Female</td>
+<td><code>nb-NO-IselinNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Norwegian (Bokmål, Norway)</td>
+<td><code>nb-NO</code></td>
+<td>Female</td>
+<td><code>nb-NO-PernilleNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Norwegian (Bokmål, Norway)</td>
+<td><code>nb-NO</code></td>
+<td>Male</td>
+<td><code>nb-NO-FinnNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Polish (Poland)</td>
+<td><code>pl-PL</code></td>
+<td>Female</td>
+<td><code>pl-PL-AgnieszkaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Polish (Poland)</td>
+<td><code>pl-PL</code></td>
+<td>Female</td>
+<td><code>pl-PL-ZofiaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Polish (Poland)</td>
+<td><code>pl-PL</code></td>
+<td>Male</td>
+<td><code>pl-PL-MarekNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Portuguese (Brazil)</td>
+<td><code>pt-BR</code></td>
+<td>Female</td>
+<td><code>pt-BR-FranciscaNeural</code></td>
+<td>General, multiple voice styles available <a href="speech-synthesis-markup#adjust-speaking-styles" data-linktype="relative-path">using SSML</a></td>
+</tr>
+<tr>
+<td>Portuguese (Brazil)</td>
+<td><code>pt-BR</code></td>
+<td>Male</td>
+<td><code>pt-BR-AntonioNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Portuguese (Portugal)</td>
+<td><code>pt-PT</code></td>
+<td>Female</td>
+<td><code>pt-PT-FernandaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Portuguese (Portugal)</td>
+<td><code>pt-PT</code></td>
+<td>Female</td>
+<td><code>pt-PT-RaquelNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Portuguese (Portugal)</td>
+<td><code>pt-PT</code></td>
+<td>Male</td>
+<td><code>pt-PT-DuarteNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Romanian (Romania)</td>
+<td><code>ro-RO</code></td>
+<td>Female</td>
+<td><code>ro-RO-AlinaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Romanian (Romania)</td>
+<td><code>ro-RO</code></td>
+<td>Male</td>
+<td><code>ro-RO-EmilNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Russian (Russia)</td>
+<td><code>ru-RU</code></td>
+<td>Female</td>
+<td><code>ru-RU-DariyaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Russian (Russia)</td>
+<td><code>ru-RU</code></td>
+<td>Female</td>
+<td><code>ru-RU-SvetlanaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Russian (Russia)</td>
+<td><code>ru-RU</code></td>
+<td>Male</td>
+<td><code>ru-RU-DmitryNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Slovak (Slovakia)</td>
+<td><code>sk-SK</code></td>
+<td>Female</td>
+<td><code>sk-SK-ViktoriaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Slovak (Slovakia)</td>
+<td><code>sk-SK</code></td>
+<td>Male</td>
+<td><code>sk-SK-LukasNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Slovenian (Slovenia)</td>
+<td><code>sl-SI</code></td>
+<td>Female</td>
+<td><code>sl-SI-PetraNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Slovenian (Slovenia)</td>
+<td><code>sl-SI</code></td>
+<td>Male</td>
+<td><code>sl-SI-RokNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Argentina)</td>
+<td><code>es-AR</code></td>
+<td>Female</td>
+<td><code>es-AR-ElenaNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Argentina)</td>
+<td><code>es-AR</code></td>
+<td>Male</td>
+<td><code>es-AR-TomasNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Colombia)</td>
+<td><code>es-CO</code></td>
+<td>Female</td>
+<td><code>es-CO-SalomeNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Colombia)</td>
+<td><code>es-CO</code></td>
+<td>Male</td>
+<td><code>es-CO-GonzaloNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Mexico)</td>
+<td><code>es-MX</code></td>
+<td>Female</td>
+<td><code>es-MX-DaliaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Mexico)</td>
+<td><code>es-MX</code></td>
+<td>Male</td>
+<td><code>es-MX-JorgeNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Spain)</td>
+<td><code>es-ES</code></td>
+<td>Female</td>
+<td><code>es-ES-ElviraNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (Spain)</td>
+<td><code>es-ES</code></td>
+<td>Male</td>
+<td><code>es-ES-AlvaroNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (US)</td>
+<td><code>es-US</code></td>
+<td>Female</td>
+<td><code>es-US-PalomaNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Spanish (US)</td>
+<td><code>es-US</code></td>
+<td>Male</td>
+<td><code>es-US-AlonsoNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Swahili (Kenya)</td>
+<td><code>sw-KE</code></td>
+<td>Female</td>
+<td><code>sw-KE-ZuriNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Swahili (Kenya)</td>
+<td><code>sw-KE</code></td>
+<td>Male</td>
+<td><code>sw-KE-RafikiNeural</code> <sup>New</sup></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Swedish (Sweden)</td>
+<td><code>sv-SE</code></td>
+<td>Female</td>
+<td><code>sv-SE-HilleviNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Swedish (Sweden)</td>
+<td><code>sv-SE</code></td>
+<td>Female</td>
+<td><code>sv-SE-SofieNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Swedish (Sweden)</td>
+<td><code>sv-SE</code></td>
+<td>Male</td>
+<td><code>sv-SE-MattiasNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Tamil (India)</td>
+<td><code>ta-IN</code></td>
+<td>Female</td>
+<td><code>ta-IN-PallaviNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Tamil (India)</td>
+<td><code>ta-IN</code></td>
+<td>Male</td>
+<td><code>ta-IN-ValluvarNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Telugu (India)</td>
+<td><code>te-IN</code></td>
+<td>Female</td>
+<td><code>te-IN-ShrutiNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Telugu (India)</td>
+<td><code>te-IN</code></td>
+<td>Male</td>
+<td><code>te-IN-MohanNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Thai (Thailand)</td>
+<td><code>th-TH</code></td>
+<td>Female</td>
+<td><code>th-TH-AcharaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Thai (Thailand)</td>
+<td><code>th-TH</code></td>
+<td>Female</td>
+<td><code>th-TH-PremwadeeNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Thai (Thailand)</td>
+<td><code>th-TH</code></td>
+<td>Male</td>
+<td><code>th-TH-NiwatNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Turkish (Turkey)</td>
+<td><code>tr-TR</code></td>
+<td>Female</td>
+<td><code>tr-TR-EmelNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Turkish (Turkey)</td>
+<td><code>tr-TR</code></td>
+<td>Male</td>
+<td><code>tr-TR-AhmetNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Ukrainian (Ukraine)</td>
+<td><code>uk-UA</code></td>
+<td>Female</td>
+<td><code>uk-UA-PolinaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Ukrainian (Ukraine)</td>
+<td><code>uk-UA</code></td>
+<td>Male</td>
+<td><code>uk-UA-OstapNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Urdu (Pakistan)</td>
+<td><code>ur-PK</code></td>
+<td>Female</td>
+<td><code>ur-PK-UzmaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Urdu (Pakistan)</td>
+<td><code>ur-PK</code></td>
+<td>Male</td>
+<td><code>ur-PK-AsadNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Vietnamese (Vietnam)</td>
+<td><code>vi-VN</code></td>
+<td>Female</td>
+<td><code>vi-VN-HoaiMyNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Vietnamese (Vietnam)</td>
+<td><code>vi-VN</code></td>
+<td>Male</td>
+<td><code>vi-VN-NamMinhNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Welsh (United Kingdom)</td>
+<td><code>cy-GB</code></td>
+<td>Female</td>
+<td><code>cy-GB-NiaNeural</code></td>
+<td>General</td>
+</tr>
+<tr>
+<td>Welsh (United Kingdom)</td>
+<td><code>cy-GB</code></td>
+<td>Male</td>
+<td><code>cy-GB-AledNeural</code></td>
+<td>General</td>
+</tr>
+</tbody>
+</table>
