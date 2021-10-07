@@ -95,7 +95,7 @@ class MSSpeech():
 	async def get_voice(self)->dict:
 		voices:List[Dict] = await self.get_voices_list()
 		for voice in voices:
-			if voice["Name"].strip() == self.voiceName.strip():
+			if voice["Name"].strip() == self.voiceName.strip() or voice["ShortName"].strip() == self.voiceName.strip():
 				return voice
 		return {}
 
