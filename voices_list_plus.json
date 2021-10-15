@@ -351,20 +351,20 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Yan  - English (Hongkong)",
+    "FriendlyName": "Yan - English (Hongkong)",
     "Gender": "Female",
     "Locale": "en-HK",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-HK, YanNeural )",
-    "ShortName": "en-HK-YanNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-HK, YanNeural)",
+    "ShortName": "en-HK-YanNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Sam  - English (Hongkong)",
+    "FriendlyName": "Sam - English (Hongkong)",
     "Gender": "Male",
     "Locale": "en-HK",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-HK, SamNeural )",
-    "ShortName": "en-HK-SamNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-HK, SamNeural)",
+    "ShortName": "en-HK-SamNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -405,20 +405,20 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Molly  - English (New Zealand)",
+    "FriendlyName": "Molly - English (New Zealand)",
     "Gender": "Female",
     "Locale": "en-NZ",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-NZ, MollyNeural )",
-    "ShortName": "en-NZ-MollyNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-NZ, MollyNeural)",
+    "ShortName": "en-NZ-MollyNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Mitchell  - English (New Zealand)",
+    "FriendlyName": "Mitchell - English (New Zealand)",
     "Gender": "Male",
     "Locale": "en-NZ",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-NZ, MitchellNeural )",
-    "ShortName": "en-NZ-MitchellNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-NZ, MitchellNeural)",
+    "ShortName": "en-NZ-MitchellNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -441,38 +441,38 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Luna  - English (Singapore)",
+    "FriendlyName": "Luna - English (Singapore)",
     "Gender": "Female",
     "Locale": "en-SG",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-SG, LunaNeural )",
-    "ShortName": "en-SG-LunaNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-SG, LunaNeural)",
+    "ShortName": "en-SG-LunaNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Wayne  - English (Singapore)",
+    "FriendlyName": "Wayne - English (Singapore)",
     "Gender": "Male",
     "Locale": "en-SG",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-SG, WayneNeural )",
-    "ShortName": "en-SG-WayneNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-SG, WayneNeural)",
+    "ShortName": "en-SG-WayneNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Leah  - English (South Africa)",
+    "FriendlyName": "Leah - English (South Africa)",
     "Gender": "Female",
     "Locale": "en-ZA",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-ZA, LeahNeural )",
-    "ShortName": "en-ZA-LeahNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-ZA, LeahNeural)",
+    "ShortName": "en-ZA-LeahNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Luke  - English (South Africa)",
+    "FriendlyName": "Luke - English (South Africa)",
     "Gender": "Male",
     "Locale": "en-ZA",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-ZA, LukeNeural )",
-    "ShortName": "en-ZA-LukeNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-ZA, LukeNeural)",
+    "ShortName": "en-ZA-LukeNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -486,11 +486,11 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Sonia  - English (United Kingdom)",
+    "FriendlyName": "Sonia - English (United Kingdom)",
     "Gender": "Female",
     "Locale": "en-GB",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-GB, SoniaNeural )",
-    "ShortName": "en-GB-SoniaNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-GB, SoniaNeural)",
+    "ShortName": "en-GB-SoniaNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -531,11 +531,11 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Sara  - English (United States)",
+    "FriendlyName": "Sara - English (United States)",
     "Gender": "Female",
     "Locale": "en-US",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, SaraNeural )",
-    "ShortName": "en-US-SaraNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, SaraNeural)",
+    "ShortName": "en-US-SaraNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -837,20 +837,20 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Dhwani  - Gujarati (India)",
+    "FriendlyName": "Dhwani - Gujarati (India)",
     "Gender": "Female",
     "Locale": "gu-IN",
-    "Name": "Microsoft Server Speech Text to Speech Voice (gu-IN, DhwaniNeural )",
-    "ShortName": "gu-IN-DhwaniNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (gu-IN, DhwaniNeural)",
+    "ShortName": "gu-IN-DhwaniNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Niranjan  - Gujarati (India)",
+    "FriendlyName": "Niranjan - Gujarati (India)",
     "Gender": "Male",
     "Locale": "gu-IN",
-    "Name": "Microsoft Server Speech Text to Speech Voice (gu-IN, NiranjanNeural )",
-    "ShortName": "gu-IN-NiranjanNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (gu-IN, NiranjanNeural)",
+    "ShortName": "gu-IN-NiranjanNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -1080,20 +1080,20 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Aarohi  - Marathi (India)",
+    "FriendlyName": "Aarohi - Marathi (India)",
     "Gender": "Female",
     "Locale": "mr-IN",
-    "Name": "Microsoft Server Speech Text to Speech Voice (mr-IN, AarohiNeural )",
-    "ShortName": "mr-IN-AarohiNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (mr-IN, AarohiNeural)",
+    "ShortName": "mr-IN-AarohiNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Manohar  - Marathi (India)",
+    "FriendlyName": "Manohar - Marathi (India)",
     "Gender": "Male",
     "Locale": "mr-IN",
-    "Name": "Microsoft Server Speech Text to Speech Voice (mr-IN, ManoharNeural )",
-    "ShortName": "mr-IN-ManoharNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (mr-IN, ManoharNeural)",
+    "ShortName": "mr-IN-ManoharNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -1278,38 +1278,38 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Elena  - Spanish (Argentina)",
+    "FriendlyName": "Elena - Spanish (Argentina)",
     "Gender": "Female",
     "Locale": "es-AR",
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-AR, ElenaNeural )",
-    "ShortName": "es-AR-ElenaNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (es-AR, ElenaNeural)",
+    "ShortName": "es-AR-ElenaNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Tomas  - Spanish (Argentina)",
+    "FriendlyName": "Tomas - Spanish (Argentina)",
     "Gender": "Male",
     "Locale": "es-AR",
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-AR, TomasNeural )",
-    "ShortName": "es-AR-TomasNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (es-AR, TomasNeural)",
+    "ShortName": "es-AR-TomasNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Salome  - Spanish (Colombia)",
+    "FriendlyName": "Salome - Spanish (Colombia)",
     "Gender": "Female",
     "Locale": "es-CO",
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, SalomeNeural )",
-    "ShortName": "es-CO-SalomeNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, SalomeNeural)",
+    "ShortName": "es-CO-SalomeNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Gonzalo  - Spanish (Colombia)",
+    "FriendlyName": "Gonzalo - Spanish (Colombia)",
     "Gender": "Male",
     "Locale": "es-CO",
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, GonzaloNeural )",
-    "ShortName": "es-CO-GonzaloNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, GonzaloNeural)",
+    "ShortName": "es-CO-GonzaloNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
@@ -1350,38 +1350,38 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Paloma  - Spanish (US)",
+    "FriendlyName": "Paloma - Spanish (US)",
     "Gender": "Female",
     "Locale": "es-US",
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-US, PalomaNeural )",
-    "ShortName": "es-US-PalomaNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (es-US, PalomaNeural)",
+    "ShortName": "es-US-PalomaNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Alonso  - Spanish (US)",
+    "FriendlyName": "Alonso - Spanish (US)",
     "Gender": "Male",
     "Locale": "es-US",
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-US, AlonsoNeural )",
-    "ShortName": "es-US-AlonsoNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (es-US, AlonsoNeural)",
+    "ShortName": "es-US-AlonsoNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Zuri  - Swahili (Kenya)",
+    "FriendlyName": "Zuri - Swahili (Kenya)",
     "Gender": "Female",
     "Locale": "sw-KE",
-    "Name": "Microsoft Server Speech Text to Speech Voice (sw-KE, ZuriNeural )",
-    "ShortName": "sw-KE-ZuriNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (sw-KE, ZuriNeural)",
+    "ShortName": "sw-KE-ZuriNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Rafiki  - Swahili (Kenya)",
+    "FriendlyName": "Rafiki - Swahili (Kenya)",
     "Gender": "Male",
     "Locale": "sw-KE",
-    "Name": "Microsoft Server Speech Text to Speech Voice (sw-KE, RafikiNeural )",
-    "ShortName": "sw-KE-RafikiNeural ",
+    "Name": "Microsoft Server Speech Text to Speech Voice (sw-KE, RafikiNeural)",
+    "ShortName": "sw-KE-RafikiNeural",
     "Status": "General",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
