@@ -495,15 +495,6 @@
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
   },
   {
-    "FriendlyName": "Mia <sup>Retires Oct 30, see below</sup> - English (United Kingdom)",
-    "Gender": "Female",
-    "Locale": "en-GB",
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-GB, MiaNeural <sup>Retires Oct 30, see below</sup>)",
-    "ShortName": "en-GB-MiaNeural <sup>Retires Oct 30, see below</sup>",
-    "Status": "General",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3"
-  },
-  {
     "FriendlyName": "Ryan - English (United Kingdom)",
     "Gender": "Male",
     "Locale": "en-GB",

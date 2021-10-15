@@ -2,7 +2,7 @@ import html
 import json
 import re
 with open("voicesplus.txt") as f: table = f.read()
-table = table.replace("\r", "").replace("\n", "").replace("<code>", "").replace("</code>", "").replace("<sup>New</sup>", "")
+table = table.replace("\r", "").replace("\n", "").replace("<code>", "").replace("</code>", "").replace("<sup>New</sup>", "").replace(" <sup>New</sup>", "")
 
 json_voices_list = []
 tbody = re.findall(r"<tbody>(.*?)</tbody>", table, re.M+re.I)[0]

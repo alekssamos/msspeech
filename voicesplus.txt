@@ -397,13 +397,6 @@
 <tr>
 <td>English (United Kingdom)</td>
 <td><code>en-GB</code></td>
-<td>Female</td>
-<td><code>en-GB-MiaNeural</code> <sup>Retires Oct 30, see below</sup></td>
-<td>General</td>
-</tr>
-<tr>
-<td>English (United Kingdom)</td>
-<td><code>en-GB</code></td>
 <td>Male</td>
 <td><code>en-GB-RyanNeural</code></td>
 <td>General</td>

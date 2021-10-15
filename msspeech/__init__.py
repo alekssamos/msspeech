@@ -2,7 +2,6 @@
 
 import asyncio
 import os, os.path
-from glob import glob
 import html
 from typing import Any, List, Dict, Tuple, Union
 from urllib.parse import urlencode
@@ -11,6 +10,7 @@ import json
 
 bytes_or_str = Union[str, bytes]
 
+msspeech_dir = os.path.dirname(__file__)
 class MSSpeechError(Exception):
 	pass
 
@@ -155,14 +155,11 @@ class MSSpeech():
 		global _voices_list
 		if len(_voices_list) > 0:
 			return _voices_list
-
-		folders = []
-		for w in os.walk("."):
-			folders.append(w[0])
-		for folder in folders:
-			voicesplusfilepath = os.path.join(folder, "voices_list_plus.json")
-			if os.path.isfile(voicesplusfilepath):
-				with open(voicesplusfilepath, encoding="UTF8") as f: return json.load(f)
+		voicesplusfilepath = os.path.join(msspeech_dir, "voices_list_plus.json")
+		if os.path.isfile(voicesplusfilepath):
+			with open(voicesplusfilepath, encoding="UTF8") as f: _voices_list = json.load(f)
+		if len(_voices_list) > 0:
+			return _voices_list
 		async with aiohttp.ClientSession(headers = self.headers) as session:
 			async with session.get(self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
 					params={"trustedclienttoken":self.trustedclienttoken}) as resp:
