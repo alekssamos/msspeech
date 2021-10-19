@@ -180,6 +180,10 @@ class MSSpeech():
 				},
 				json.dumps(self.synthesis_config)).decode("UTF8")
 			)
+			text = html.escape(text)
+			for c in range(0, 32):
+				if c not in [9, 10, 13]:
+					text = text.replace(chr(c), " ")
 			await ws.send_str(
 				self._build_request({
 				"X-RequestId":"586bb1cb2bbe2e68bb1e7617113bee75",
@@ -189,7 +193,7 @@ class MSSpeech():
 				"""
 <speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'><voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'> {text}</prosody></voice></speak>
 			""".strip().format(
-				text = html.escape(text),
+				text = text,
 				voiceName = self.voiceName,
 				pitch = self._int_to_str(self.pitch),
 				rate = self._int_to_str(self.rate),
