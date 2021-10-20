@@ -1,5 +1,6 @@
 """not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud"""
 
+import re
 import asyncio
 import os, os.path
 import html
@@ -181,6 +182,10 @@ class MSSpeech():
 				json.dumps(self.synthesis_config)).decode("UTF8")
 			)
 			text = html.escape(text)
+			text = text.replace("\r\n", "\n").replace("\r", "\n")
+			text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
+			text = re.sub(r"([^.])[\s]\.([^.])", r"\1. \2", text)
+			text = re.sub(r"[ \t]{2,}", r" ", text)
 			for c in range(0, 32):
 				if c not in [9, 10, 13]:
 					text = text.replace(chr(c), " ")
