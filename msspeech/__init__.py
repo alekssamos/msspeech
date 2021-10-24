@@ -2,6 +2,7 @@
 
 import re
 import asyncio
+import aiofiles
 import os, os.path
 import html
 from typing import Any, List, Dict, Tuple, Union
@@ -167,7 +168,20 @@ class MSSpeech():
 				_voices_list = await resp.json()
 				return _voices_list
 
-	async def synthesize(self, text:str, filename_or_buffer:Any)-> None:
+	async def synthesize(self, text:str, filename_or_buffer:Any)-> int:
+		"returns the number of bytes written in an MP3 file"
+		rplimit = 50
+		for rpcount in range(1, rplimit+1):
+			try:
+				res = await self._synthesize(text, filename_or_buffer)
+				return res
+			except (aiohttp.ClientError, ValueError) as e:
+				if rpcount==rplimit:
+					raise
+				await asyncio.sleep(10)
+
+	async def _synthesize(self, text:str, filename_or_buffer:Any)-> int:
+		bc:int=0
 		if len(text.strip()) < 1:
 			raise ValueError("the text cannot be empty")
 		async with aiohttp.ClientSession(headers = self.headers) as session:
@@ -219,10 +233,11 @@ class MSSpeech():
 				if isinstance(resp[1], bytes):
 					if f is None:
 						if isinstance(filename_or_buffer, str):
-							f = open(filename_or_buffer, "wb")
+							f = await aiofiles.open(filename_or_buffer, "wb")
 						else:
 							f = filename_or_buffer
-					f.write(resp[1])
+					bc += (await f.write(resp[1]))
 			if f is not None and isinstance(filename_or_buffer, str):
-				f.close()
+				await f.close()
 			f = None
+			return bc
