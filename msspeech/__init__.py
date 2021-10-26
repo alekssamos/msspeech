@@ -200,6 +200,42 @@ class MSSpeech():
 			text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
 			text = re.sub(r"([^.])[\s]\.([^.])", r"\1. \2", text)
 			text = re.sub(r"[ \t]{2,}", r" ", text)
+			CHARACTER_TO_ESCAPE = {
+				'<' : '&lt;',
+				'>' : '&gt;',
+				'&' : '&amp;',
+				'"' : '&quot;',
+				'\'' : '&apos;',
+			}
+			ESCAPE_TO_CHARACTER = {
+				'&lt;' : '<',
+				'&gt;' : '>' ,
+				'&amp;' : '&',
+				'&quot;' : '"',
+				'&apos;' : '\'',
+			}
+			STANDARD_CONVERSION = {
+				'‘' : '\'',
+				'’' : '\'',
+				'‛' : '\'',
+				'‚' : '\'',
+				'′' : '\'',
+				'“' : '"',
+				'”' : '"',
+				'„' : '"',
+				'‟' : '"',
+				'″' : '"',
+			}
+
+			for k, v in STANDARD_CONVERSION.items(): text = text.replace(k, v)
+			for k, v in CHARACTER_TO_ESCAPE.items(): text = text.replace(k, v)
+			if (await self.get_voice())["Locale"][0:2].lower() == "ru":
+				text = text.replace("і","и")
+				text = text.replace("І","И")
+				text = text.replace("і","и")
+				text = text.replace("ў","у")
+				text = text.replace("Ў","У")
+				text = text.replace("'","ъ")
 			for c in range(0, 32):
 				if c not in [9, 10, 13]:
 					text = text.replace(chr(c), " ")
