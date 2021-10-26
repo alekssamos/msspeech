@@ -229,6 +229,9 @@ class MSSpeech():
 
 			for k, v in STANDARD_CONVERSION.items(): text = text.replace(k, v)
 			for k, v in CHARACTER_TO_ESCAPE.items(): text = text.replace(k, v)
+			if (await self.get_voice())["Locale"][0:2].lower() == "ua":
+				text = text.replace("ў","у")
+				text = text.replace("Ў","У")
 			if (await self.get_voice())["Locale"][0:2].lower() == "ru":
 				text = text.replace("і","и")
 				text = text.replace("І","И")
