@@ -195,7 +195,7 @@ class MSSpeech():
 				},
 				json.dumps(self.synthesis_config)).decode("UTF8")
 			)
-			text = html.escape(text)
+			# text = html.escape(text)
 			text = text.replace("\r\n", "\n").replace("\r", "\n")
 			text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
 			text = re.sub(r"([^.])[\s]\.([^.])", r"\1. \2", text)
@@ -228,17 +228,19 @@ class MSSpeech():
 			}
 
 			for k, v in STANDARD_CONVERSION.items(): text = text.replace(k, v)
-			for k, v in CHARACTER_TO_ESCAPE.items(): text = text.replace(k, v)
-			if (await self.get_voice())["Locale"][0:2].lower() == "ua":
-				text = text.replace("ў","у")
-				text = text.replace("Ў","У")
+			if (await self.get_voice())["Locale"][0:2].lower() == "uk":
+				for k, v in {"ў":"у", "Ў":"У"}.items(): text = text.replace(k, v)
 			if (await self.get_voice())["Locale"][0:2].lower() == "ru":
-				text = text.replace("і","и")
-				text = text.replace("І","И")
-				text = text.replace("і","и")
-				text = text.replace("ў","у")
-				text = text.replace("Ў","У")
-				text = text.replace("'","ъ")
+				for k, v in {
+					"ў":"у",
+					"Ў":"У",
+					"і":"и",
+					"І":"И",
+					"ў":"у",
+					"Ў":"У",
+					"'":"ъ"
+				}.items(): text = text.replace(k, v)
+			for k, v in CHARACTER_TO_ESCAPE.items(): text = text.replace(k, v)
 			for c in range(0, 32):
 				if c not in [9, 10, 13]:
 					text = text.replace(chr(c), " ")
