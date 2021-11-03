@@ -9,6 +9,7 @@ from typing import Any, List, Dict, Tuple, Union
 from urllib.parse import urlencode
 import aiohttp
 import json
+import ssl
 
 bytes_or_str = Union[str, bytes]
 
@@ -175,7 +176,7 @@ class MSSpeech():
 			try:
 				res = await self._synthesize(text, filename_or_buffer)
 				return res
-			except (aiohttp.ClientError, ValueError) as e:
+			except (aiohttp.ClientError, ssl.SSLError, ValueError) as e:
 				if rpcount==rplimit:
 					raise
 				await asyncio.sleep(10)
