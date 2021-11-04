@@ -177,6 +177,8 @@ class MSSpeech():
 				res = await self._synthesize(text, filename_or_buffer)
 				return res
 			except (aiohttp.ClientError, ssl.SSLError, ValueError) as e:
+				import sys
+				sys.stderr.write(f"MSSpeech.synthesize: {sys.exc_info()[1]}, repeat #{rpcount}")
 				if rpcount==rplimit:
 					raise
 				await asyncio.sleep(10)
@@ -196,11 +198,11 @@ class MSSpeech():
 				},
 				json.dumps(self.synthesis_config)).decode("UTF8")
 			)
-			# text = html.escape(text)
 			text = text.replace("\r\n", "\n").replace("\r", "\n")
+			text = re.sub(r"([\w])[-][\r\n]([\w])", r"\1\2", text)
 			text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
-			text = re.sub(r"([^.])[\s]\.([^.])", r"\1. \2", text)
 			text = re.sub(r"[ \t]{2,}", r" ", text)
+			text = re.sub(r"([\w])([.!?,])([\w])", r"\1\2 \3", text)
 			CHARACTER_TO_ESCAPE = {
 				'<' : '&lt;',
 				'>' : '&gt;',
