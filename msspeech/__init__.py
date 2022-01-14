@@ -15,6 +15,8 @@ bytes_or_str = Union[str, bytes]
 
 msspeech_dir = os.path.dirname(__file__)
 
+def ireplace(old, repl, text):
+    return re.sub('(?i)'+re.escape(old), lambda m: repl, text)
 
 class MSSpeechError(Exception):
     pass
@@ -147,7 +149,7 @@ class MSSpeech:
         }
         for k, v in sudonames.items():
             for sudoname in v:
-                message = message.replace(f"%{sudoname.lower()}:", f"%{k.lower()}:")
+                message = ireplace(f"%{sudoname}:", f"%{k}:", message)
         voices:list = await self.get_voices_by_substring("-")
         replaced:str = ''
         for match in re.findall(pattern, message):
