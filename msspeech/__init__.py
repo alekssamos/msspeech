@@ -147,7 +147,7 @@ class MSSpeech:
         }
         for k, v in sudonames.items():
             for sudoname in v:
-                message = message.replace(f"%{sudoname}:", f"%{k}:")
+                message = message.replace(f"%{sudoname.lower()}:", f"%{k.lower()}:")
         voices:list = await self.get_voices_by_substring("-")
         replaced:str = ''
         for match in re.findall(pattern, message):
