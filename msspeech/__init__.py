@@ -97,11 +97,12 @@ class MSSpeech:
         if len(voiceName) < 1:
             raise ValueError("voiceName is empty")
         voices: List[Dict] = await self.get_voices_list()
-        voiceNames: List = [v["Name"] for v in voices if "FriendlyName" in v]
-        voiceShortNames: List = [v["ShortName"] for v in voices if "FriendlyName" in v]
-        if not voiceName in voiceNames + voiceShortNames:
+        voiceNames: List = [v["Name"] for v in voices if "DisplayName" in v]
+        voiceShortNames: List = [v["ShortName"] for v in voices if "ShortName" in v]
+        voiceLocalNames: List = [v["LocalName"] for v in voices if "LocalName" in v]
+        if not voiceName in voiceNames + voiceShortNames + voiceLocalNames:
             raise ValueError("Unknown voice " + voiceName)
-        self.voiceName = voiceName
+        self.voiceName = (await self.get_voices_by_substring(voiceName))[0]['Name']
 
     async def get_voices_by_substring(self, substring: str) -> dict:
         """
@@ -113,6 +114,8 @@ class MSSpeech:
             if (
                 substring.strip() in voice["Name"].strip()
                 or substring.strip() in voice["ShortName"].strip()
+                or substring.strip() in voice["DisplayName"].strip()
+                or substring.strip() in voice["LocalName"].strip()
             ):
                 l.append(voice)
         return l
@@ -123,6 +126,8 @@ class MSSpeech:
             if (
                 voice["Name"].strip() == self.voiceName.strip()
                 or voice["ShortName"].strip() == self.voiceName.strip()
+                or voice["DisplayName"].strip() == self.voiceName.strip()
+                or voice["LocalName"].strip() == self.voiceName.strip()
             ):
                 return voice
         return {}
@@ -159,6 +164,8 @@ class MSSpeech:
                 if (
                     voice_name_from_tag.lower() == voiceShortName
                     or voice_name_from_tag.lower()  + "neural" == voiceShortName
+                    or voice_name_from_tag.lower() == voice['DisplayName']
+                    or voice_name_from_tag.lower() == voice['LocalName']
                 ):
                     replaced = close_voice_tag_if_needed + """
 <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'>{text_from_tag}</prosody></voice>
@@ -225,7 +232,7 @@ class MSSpeech:
                         "Gender": "Female",
                         "Locale": "ar-EG",
                         "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-                        "FriendlyName": "Microsoft Salma Online (Natural) - Arabic (Egypt)",
+                        "DisplayName": "Microsoft Salma Online (Natural) - Arabic (Egypt)",
                         "Status": "GA"
                 },
                 {
@@ -234,7 +241,7 @@ class MSSpeech:
                         "Gender": "Female",
                         "Locale": "ar-SA",
                         "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-                        "FriendlyName": "Microsoft Zariyah Online (Natural) - Arabic (Saudi Arabia)",
+                        "DisplayName": "Microsoft Zariyah Online (Natural) - Arabic (Saudi Arabia)",
                         "Status": "GA"
                 }
                 ]
