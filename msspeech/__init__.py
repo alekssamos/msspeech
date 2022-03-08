@@ -145,8 +145,8 @@ class MSSpeech:
         """
         replacing voices with tags in the text
         """
-        message = re.sub(r'([%][а-яёa-z]+[:])', '\n' + r'\1', message, flags=re.I)
-        pattern = re.compile(r'[%]([а-яёa-z]+)[:](.*)', re.I)
+        message = re.sub(r'([%][\w]+[:])', '\n' + r'\1', message, flags=re.I)
+        pattern = re.compile(r'[%]([\w]+)[:](.*)', re.I)
         sudonames = {
             "DariyaNeural": ["Даша", "Дарья"],
             "SvetlanaNeural": ["Света", "Светлана"],
@@ -155,7 +155,7 @@ class MSSpeech:
         for k, v in sudonames.items():
             for sudoname in v:
                 message = ireplace(f"%{sudoname}:", f"%{k}:", message)
-        voices:list = await self.get_voices_by_substring("-")
+        voices:list = await self.get_voices_list()
         replaced:str = ''
         for match in re.findall(pattern, message):
             voice_name_from_tag, text_from_tag = match
@@ -164,8 +164,8 @@ class MSSpeech:
                 if (
                     voice_name_from_tag.lower() == voiceShortName
                     or voice_name_from_tag.lower()  + "neural" == voiceShortName
-                    or voice_name_from_tag.lower() == voice['DisplayName']
-                    or voice_name_from_tag.lower() == voice['LocalName']
+                    or voice_name_from_tag.lower() == voice['DisplayName'].lower()
+                    or voice_name_from_tag.lower() == voice['LocalName'].lower()
                 ):
                     replaced = close_voice_tag_if_needed + """
 <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'>{text_from_tag}</prosody></voice>
@@ -226,24 +226,39 @@ class MSSpeech:
                 Example:
                 ```javascript
                 [
-                {
-                        "Name": "Microsoft Server Speech Text to Speech Voice (ar-EG, SalmaNeural)",
-                        "ShortName": "ar-EG-SalmaNeural",
-                        "Gender": "Female",
-                        "Locale": "ar-EG",
-                        "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-                        "DisplayName": "Microsoft Salma Online (Natural) - Arabic (Egypt)",
-                        "Status": "GA"
-                },
-                {
-                        "Name": "Microsoft Server Speech Text to Speech Voice (ar-SA, ZariyahNeural)",
-                        "ShortName": "ar-SA-ZariyahNeural",
-                        "Gender": "Female",
-                        "Locale": "ar-SA",
-                        "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-                        "DisplayName": "Microsoft Zariyah Online (Natural) - Arabic (Saudi Arabia)",
-                        "Status": "GA"
-                }
+                  {
+                    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, JennyNeural)",
+                    "DisplayName": "Jenny",
+                    "LocalName": "Jenny",
+                    "ShortName": "en-US-JennyNeural",
+                    "Gender": "Female",
+                    "Locale": "en-US",
+                    "LocaleName": "English (United States)",
+                    "StyleList": [
+                      "assistant",
+                      "chat",
+                      "customerservice",
+                      "newscast"
+                    ],
+                    "SampleRateHertz": "24000",
+                    "VoiceType": "Neural",
+                    "Status": "GA"
+                  },
+                  {
+                    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, GuyNeural)",
+                    "DisplayName": "Guy",
+                    "LocalName": "Guy",
+                    "ShortName": "en-US-GuyNeural",
+                    "Gender": "Male",
+                    "Locale": "en-US",
+                    "LocaleName": "English (United States)",
+                    "StyleList": [
+                      "newscast"
+                    ],
+                    "SampleRateHertz": "24000",
+                    "VoiceType": "Neural",
+                    "Status": "GA"
+                  },
                 ]
                 ```
         """
@@ -259,8 +274,14 @@ class MSSpeech:
             return _voices_list
         async with aiohttp.ClientSession(headers=self.headers) as session:
             async with session.get(
-                self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
-                params={"trustedclienttoken": self.trustedclienttoken},
+                # self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
+                "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
+                headers={
+                    "Referer": "https://azure.microsoft.com/",
+                    "Authorization": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJyZWdpb24iOiJlYXN0dXMiLCJzdWJzY3JpcHRpb24taWQiOiI2MWIxODBlMmJkOGU0YWI2OGNiNmQxN2UxOWE5NjAwMiIsInByb2R1Y3QtaWQiOiJTcGVlY2hTZXJ2aWNlcy5TMCIsImNvZ25pdGl2ZS1zZXJ2aWNlcy1lbmRwb2ludCI6Imh0dHBzOi8vYXBpLmNvZ25pdGl2ZS5taWNyb3NvZnQuY29tL2ludGVybmFsL3YxLjAvIiwiYXp1cmUtcmVzb3VyY2UtaWQiOiIvc3Vic2NyaXB0aW9ucy9jMjU1ZGYzNi05NzRjLTQ2MGEtODMwYi0yNTE2NTEzYWNlYjIvcmVzb3VyY2VHcm91cHMvY3MtY29nbml0aXZlc2VydmljZXMtcHJvZC13dXMyL3Byb3ZpZGVycy9NaWNyb3NvZnQuQ29nbml0aXZlU2VydmljZXMvYWNjb3VudHMvYWNvbS1zcGVlY2gtcHJvZC1lYXN0dXMiLCJzY29wZSI6InNwZWVjaHNlcnZpY2VzIiwiYXVkIjoidXJuOm1zLnNwZWVjaHNlcnZpY2VzLmVhc3R1cyIsImV4cCI6MTY0NjY2ODgzNCwiaXNzIjoidXJuOm1zLmNvZ25pdGl2ZXNlcnZpY2VzIn0.1gSnCVr4R69ZkudLnS00QR7usoUzPIYu-USjaxWlSLg",
+                    "Origin": "https://azure.microsoft.com"
+                }
+                # params={"trustedclienttoken": self.trustedclienttoken},
             ) as resp:
                 _voices_list = await resp.json()
                 return _voices_list
@@ -334,20 +355,6 @@ class MSSpeech:
 
             for k, v in STANDARD_CONVERSION.items():
                 text = text.replace(k, v)
-            if (await self.get_voice())["Locale"][0:2].lower() == "uk":
-                for k, v in {"ў": "у", "Ў": "У"}.items():
-                    text = text.replace(k, v)
-            if (await self.get_voice())["Locale"][0:2].lower() == "ru":
-                for k, v in {
-                    "ў": "у",
-                    "Ў": "У",
-                    "і": "и",
-                    "І": "И",
-                    "ў": "у",
-                    "Ў": "У",
-                    "'": "ъ",
-                }.items():
-                    text = text.replace(k, v)
             for k, v in CHARACTER_TO_ESCAPE.items():
                 text = text.replace(k, v)
             for c in range(0, 32):
@@ -364,6 +371,11 @@ class MSSpeech:
                 volume=self._int_to_str(self.volume),
             )
             voice_element_close = "</prosody></voice>"
+            if (await self.get_voice())["Locale"][0:2].lower() == "ru":
+                for k, v in {
+                    "'": "ъ",
+                }.items():
+                    text = text.replace(k, v)
             if multivoices:
                 text = await self.parse_multivoices(
                     text,
@@ -374,6 +386,19 @@ class MSSpeech:
                     default_rate = self.rate,
                     default_volume = self.volume,
                 )
+            if (await self.get_voice())["Locale"][0:2].lower() == "uk":
+                for k, v in {"ў": "у", "Ў": "У"}.items():
+                    text = text.replace(k, v)
+            if (await self.get_voice())["Locale"][0:2].lower() == "ru":
+                for k, v in {
+                    "ў": "у",
+                    "Ў": "У",
+                    "і": "и",
+                    "І": "И",
+                    "ў": "у",
+                    "Ў": "У",
+                }.items():
+                    text = text.replace(k, v)
             ssml = speak_element_open + voice_element_open + text + voice_element_close + speak_element_close
             ssml = re.sub(r"\<voice[^>]+\>\<prosody[^>]+>[\s\r\n]{0,}\</prosody\>\</voice>", "", ssml, flags = re.MULTILINE)
             await ws.send_str(

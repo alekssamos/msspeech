@@ -9,7 +9,7 @@ from setuptools import setup
 
 
 NAME = "msspeech"
-VERSION = "2.14"
+VERSION = "3.0"
 
 
 with open(pathjoin(dirname(__file__), "README.md")) as f:
