@@ -33,6 +33,7 @@ setup(
     version=VERSION,
     description="Microsoft speech synthesis from Microsoft Edge web browser read aloud.",
     long_description=DESCRIPTION,
+    long_description_content_type="text/markdown",
     author="alekssamos",
     author_email="aleks-samos@yandex.ru",
     maintainer="alekssamos",
