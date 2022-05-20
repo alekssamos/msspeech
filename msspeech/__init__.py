@@ -263,6 +263,7 @@ class MSSpeech:
                 ```
         """
 
+        import sys
         global _voices_list
         _res = {}
         if len(_voices_list) > 0:
@@ -275,9 +276,11 @@ class MSSpeech:
                 _voices_list = _res
             except json.decoder.JSONDecodeError:
                 _voices_list = {}
+                sys.stderr.write(f"MSSpeech.get_voices_list: error reading {voicesplusfilepath}")
         if len(_voices_list) > 0:
             return _voices_list
         async with aiohttp.ClientSession(headers=self.headers) as session:
+            sys.stdout.write("MSSpeech.get_voices_list: downloading voice list JSON file...")
             async with session.get(
                 # self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
                 # "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
@@ -290,8 +293,11 @@ class MSSpeech:
             ) as resp:
                 # _voices_list = await resp.json()
                 _voices_list = await resp.json(content_type = "text/plain; charset=utf-8")
-                with open(voicesplusfilepath, "w", encoding="UTF8") as fp:
-                    json.dump(_voices_list, fp, ensure_ascii=False, indent=2)
+                try:
+                    with open(voicesplusfilepath, "w", encoding="UTF8") as fp:
+                        json.dump(_voices_list, fp, ensure_ascii=False, indent=2)
+                except OSError:
+                    sys.stderr.write(f"MSSpeech.get_voices_list: error ssaving {voicesplusfilepath}")
                 return _voices_list
 
     async def synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = True) -> int:
