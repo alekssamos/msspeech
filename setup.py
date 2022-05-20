@@ -9,10 +9,10 @@ from setuptools import setup
 
 
 NAME = "msspeech"
-VERSION = "3.1"
+VERSION = "3.2"
 
 
-with open(pathjoin(dirname(__file__), "README.md")) as f:
+with open(pathjoin(dirname(__file__), "README.md"), encoding="UTF-8") as f:
     DESCRIPTION = f.read()
 
 REQUIRED, REQUIRED_URL = [], []
@@ -39,6 +39,11 @@ setup(
     maintainer_email="aleks-samos@yandex.ru",
     url="https://github.com/alekssamos/msspeech/",
     packages=packages,
+    entry_points={
+        'console_scripts': [
+            'msspeech=msspeech.__main__:main',
+        ],
+    },
     install_requires=REQUIRED,
     dependency_links=REQUIRED_URL,
     include_package_data=True,
