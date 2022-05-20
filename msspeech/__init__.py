@@ -264,26 +264,34 @@ class MSSpeech:
         """
 
         global _voices_list
+        _res = {}
         if len(_voices_list) > 0:
             return _voices_list
         voicesplusfilepath = os.path.join(msspeech_dir, "voices_list_plus.json")
         if os.path.isfile(voicesplusfilepath):
-            with open(voicesplusfilepath, encoding="UTF8") as f:
-                _voices_list = json.load(f)
+            try:
+                with open(voicesplusfilepath, encoding="UTF8") as f:
+                    _res= json.load(f)
+                _voices_list = _res
+            except json.decoder.JSONDecodeError:
+                _voices_list = {}
         if len(_voices_list) > 0:
             return _voices_list
         async with aiohttp.ClientSession(headers=self.headers) as session:
             async with session.get(
                 # self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
-                "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
+                # "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
+                "https://raw.githubusercontent.com/alekssamos/msspeech/da5904e14e7e8b383f4230c57585eaa92271a4bb/msspeech/voices_list_plus.json",
                 headers={
-                    "Referer": "https://azure.microsoft.com/",
-                    "Authorization": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJyZWdpb24iOiJlYXN0dXMiLCJzdWJzY3JpcHRpb24taWQiOiI2MWIxODBlMmJkOGU0YWI2OGNiNmQxN2UxOWE5NjAwMiIsInByb2R1Y3QtaWQiOiJTcGVlY2hTZXJ2aWNlcy5TMCIsImNvZ25pdGl2ZS1zZXJ2aWNlcy1lbmRwb2ludCI6Imh0dHBzOi8vYXBpLmNvZ25pdGl2ZS5taWNyb3NvZnQuY29tL2ludGVybmFsL3YxLjAvIiwiYXp1cmUtcmVzb3VyY2UtaWQiOiIvc3Vic2NyaXB0aW9ucy9jMjU1ZGYzNi05NzRjLTQ2MGEtODMwYi0yNTE2NTEzYWNlYjIvcmVzb3VyY2VHcm91cHMvY3MtY29nbml0aXZlc2VydmljZXMtcHJvZC13dXMyL3Byb3ZpZGVycy9NaWNyb3NvZnQuQ29nbml0aXZlU2VydmljZXMvYWNjb3VudHMvYWNvbS1zcGVlY2gtcHJvZC1lYXN0dXMiLCJzY29wZSI6InNwZWVjaHNlcnZpY2VzIiwiYXVkIjoidXJuOm1zLnNwZWVjaHNlcnZpY2VzLmVhc3R1cyIsImV4cCI6MTY0NjY2ODgzNCwiaXNzIjoidXJuOm1zLmNvZ25pdGl2ZXNlcnZpY2VzIn0.1gSnCVr4R69ZkudLnS00QR7usoUzPIYu-USjaxWlSLg",
-                    "Origin": "https://azure.microsoft.com"
+                    # "Referer": "https://azure.microsoft.com/",
+                    # "Origin": "https://azure.microsoft.com"
                 }
                 # params={"trustedclienttoken": self.trustedclienttoken},
             ) as resp:
-                _voices_list = await resp.json()
+                # _voices_list = await resp.json()
+                _voices_list = await resp.json(content_type = "text/plain; charset=utf-8")
+                with open(voicesplusfilepath, "w", encoding="UTF8") as fp:
+                    json.dump(_voices_list, fp, ensure_ascii=False, indent=2)
                 return _voices_list
 
     async def synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = True) -> int:
