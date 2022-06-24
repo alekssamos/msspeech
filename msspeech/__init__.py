@@ -284,7 +284,7 @@ class MSSpeech:
             async with session.get(
                 # self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
                 # "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
-                "https://raw.githubusercontent.com/alekssamos/msspeech/da5904e14e7e8b383f4230c57585eaa92271a4bb/msspeech/voices_list_plus.json",
+                "https://raw.githubusercontent.com/alekssamos/msspeech/c5554042c6a1b323ccf269b7bd98bf8250b912bf/msspeech/voices_list_plus.json",
                 headers={
                     # "Referer": "https://azure.microsoft.com/",
                     # "Origin": "https://azure.microsoft.com"
