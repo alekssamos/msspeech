@@ -97,10 +97,9 @@ class MSSpeech:
         if len(voiceName) < 1:
             raise ValueError("voiceName is empty")
         voices: List[Dict] = await self.get_voices_list()
-        voiceNames: List = [v["Name"] for v in voices if "DisplayName" in v]
+        voiceNames: List = [v["Name"] for v in voices if "FriendlyName" in v]
         voiceShortNames: List = [v["ShortName"] for v in voices if "ShortName" in v]
-        voiceLocalNames: List = [v["LocalName"] for v in voices if "LocalName" in v]
-        if not voiceName in voiceNames + voiceShortNames + voiceLocalNames:
+        if not voiceName in voiceNames + voiceShortNames:
             raise ValueError("Unknown voice " + voiceName)
         self.voiceName = (await self.get_voices_by_substring(voiceName))[0]['Name']
 
@@ -114,8 +113,7 @@ class MSSpeech:
             if (
                 substring.strip() in voice["Name"].strip()
                 or substring.strip() in voice["ShortName"].strip()
-                or substring.strip() in voice["DisplayName"].strip()
-                or substring.strip() in voice["LocalName"].strip()
+                or substring.strip() in voice["FriendlyName"].strip()
             ):
                 l.append(voice)
         return l
@@ -126,8 +124,7 @@ class MSSpeech:
             if (
                 voice["Name"].strip() == self.voiceName.strip()
                 or voice["ShortName"].strip() == self.voiceName.strip()
-                or voice["DisplayName"].strip() == self.voiceName.strip()
-                or voice["LocalName"].strip() == self.voiceName.strip()
+                or voice["FriendlyName"].strip() == self.voiceName.strip()
             ):
                 return voice
         return {}
@@ -164,8 +161,7 @@ class MSSpeech:
                 if (
                     voice_name_from_tag.lower() == voiceShortName
                     or voice_name_from_tag.lower()  + "neural" == voiceShortName
-                    or voice_name_from_tag.lower() == voice['DisplayName'].lower()
-                    or voice_name_from_tag.lower() == voice['LocalName'].lower()
+                    or voice_name_from_tag.lower() == voice['FriendlyName'].lower()
                 ):
                     replaced = close_voice_tag_if_needed + """
 <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'>{text_from_tag}</prosody></voice>
@@ -227,36 +223,21 @@ class MSSpeech:
                 ```javascript
                 [
                   {
-                    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, JennyNeural)",
-                    "DisplayName": "Jenny",
-                    "LocalName": "Jenny",
-                    "ShortName": "en-US-JennyNeural",
+                    "Name": "Microsoft Server Speech Text to Speech Voice (af-ZA, AdriNeural)",
+                    "ShortName": "af-ZA-AdriNeural",
                     "Gender": "Female",
-                    "Locale": "en-US",
-                    "LocaleName": "English (United States)",
-                    "StyleList": [
-                      "assistant",
-                      "chat",
-                      "customerservice",
-                      "newscast"
-                    ],
-                    "SampleRateHertz": "24000",
-                    "VoiceType": "Neural",
+                    "Locale": "af-ZA",
+                    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+                    "FriendlyName": "Microsoft Adri Online (Natural) - Afrikaans (South Africa)",
                     "Status": "GA"
                   },
                   {
-                    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, GuyNeural)",
-                    "DisplayName": "Guy",
-                    "LocalName": "Guy",
-                    "ShortName": "en-US-GuyNeural",
-                    "Gender": "Male",
-                    "Locale": "en-US",
-                    "LocaleName": "English (United States)",
-                    "StyleList": [
-                      "newscast"
-                    ],
-                    "SampleRateHertz": "24000",
-                    "VoiceType": "Neural",
+                    "Name": "Microsoft Server Speech Text to Speech Voice (am-ET, MekdesNeural)",
+                    "ShortName": "am-ET-MekdesNeural",
+                    "Gender": "Female",
+                    "Locale": "am-ET",
+                    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+                    "FriendlyName": "Microsoft Mekdes Online (Natural) - Amharic (Ethiopia)",
                     "Status": "GA"
                   },
                 ]
@@ -268,7 +249,8 @@ class MSSpeech:
         _res = {}
         if len(_voices_list) > 0:
             return _voices_list
-        voicesplusfilepath = os.path.join(msspeech_dir, "voices_list_plus.json")
+        voicesplusfilepath = os.path.join(msspeech_dir, "voices_list.json")
+        # voicesplusfilepath = os.path.join(msspeech_dir, "voices_list_plus.json")
         if os.path.isfile(voicesplusfilepath):
             try:
                 with open(voicesplusfilepath, encoding="UTF8") as f:
@@ -282,17 +264,17 @@ class MSSpeech:
         async with aiohttp.ClientSession(headers=self.headers) as session:
             sys.stdout.write("MSSpeech.get_voices_list: downloading voice list JSON file...")
             async with session.get(
-                # self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
+                self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
                 # "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
-                "https://raw.githubusercontent.com/alekssamos/msspeech/c5554042c6a1b323ccf269b7bd98bf8250b912bf/msspeech/voices_list_plus.json",
+                # "https://raw.githubusercontent.com/alekssamos/msspeech/c5554042c6a1b323ccf269b7bd98bf8250b912bf/msspeech/voices_list_plus.json",
                 headers={
                     # "Referer": "https://azure.microsoft.com/",
                     # "Origin": "https://azure.microsoft.com"
-                }
-                # params={"trustedclienttoken": self.trustedclienttoken},
+                },
+                params={"trustedclienttoken": self.trustedclienttoken}
             ) as resp:
-                # _voices_list = await resp.json()
-                _voices_list = await resp.json(content_type = "text/plain; charset=utf-8")
+                _voices_list = await resp.json()
+                # _voices_list = await resp.json(content_type = "text/plain; charset=utf-8")
                 try:
                     with open(voicesplusfilepath, "w", encoding="UTF8") as fp:
                         json.dump(_voices_list, fp, ensure_ascii=False, indent=2)
@@ -302,12 +284,12 @@ class MSSpeech:
 
     async def synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = True) -> int:
         "returns the number of bytes written in an MP3 file"
-        rplimit = 50
+        rplimit = 3
         for rpcount in range(1, rplimit + 1):
             try:
                 res = await self._synthesize(text, filename_or_buffer)
                 return res
-            except (aiohttp.ClientError, ssl.SSLError, ValueError) as e:
+            except (aiohttp.ClientError, ssl.SSLError, ValueError, MSSpeechError) as e:
                 import sys
                 sys.stderr.write(
                     f"MSSpeech.synthesize: {sys.exc_info()[1]}, repeat #{rpcount}"
@@ -390,6 +372,7 @@ class MSSpeech:
                     "'": "ъ",
                 }.items():
                     text = text.replace(k, v)
+            multivoices = False
             if multivoices:
                 text = await self.parse_multivoices(
                     text,

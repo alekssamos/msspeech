@@ -1,9 +1,9 @@
 # msspeech
 not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud
 
-### SUPER UPDATE!
+### Bad news
 
-Hidden voices!!!
+Since the first of July 2022, the list of voices and the API as a whole has been very much limited!
 
 https://docs.microsoft.com/ru-ru/azure/cognitive-services/speech-service/language-support#text-to-speech
 
@@ -24,9 +24,6 @@ async def main():
 			await mss.set_voice(voice["Name"])
 
 
-	# or
-	# await mss.set_voice("ru-RU-DmitryNeural")
-	# await mss.set_voice("ru-RU-DariyaNeural")
 	print("*" * 10)
 	filename = "audio.mp3"
 	# with open("s.txt", encoding="UTF8") as f: text:str = f.read()
