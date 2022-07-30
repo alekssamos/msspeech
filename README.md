@@ -1,13 +1,35 @@
 # msspeech
 not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud
 
+## Installation
+
+`pip install --upgrade msspeech`
+
+or
+
+`pip install  --upgrade https://github.com/alekssamos/msspeech/archive/refs/heads/main.zip`
+
+After updating an already installed library
+To update the list of voices, run the command in your terminal:
+`msspeech_update_voices`
+
+
+## Notes
 ### Bad news
 
-Since the first of July 2022, the list of voices and the API as a whole has been very much limited!
+Since the first of July 2022,
+the list of voices and the API as a whole has been very much limited!
+
+### But there is also good news
+
+They returned back some male voices and added new languages, as well as made support for emotional styles.
+Despite the fact that styles appeared in JSON, you still won't be able to use them, SSML does not perceive them.
+SSML is very limited here, so there is no point in supporting it.
 
 https://docs.microsoft.com/ru-ru/azure/cognitive-services/speech-service/language-support#text-to-speech
 
-## Example
+## Using
+### Example
 ```python
 import asyncio
 from msspeech import MSSpeech

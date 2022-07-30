@@ -3,7 +3,7 @@
 import asyncio
 import click
 
-from . import MSSpeech, MSSpeechError
+from . import MSSpeech, msspeech_dir, MSSpeechError
 
 
 async def a_main(voice_name, text, filename, rate, pitch, volume):
@@ -16,7 +16,6 @@ async def a_main(voice_name, text, filename, rate, pitch, volume):
     await mss.set_pitch(pitch)
     await mss.set_volume(volume)
     await mss.synthesize(text.strip(), filename)
-
 
 @click.command(context_settings={'help_option_names': ['-h', '--help']})
 @click.argument("voice_name")
@@ -42,5 +41,27 @@ def main(voice_name, text, filename="msspeech.mp3", rate=0, pitch=0, volume=1.0)
         raise SystemExit(-2)
 
 
+@click.command()
+def update_voices():
+    "Delete the file with the list of voices and download the list of voices again"
+    import os
+    import os.path
+    removed = False
+    for f in ["voices_list.json", "voices_list_plus.json"]:
+        p = os.path.join(msspeech_dir, f)
+        if os.path.isfile(p):
+            removed = True
+            click.echo(f"removing {p}")
+            os.remove(p)
+    if not removed:
+        click.echo("Files not found")
+    mss = MSSpeech()
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(mss.get_voices_list())
+
 if __name__ == '__main__':
+    import sys
+    if sys.argv[-1].replace("-", "_").lower() == "update_voices":
+        update_voices()
+        sys.exit(0)
     main()

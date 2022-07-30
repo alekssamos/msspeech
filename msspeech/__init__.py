@@ -266,7 +266,7 @@ class MSSpeech:
             async with session.get(
                 self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
                 # "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
-                # "https://raw.githubusercontent.com/alekssamos/msspeech/c5554042c6a1b323ccf269b7bd98bf8250b912bf/msspeech/voices_list_plus.json",
+                # "https://raw.githubusercontent.com/alekssamos/msspeech/c0a40bf3cb361383fa46efc648d872555589438b/msspeech/voices_list_plus.json",
                 headers={
                     # "Referer": "https://azure.microsoft.com/",
                     # "Origin": "https://azure.microsoft.com"
@@ -302,6 +302,8 @@ class MSSpeech:
         bc: int = 0
         if len(text.strip()) < 1:
             raise ValueError("the text cannot be empty")
+        is_user_ssml:bool = "<speak" in text and "</speak>" in text
+        ssml:str = ""
         async with aiohttp.ClientSession(headers=self.headers) as session:
             ws = await session.ws_connect(
                 self.endpoint
@@ -317,87 +319,90 @@ class MSSpeech:
                     json.dumps(self.synthesis_config)
                 ).decode("UTF8")
             )
-            text = text.replace("\r\n", "\n").replace("\r", "\n")
-            text = re.sub(r"([\w])[-][\r\n]([\w])", r"\1\2", text)
-            text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
-            text = re.sub(r"[ \t]{2,}", r" ", text)
-            text = re.sub(r"([\w])([.!?,])([\w])", r"\1\2 \3", text)
-            CHARACTER_TO_ESCAPE = {
-                "<": "&lt;",
-                ">": "&gt;",
-                "&": "&amp;",
-                '"': "&quot;",
-                "'": "&apos;",
-            }
-            ESCAPE_TO_CHARACTER = {
-                "&lt;": "<",
-                "&gt;": ">",
-                "&amp;": "&",
-                "&quot;": '"',
-                "&apos;": "'",
-            }
-            STANDARD_CONVERSION = {
-                "‘": "'",
-                "’": "'",
-                "‛": "'",
-                "‚": "'",
-                "′": "'",
-                "“": '"',
-                "”": '"',
-                "„": '"',
-                "‟": '"',
-                "″": '"',
-            }
+            if not is_user_ssml:
+                text = text.replace("\r\n", "\n").replace("\r", "\n")
+                text = re.sub(r"([\w])[-][\r\n]([\w])", r"\1\2", text)
+                text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
+                text = re.sub(r"[ \t]{2,}", r" ", text)
+                text = re.sub(r"([\w])([.!?,])([\w])", r"\1\2 \3", text)
+                CHARACTER_TO_ESCAPE = {
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    "&": "&amp;",
+                    '"': "&quot;",
+                    "'": "&apos;",
+                }
+                ESCAPE_TO_CHARACTER = {
+                    "&lt;": "<",
+                    "&gt;": ">",
+                    "&amp;": "&",
+                    "&quot;": '"',
+                    "&apos;": "'",
+                }
+                STANDARD_CONVERSION = {
+                    "‘": "'",
+                    "’": "'",
+                    "‛": "'",
+                    "‚": "'",
+                    "′": "'",
+                    "“": '"',
+                    "”": '"',
+                    "„": '"',
+                    "‟": '"',
+                    "″": '"',
+                }
 
-            for k, v in STANDARD_CONVERSION.items():
-                text = text.replace(k, v)
-            for k, v in CHARACTER_TO_ESCAPE.items():
-                text = text.replace(k, v)
-            for c in range(0, 32):
-                if c not in [9, 10, 13]:
-                    text = text.replace(chr(c), " ")
-            speak_element_open = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"
-            speak_element_close = "</speak>"
-            voice_element_open = """
-<voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'>
-            """.strip().format(
-                voiceName=self.voiceName,
-                pitch=self._int_to_str(self.pitch),
-                rate=self._int_to_str(self.rate),
-                volume=self._int_to_str(self.volume),
-            )
-            voice_element_close = "</prosody></voice>"
-            if (await self.get_voice())["Locale"][0:2].lower() == "ru":
-                for k, v in {
-                    "'": "ъ",
-                }.items():
+                for k, v in STANDARD_CONVERSION.items():
                     text = text.replace(k, v)
-            multivoices = False
-            if multivoices:
-                text = await self.parse_multivoices(
-                    text,
-                    call_from_synthesize_function = True,
-                    open_voice_tag_if_needed = voice_element_open,
-                    close_voice_tag_if_needed = voice_element_close,
-                    default_pitch = self.pitch,
-                    default_rate = self.rate,
-                    default_volume = self.volume,
+                for k, v in CHARACTER_TO_ESCAPE.items():
+                    text = text.replace(k, v)
+                for c in range(0, 32):
+                    if c not in [9, 10, 13]:
+                        text = text.replace(chr(c), " ")
+                speak_element_open = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"
+                speak_element_close = "</speak>"
+                voice_element_open = """
+    <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'>
+                """.strip().format(
+                    voiceName=self.voiceName,
+                    pitch=self._int_to_str(self.pitch),
+                    rate=self._int_to_str(self.rate),
+                    volume=self._int_to_str(self.volume),
                 )
-            if (await self.get_voice())["Locale"][0:2].lower() == "uk":
-                for k, v in {"ў": "у", "Ў": "У"}.items():
-                    text = text.replace(k, v)
-            if (await self.get_voice())["Locale"][0:2].lower() == "ru":
-                for k, v in {
-                    "ў": "у",
-                    "Ў": "У",
-                    "і": "и",
-                    "І": "И",
-                    "ў": "у",
-                    "Ў": "У",
-                }.items():
-                    text = text.replace(k, v)
-            ssml = speak_element_open + voice_element_open + text + voice_element_close + speak_element_close
-            ssml = re.sub(r"\<voice[^>]+\>\<prosody[^>]+>[\s\r\n]{0,}\</prosody\>\</voice>", "", ssml, flags = re.MULTILINE)
+                voice_element_close = "</prosody></voice>"
+                if (await self.get_voice())["Locale"][0:2].lower() == "ru":
+                    for k, v in {
+                        "'": "ъ",
+                    }.items():
+                        text = text.replace(k, v)
+                multivoices = False
+                if multivoices:
+                    text = await self.parse_multivoices(
+                        text,
+                        call_from_synthesize_function = True,
+                        open_voice_tag_if_needed = voice_element_open,
+                        close_voice_tag_if_needed = voice_element_close,
+                        default_pitch = self.pitch,
+                        default_rate = self.rate,
+                        default_volume = self.volume,
+                    )
+                if (await self.get_voice())["Locale"][0:2].lower() == "uk":
+                    for k, v in {"ў": "у", "Ў": "У"}.items():
+                        text = text.replace(k, v)
+                if (await self.get_voice())["Locale"][0:2].lower() == "ru":
+                    for k, v in {
+                        "ў": "у",
+                        "Ў": "У",
+                        "і": "и",
+                        "І": "И",
+                        "ў": "у",
+                        "Ў": "У",
+                    }.items():
+                        text = text.replace(k, v)
+                ssml = speak_element_open + voice_element_open + text + voice_element_close + speak_element_close
+                ssml = re.sub(r"\<voice[^>]+\>\<prosody[^>]+>[\s\r\n]{0,}\</prosody\>\</voice>", "", ssml, flags = re.MULTILINE)
+            elif is_user_ssml:
+                ssml = text
             await ws.send_str(
                 self._build_request(
                     {
