@@ -3,6 +3,10 @@ not official API for Microsoft speech synthesis from Microsoft Edge web browser 
 
 ## Installation
 
+`poetry install msspeech`
+
+or
+
 `pip install --upgrade msspeech`
 
 or
@@ -12,6 +16,10 @@ or
 After updating an already installed library
 To update the list of voices, run the command in your terminal:
 `msspeech_update_voices`
+
+or
+
+`poetry run msspeech_update_voices`
 
 
 ## Notes
