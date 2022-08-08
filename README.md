@@ -3,7 +3,7 @@ not official API for Microsoft speech synthesis from Microsoft Edge web browser 
 
 ## Installation
 
-`poetry install msspeech`
+`poetry add msspeech && poetry install`
 
 or
 
@@ -37,7 +37,17 @@ SSML is very limited here, so there is no point in supporting it.
 https://docs.microsoft.com/ru-ru/azure/cognitive-services/speech-service/language-support#text-to-speech
 
 ## Using
-### Example
+### from CLI
+
+synthesize text:
+
+`msspeech Guy hello --filename audio.mp3`
+
+update voices:
+
+`msspeech_update_voices`
+
+### From python
 ```python
 import asyncio
 from msspeech import MSSpeech
@@ -61,7 +71,7 @@ async def main():
 	print("waiting...")
 	await mss.set_rate(1)
 	await mss.set_pitch(0)
-	await mss.set_volume(2)
+	await mss.set_volume(1)
 	await mss.synthesize(text.strip(), filename)
 	print("*"*10)
 	print("SUCCESS! OK!")
