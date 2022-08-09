@@ -3,11 +3,12 @@ not official API for Microsoft speech synthesis from Microsoft Edge web browser 
 
 ## Installation
 
-`poetry add msspeech`
+`pip install --upgrade msspeech`
 
 or
 
-`pip install --upgrade msspeech`
+`poetry add msspeech`
+
 
 After updating an already installed library
 To update the list of voices, run the command in your terminal:
@@ -30,14 +31,20 @@ the list of voices and the API as a whole has been very much limited!
 They returned back some male voices and added new languages, as well as made support for emotional styles.
 Despite the fact that styles appeared in JSON, you still won't be able to use them, SSML does not perceive them.
 SSML is very limited here, so there is no point in supporting it.
+
 The official documentation is not suitable for this API. It seems this API uses **undocumented** SSML markup.
+
 https://docs.microsoft.com/ru-ru/azure/cognitive-services/speech-service/language-support#text-to-speech
 
 ## Using
 the pitch and rate values are set as a percentage from -100 to +100,
 that is, it can be a negative, positive number, or zero for the default value.
+
 examples: -30, 40, 0
+
+
 The volume should be a fractional number from 0.1 to 1.0, but in fact it doesn't work for some reason.
+
 
 The maximum synthesize text length is approximately 31000 characters per request.
 
