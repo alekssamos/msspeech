@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "msspeech"
-version = "3.7.4"
+version = "3.7.5"
 description = "not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud"
 authors = ["Alexey <aleks-samos@yandex.ru>"]
 readme  = "README.md"
