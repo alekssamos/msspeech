@@ -1,7 +1,0 @@
-include setup.py
-include tests/*.py
-include requirements.txt
-include requirements-dev.txt
-include README.md
-include msspeech/*.py
-include msspeech/*.json

@@ -3,16 +3,24 @@ import pytest
 from aiohttp import web
 from msspeech import MSSpeech
 
+
 @pytest.fixture
 def event_loop():
-	loop = asyncio.get_event_loop()
-	yield loop
-	loop.close()
+    "run asyncio event loop"
+    loop = asyncio.get_event_loop()
+    yield loop
+    loop.close()
+
 
 async def voices_list_ok(request):
-	if "trustedclienttoken" not in request.rel_url.query or len(request.rel_url.query.get("trustedclienttoken", "")) < 10:
-		raise web.HTTPNotFound()
-	data = json.loads("""
+    "check request"
+    if (
+        "trustedclienttoken" not in request.rel_url.query
+        or len(request.rel_url.query.get("trustedclienttoken", "")) < 10
+    ):
+        raise web.HTTPNotFound()
+    data = json.loads(
+        """
 [
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-EG, SalmaNeural)",
@@ -33,22 +41,27 @@ async def voices_list_ok(request):
     "Status": "GA"
   }
 ]
-""".strip())
-	return web.json_response(data)
+""".strip()
+    )
+    return web.json_response(data)
+
 
 def create_app(get_event_loop):
-	app = web.Application(loop=get_event_loop)
-	app.router.add_route('GET', '/consumer/speech/synthesize/readaloud/voices/list', voices_list_ok)
-	return app
+    app = web.Application(loop=get_event_loop)
+    app.router.add_route(
+        "GET", "/consumer/speech/synthesize/readaloud/voices/list", voices_list_ok
+    )
+    return app
+
 
 async def test_voices_list(test_client):
-	client = await test_client(create_app)
-	msp = MSSpeech()
-	resp = await msp.voices_list()
+    client = await test_client(create_app)
+    msp = MSSpeech()
+    resp = await msp.voices_list()
 
-	assert len(resp) > 0
-	assert "Name" in resp[-1]
-	assert "ShortName" in resp[-1]
-	assert "Gender" in resp[-1]
-	assert "Locale" in resp[-1]
-	assert "FriendlyName" in resp[-1]
+    assert len(resp) > 0
+    assert "Name" in resp[-1]
+    assert "ShortName" in resp[-1]
+    assert "Gender" in resp[-1]
+    assert "Locale" in resp[-1]
+    assert "FriendlyName" in resp[-1]

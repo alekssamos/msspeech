@@ -13,14 +13,12 @@ async def main():
     # 			print("Russian voice found:", voice["FriendlyName"])
     # 			await mss.set_voice(voice["Name"])
 
-    # 	await mss.set_voice("ru-RU-DmitryNeural")
-    # await mss.set_voice("ru-RU-DariyaNeural")
-    await mss.set_voice("Дария")
+    await mss.set_voice("ru-RU-DmitryNeural")
     print("*" * 10)
     filename = "full.mp3"
     with open("s.txt", encoding="UTF8") as f:
         text: str = f.read()
-    text = "В новой версии появились локализованные имена. Оказывается, ты не Дарья, а Дария? Интересно."
+    text = "В новой версии вернули Димана, а Дашу нет!"
     print("waiting...")
     await mss.set_rate(1)
     await mss.set_pitch(0)
