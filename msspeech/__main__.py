@@ -3,7 +3,10 @@
 import asyncio
 import click
 
-from . import MSSpeech, msspeech_dir, MSSpeechError
+try:
+    from . import MSSpeech, msspeech_dir, MSSpeechError
+except ImportError:
+    from msspeech import MSSpeech, msspeech_dir, MSSpeechError
 
 
 async def a_main(voice_name, text, filename, rate, pitch, volume):

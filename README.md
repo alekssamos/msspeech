@@ -13,11 +13,11 @@ or
 After updating an already installed library
 To update the list of voices, run the command in your terminal:
 
-`msspeech_update_voices`
+`msspeech-update-voices`
 
 or
 
-`poetry run msspeech_update_voices`
+`poetry run msspeech-update-voices`
 
 
 ## Notes
@@ -56,7 +56,7 @@ synthesize text:
 
 update voices list:
 
-`msspeech_update_voices`
+`msspeech-update-voices`
 
 ### From python
 ```python
@@ -89,6 +89,5 @@ async def main():
 	print("*"*10)
 
 if __name__ == "__main__":
-	loop = asyncio.get_event_loop()
-	loop.run_until_complete(main())
+	asyncio.run(main())
 ```

@@ -1,5 +1,6 @@
 """not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud"""
 
+import sys
 import re
 import asyncio
 import aiofiles
@@ -13,7 +14,9 @@ import ssl
 
 bytes_or_str = Union[str, bytes]
 
-msspeech_dir = os.path.dirname(__file__)
+msspeech_dir:str = os.path.dirname(__file__)
+if getattr(sys, 'frozen', False):
+    msspeech_dir = os.path.dirname(os.path.abspath("."))
 
 def ireplace(old, repl, text):
     return re.sub('(?i)'+re.escape(old), lambda m: repl, text)
@@ -282,14 +285,14 @@ class MSSpeech:
                     sys.stderr.write(f"MSSpeech.get_voices_list: error ssaving {voicesplusfilepath}")
                 return _voices_list
 
-    async def synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = True) -> int:
+    async def synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = False) -> int:
         "returns the number of bytes written in an MP3 file"
         rplimit = 3
         for rpcount in range(1, rplimit + 1):
             try:
-                res = await self._synthesize(text, filename_or_buffer)
+                res = await asyncio.wait_for(self._synthesize(text, filename_or_buffer, multivoices), 240)
                 return res
-            except (aiohttp.ClientError, ssl.SSLError, ValueError, MSSpeechError) as e:
+            except (aiohttp.ClientError, ssl.SSLError, ValueError, MSSpeechError, asyncio.exceptions.TimeoutError) as e:
                 import sys
                 sys.stderr.write(
                     f"MSSpeech.synthesize: {sys.exc_info()[1]}, repeat #{rpcount}"
@@ -298,7 +301,9 @@ class MSSpeech:
                     raise
                 await asyncio.sleep(10)
 
-    async def _synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = True) -> int:
+    async def _synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = False) -> int:
+        if multivoices:
+            sys.stderr.write("warning: multiple voices are no longer supported")
         bc: int = 0
         if len(text.strip()) < 1:
             raise ValueError("the text cannot be empty")
