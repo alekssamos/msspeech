@@ -49,6 +49,8 @@ jobs:
 
     - run: pipx install poetry
     - name: Set up Python ${{ matrix.architecture }} on ${{ matrix.os }}
+      if: ${{ contains(matrix.os, 'ubuntu') && matrix.architecture != 'x86' }}
+      # for some reason, there is no python x86 for Linux
       uses: actions/setup-python@v4
       with:
         python-version: 3.8
