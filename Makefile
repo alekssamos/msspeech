@@ -36,7 +36,7 @@ test:
 
 compile:
 	poetry install --with dev
-	poetry run pyinstaller -n ${MSS} -y --clean -F --noupx ${MSS}/__main__.py
+	poetry run pyinstaller -n ${MSS} --clean -F --noupx ${MSS}/__main__.py
 
 # In this context, the *.project pattern means "anything that has the .project extension"
 clean:
