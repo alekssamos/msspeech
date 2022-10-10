@@ -117,4 +117,4 @@ jobs:
 
     - name: Publish to pypi
       run: |
-        poetry publish -n
+        poetry publish --build -n
