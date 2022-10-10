@@ -1,0 +1,99 @@
+name: ci
+
+on:
+  push:
+    tags: ["v*"]
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+        cache: 'poetry'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip wheel
+        python -m pip install poetry
+        poetry install -n --no-root --with dev
+
+    - name: Code checks
+      run: |
+        export SKIP=no-commit-to-branch
+        poetry run pre-commit run --all
+
+
+  compile:
+
+    if: ${{ startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-') }}
+    needs: ["build"]
+    strategy:
+      max-parallel: 4
+      matrix:
+        os: ["ubuntu-latest", "windows-latest"]
+        architecture: ["x86", "x64"]
+
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python ${{ matrix.architecture }} on ${{ matrix.os }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+        cache: 'poetry'
+        architecture: ${{ matrix.architecture }}
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        python -m pip install --upgrade pip wheel
+        python -m pip install poetry
+        poetry install -n --no-root --with dev
+
+    - name: setnamewin
+      if: ${{ contains(matrix.os, 'windows') }}
+      shell: bash
+      run: export NAMEPART=windows_${{ matrix.architecture }}
+    - name: setnamelinux executable
+      if: ${{ contains(matrix.os, 'ubuntu') }}
+      shell: bash
+      run: export NAMEPART=linux_${{ matrix.architecture }}
+    - name: building executable
+      shell: bash
+      run: poetry run pyinstaller -n msspeech_${NAMEPART} --clean -F --noupx msspeech/__main__.py
+
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: exe_for_${{ matrix.os }}_${{ matrix.architecture }}
+        path: dist/msspeech*
+
+  uploadrelease:
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-') }}
+    needs: ["build", "compile"]
+    steps:
+    - uses: actions/checkout@v3
+    - name: download releases files
+      uses: actions/download-artifact@v3
+    - name: Display structure of downloaded files
+      run: ls -R
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: exe_for_*/msspeech*
+        fail_on_unmatched_files: true
+        # append_body: true
