@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "msspeech"
-version = "3.7.5"
+version = "3.7.6"
 description = "not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud"
 authors = ["Alexey <aleks-samos@yandex.ru>"]
 readme  = "README.md"
@@ -8,7 +8,7 @@ repository  = "https://github.com/alekssamos/msspeech"
 include = ["msspeech/voices_list.json"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.7,<3.12"
 aiohttp = "^3.8.1"
 aiofiles = "^0.8.0"
 click = "^8.0.2"
@@ -24,6 +24,12 @@ pylint = "^2.10.2"
 pytest = "^6.2.5"
 pytest-aiohttp = "^1.0.4"
 typing-extensions = "^4.3.0"
+pyinstaller = [
+    {version = "^5.4", python = ">=3.8,<3.12"}
+]
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.20.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -32,6 +38,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 msspeech = 'msspeech.__main__:main'
 msspeech_update_voices = 'msspeech.__main__:update_voices'
+"msspeech-update-voices" = 'msspeech.__main__:update_voices'
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/alekssamos/msspeech/issues"

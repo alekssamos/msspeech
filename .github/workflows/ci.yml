@@ -1,0 +1,120 @@
+name: ci
+
+on:
+  push:
+    tags: ["v*"]
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - run: pipx install poetry
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+        cache: 'poetry'
+
+    - name: Install dependencies
+      run: |
+        poetry install -n --no-root --with dev
+
+    - name: Code checks
+      run: |
+        export SKIP=no-commit-to-branch
+        poetry run pre-commit run --all
+
+
+  compile:
+
+    if: ${{ startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-') }}
+    needs: ["build"]
+    strategy:
+      max-parallel: 4
+      matrix:
+        os: ["ubuntu-latest", "windows-latest"]
+
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v3
+
+    - run: pipx install poetry
+    - name: Set up Python x64 on ubuntu
+      if: ${{ contains(matrix.os, 'ubuntu') }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+        cache: 'poetry'
+
+    - run: pipx install poetry
+    - name: Set up Python x86 on windows
+      if: ${{ contains(matrix.os, 'windows') }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+        cache: 'poetry'
+        architecture: x86
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        poetry install -n --no-root --with dev
+
+    - name: building executable
+      shell: bash
+      run: poetry run pyinstaller -n msspeech --clean -F --noupx msspeech/__main__.py
+
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: exe_for_${{ matrix.os }}_${{ matrix.architecture }}
+        path: dist/msspeech*
+
+  uploadrelease:
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-') }}
+    needs: ["build", "compile"]
+    steps:
+    - uses: actions/checkout@v3
+    - name: download releases files
+      uses: actions/download-artifact@v3
+    - name: Display structure of downloaded files
+      run: ls -R
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: exe_for_*/msspeech*
+        fail_on_unmatched_files: true
+        # append_body: true
+
+    - run: pipx install poetry
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+        cache: 'poetry'
+
+    - name: Install dependencies
+      run: |
+        poetry install -n
+
+    - name: Check work
+      run: |
+        poetry run msspeech --help
+
+    - name: Login to pypi
+      run: |
+        poetry config -n pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+
+    - name: Publish to pypi
+      run: |
+        poetry publish --build -n
