@@ -97,3 +97,28 @@ jobs:
         files: exe_for_*/msspeech*
         fail_on_unmatched_files: true
         # append_body: true
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+        cache: 'poetry'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip wheel
+        python -m pip install poetry
+        poetry install -n
+
+    - name: Check work
+      run: |
+        poetry run msspeech --help
+
+    - name: Login to pypi
+      run: |
+        poetry config -n pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+
+
+    - name: Publish to pypi
+      run: |
+        poetry publish -n
