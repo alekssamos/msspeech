@@ -43,7 +43,7 @@ that is, it can be a negative, positive number, or zero for the default value.
 examples: -30, 40, 0
 
 
-The volume should be a fractional number from 0.1 to 1.0, but in fact it doesn't work for some reason.
+The volume should be a fractional number from 0.1 to 1.0.
 
 
 The maximum synthesize text length is approximately 31000 characters per request.
@@ -80,9 +80,9 @@ async def main():
 	# with open("s.txt", encoding="UTF8") as f: text:str = f.read()
 	text = "Или написать текст здесь"
 	print("waiting...")
-	await mss.set_rate(1)
-	await mss.set_pitch(0)
-	await mss.set_volume(1)
+	await mss.set_rate(30) # thirty percent faster
+	await mss.set_pitch(0) # by default, no changes
+	await mss.set_volume(0.5) # 50% volume, half
 	await mss.synthesize(text.strip(), filename)
 	print("*"*10)
 	print("SUCCESS! OK!")
