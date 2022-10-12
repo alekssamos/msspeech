@@ -10,7 +10,7 @@ include = ["msspeech/voices_list.json"]
 [tool.poetry.dependencies]
 python = ">=3.7,<3.12"
 aiohttp = "^3.8.1"
-aiofiles = "^0.8.0"
+aiofiles = ">=0.8,<22.2"
 click = "^8.0.2"
 
 [tool.poetry.dev-dependencies]
