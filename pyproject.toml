@@ -16,7 +16,7 @@ click = "^8.0.2"
 [tool.poetry.dev-dependencies]
 black = "22.10.0"
 flake8 = "^3.9.2"
-mypy = "^0.910"
+mypy = "^0.982"
 mypy-extensions = "^0.4.3"
 pycodestyle = "^2.7.0"
 pyflakes = "^2.3.1"
