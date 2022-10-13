@@ -33,8 +33,8 @@ jobs:
         poetry run pre-commit run --all
 
     - name: Run pytest
-      run: |
-        poetry run pytest 
+      run:|
+        poetry run pytest
 
   compile:
 
