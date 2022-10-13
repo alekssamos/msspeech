@@ -1,6 +1,7 @@
 import asyncio
 import pytest
 
+
 @pytest.mark.asyncio
 async def test_parse_multivoices_wwith_default_params(mss):
     input_text = "%Guy: Hi, Aria!\n%Aria: Hello, Guy!".strip()
