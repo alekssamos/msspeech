@@ -16,15 +16,19 @@ async def test_extract_response_str(mss):
 # @pytest.mark.xfail()
 async def test_extract_response_bytes(mss):
     expected_headers = {
-        "X-RequestId": "586e68cb1e7617113bee75",
+        "X-RequestId": "586e68cb7617113bee75",
         "Content-Type": "audio/webm; codec=opus",
         "X-StreamId": "D9C8CDE8B3E2451D84D416C9A44310CC",
         "Path": "audio",
     }
     expected_body = b"theaudiofile"
     response = (
-        b"X-RequestId:586e68cb1e7617113bee75\r\nContent-Type:audio/webm; codec=opus\r\nX-StreamId:D9C8CDE8B3E2451D84D416C9A44310CC\r\nPath:audio"
-        + b"\r\ntheaudiofile"
+        b".."
+        + b"X-RequestId:586e68cb7617113bee75\r\n"
+        + b"Content-Type:audio/webm; codec=opus\r\n"
+        + b"X-StreamId:D9C8CDE8B3E2451D84D416C9A44310CC\r\n"
+        + b"Path:audio\r\n"
+        + b"theaudiofile"
     )
     headers, body = mss._extract_response(response)
     assert body == expected_body
