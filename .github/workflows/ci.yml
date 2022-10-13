@@ -32,6 +32,7 @@ jobs:
         export SKIP=no-commit-to-branch
         poetry run pre-commit run --all
 
+        pytest 
 
   compile:
 
