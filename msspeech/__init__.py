@@ -3,29 +3,32 @@
 import sys
 import re
 import asyncio
-import aiofiles
+import aiofiles  # type: ignore
 import os, os.path
 import html
-from typing import Any, List, Dict, Tuple, Union
+from typing import Any, List, Dict, Tuple, Optional, Union
 from urllib.parse import urlencode
 import aiohttp
 import json
 import ssl
 
 bytes_or_str = Union[str, bytes]
+list_of_voices = List[Dict[str, str]]
 
-msspeech_dir:str = os.path.dirname(__file__)
-if getattr(sys, 'frozen', False):
+msspeech_dir: str = os.path.dirname(__file__)
+if getattr(sys, "frozen", False):
     msspeech_dir = os.path.dirname(os.path.abspath("."))
 
+
 def ireplace(old, repl, text):
-    return re.sub('(?i)'+re.escape(old), lambda m: repl, text)
+    return re.sub("(?i)" + re.escape(old), lambda m: repl, text)
+
 
 class MSSpeechError(Exception):
     pass
 
 
-_voices_list: List = []
+_voices_list: list_of_voices = []
 
 
 class MSSpeech:
@@ -61,7 +64,7 @@ class MSSpeech:
     voiceName: str = ""
     # voiceName = "Microsoft Server Speech Text to Speech Voice (ru-RU, SvetlanaNeural)"
     pitch: int = 0
-    volume: int = 0
+    volume: float = 1.0
     rate: int = 0
     config_sended: bool = False
 
@@ -72,25 +75,38 @@ class MSSpeech:
     def _int_to_str(i: int) -> str:
         return "+" + str(i) if i >= 0 else str(i)
 
+    @staticmethod
+    def _float_to_str(f: float) -> str:
+        return "+" + str(f) if f > 0 else str(f)
+
     async def set_pitch(self, pitch: int) -> None:
         self.pitch = int(pitch)
 
-    async def set_volume(self, volume: int) -> None:
-        self.volume = int(volume)
+    async def set_volume(self, volume: float) -> None:
+        "Set the speech volume"
+        if float(volume) >= 0.1 and float(volume) <= 1.0:
+            self.volume = float(volume)
+        else:
+            raise ValueError("The volume should be a fractional number from 0.1 to 1.0")
 
     async def set_rate(self, rate: int) -> None:
+        "Set the speech rate"
         self.rate = int(rate)
 
     async def get_pitch(self) -> int:
+        "Get the speech pitch"
         return self.pitch
 
-    async def get_volume(self) -> int:
+    async def get_volume(self) -> float:
+        "Get the speech volume"
         return self.volume
 
     async def get_rate(self) -> int:
+        "Get the speech rate"
         return self.rate
 
     async def set_voice(self, voiceName: str) -> None:
+        "Set the voice"
         if not isinstance(voiceName, str):
             raise TypeError(
                 "Not the correct data type. Required str. You passed "
@@ -104,49 +120,51 @@ class MSSpeech:
         voiceShortNames: List = [v["ShortName"] for v in voices if "ShortName" in v]
         if not voiceName in voiceNames + voiceShortNames:
             raise ValueError("Unknown voice " + voiceName)
-        self.voiceName = (await self.get_voices_by_substring(voiceName))[0]['Name']
+        self.voiceName = (await self.get_voices_by_substring(voiceName))[0]["Name"]
 
-    async def get_voices_by_substring(self, substring: str) -> dict:
+    async def get_voices_by_substring(self, substring: str) -> list_of_voices:
         """
         get   voices by substring
         """
-        voices: List[Dict] = await self.get_voices_list()
-        l:list = []
+        voices: list_of_voices = await self.get_voices_list()
+        l: list = []
         for voice in voices:
             if (
-                substring.strip() in voice["Name"].strip()
-                or substring.strip() in voice["ShortName"].strip()
-                or substring.strip() in voice["FriendlyName"].strip()
+                substring.strip().lower() in voice["Name"].strip().lower()
+                or substring.strip().lower() in voice["ShortName"].strip().lower()
+                or substring.strip().lower() in voice["FriendlyName"].strip().lower()
             ):
                 l.append(voice)
         return l
 
-    async def get_voice(self) -> dict:
-        voices: List[Dict] = await self.get_voices_list()
+    async def get_voice(self) -> Optional[Dict[str, str]]:
+        "Get the selected voice"
+        voices: list_of_voices = await self.get_voices_list()
         for voice in voices:
             if (
-                voice["Name"].strip() == self.voiceName.strip()
-                or voice["ShortName"].strip() == self.voiceName.strip()
-                or voice["FriendlyName"].strip() == self.voiceName.strip()
+                voice["Name"].strip().lower() == self.voiceName.strip().lower()
+                or voice["ShortName"].strip().lower() == self.voiceName.strip().lower()
+                or voice["FriendlyName"].strip().lower()
+                == self.voiceName.strip().lower()
             ):
                 return voice
-        return {}
+        return None
 
     async def parse_multivoices(
         self,
         message,
-        call_from_synthesize_function = False,
-        open_voice_tag_if_needed = '',
-        close_voice_tag_if_needed = '',
-        default_pitch = 0,
-        default_rate = 0,
-        default_volume = 0
+        call_from_synthesize_function=False,
+        open_voice_tag_if_needed="",
+        close_voice_tag_if_needed="",
+        default_pitch=0,
+        default_rate=0,
+        default_volume=1.0,
     ):
         """
         replacing voices with tags in the text
         """
-        message = re.sub(r'([%][\w]+[:])', '\n' + r'\1', message, flags=re.I)
-        pattern = re.compile(r'[%]([\w]+)[:](.*)', re.I)
+        message = re.sub(r"([%][\w]+[:])", "\n" + r"\1", message, flags=re.I)
+        pattern = re.compile(r"[%]([\w]+)[:](.*)", re.I)
         sudonames = {
             "DariyaNeural": ["Даша", "Дарья"],
             "SvetlanaNeural": ["Света", "Светлана"],
@@ -155,32 +173,36 @@ class MSSpeech:
         for k, v in sudonames.items():
             for sudoname in v:
                 message = ireplace(f"%{sudoname}:", f"%{k}:", message)
-        voices:list = await self.get_voices_list()
-        replaced:str = ''
+        voices: list = await self.get_voices_list()
+        replaced: str = ""
         for match in re.findall(pattern, message):
             voice_name_from_tag, text_from_tag = match
             for voice in voices:
-                voiceShortName = voice['ShortName'].split("-")[-1].lower()
+                voiceShortName = voice["ShortName"].split("-")[-1].lower()
                 if (
                     voice_name_from_tag.lower() == voiceShortName
-                    or voice_name_from_tag.lower()  + "neural" == voiceShortName
-                    or voice_name_from_tag.lower() == voice['FriendlyName'].lower()
+                    or voice_name_from_tag.lower() + "neural" == voiceShortName
+                    or voice_name_from_tag.lower() == voice["FriendlyName"].lower()
                 ):
-                    replaced = close_voice_tag_if_needed + """
-<voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'>{text_from_tag}</prosody></voice>
+                    replaced = (
+                        close_voice_tag_if_needed
+                        + """
+<voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}'>{text_from_tag}</prosody></voice>
                     """.format(
-                        voiceName = voice['ShortName'],
-                        text_from_tag = text_from_tag,
-                        pitch = default_pitch,
-                        rate = self._int_to_str(default_rate),
-                        volume=self._int_to_str(default_volume),
-                    ).strip() + open_voice_tag_if_needed
+                            voiceName=voice["ShortName"],
+                            text_from_tag=text_from_tag,
+                            pitch=default_pitch,
+                            rate=self._int_to_str(default_rate),
+                            volume=self._float_to_str(default_volume),
+                        ).strip()
+                        + open_voice_tag_if_needed
+                    )
                     message = re.sub(
                         r"[%]{}[:].*".format(voice_name_from_tag),
-                        replaced.replace('\\\\', '\\'),
+                        replaced.replace("\\\\", "\\"),
                         message,
-                        count = 1,
-                        flags = re.I
+                        count=1,
+                        flags=re.I,
                     )
                 else:
                     continue
@@ -248,24 +270,29 @@ class MSSpeech:
         """
 
         import sys
-        global _voices_list
-        _res = {}
-        if len(_voices_list) > 0:
+
+        _res = []
+        if _voices_list:
             return _voices_list
         voicesplusfilepath = os.path.join(msspeech_dir, "voices_list.json")
         # voicesplusfilepath = os.path.join(msspeech_dir, "voices_list_plus.json")
         if os.path.isfile(voicesplusfilepath):
             try:
                 with open(voicesplusfilepath, encoding="UTF8") as f:
-                    _res= json.load(f)
-                _voices_list = _res
+                    _res = json.load(f)
+                _voices_list.clear()
+                _voices_list.extend(_res)
             except json.decoder.JSONDecodeError:
-                _voices_list = {}
-                sys.stderr.write(f"MSSpeech.get_voices_list: error reading {voicesplusfilepath}")
-        if len(_voices_list) > 0:
+                _voices_list.clear()
+                sys.stderr.write(
+                    f"MSSpeech.get_voices_list: error reading {voicesplusfilepath}"
+                )
+        if _voices_list:
             return _voices_list
         async with aiohttp.ClientSession(headers=self.headers) as session:
-            sys.stdout.write("MSSpeech.get_voices_list: downloading voice list JSON file...")
+            sys.stdout.write(
+                "MSSpeech.get_voices_list: downloading voice list JSON file..."
+            )
             async with session.get(
                 self.endpoint + "consumer/speech/synthesize/readaloud/voices/list",
                 # "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list",
@@ -274,41 +301,62 @@ class MSSpeech:
                     # "Referer": "https://azure.microsoft.com/",
                     # "Origin": "https://azure.microsoft.com"
                 },
-                params={"trustedclienttoken": self.trustedclienttoken}
+                params={"trustedclienttoken": self.trustedclienttoken},
             ) as resp:
-                _voices_list = await resp.json()
-                # _voices_list = await resp.json(content_type = "text/plain; charset=utf-8")
+                _voices_list.clear()
+                _voices_list.extend(
+                    await resp.json(
+                        # content_type = "text/plain; charset=utf-8"
+                    )
+                )
                 try:
                     with open(voicesplusfilepath, "w", encoding="UTF8") as fp:
                         json.dump(_voices_list, fp, ensure_ascii=False, indent=2)
                 except OSError:
-                    sys.stderr.write(f"MSSpeech.get_voices_list: error ssaving {voicesplusfilepath}")
+                    sys.stderr.write(
+                        f"MSSpeech.get_voices_list: error ssaving {voicesplusfilepath}"
+                    )
                 return _voices_list
+        return _voices_list
 
-    async def synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = False) -> int:
+    async def synthesize(
+        self, text: str, filename_or_buffer: Any, multivoices: bool = False
+    ) -> int:
         "returns the number of bytes written in an MP3 file"
         rplimit = 3
         for rpcount in range(1, rplimit + 1):
             try:
-                res = await asyncio.wait_for(self._synthesize(text, filename_or_buffer, multivoices), 240)
+                res = await asyncio.wait_for(
+                    self._synthesize(text, filename_or_buffer, multivoices), 240
+                )
                 return res
-            except (aiohttp.ClientError, ssl.SSLError, ValueError, MSSpeechError, asyncio.exceptions.TimeoutError) as e:
+            except (
+                aiohttp.ClientError,
+                ssl.SSLError,
+                ValueError,
+                MSSpeechError,
+                asyncio.exceptions.TimeoutError,
+            ) as e:
                 import sys
+
                 sys.stderr.write(
                     f"MSSpeech.synthesize: {sys.exc_info()[1]}, repeat #{rpcount}"
                 )
                 if rpcount == rplimit:
                     raise
                 await asyncio.sleep(10)
+        return 0
 
-    async def _synthesize(self, text: str, filename_or_buffer: Any, multivoices:bool = False) -> int:
+    async def _synthesize(
+        self, text: str, filename_or_buffer: Any, multivoices: bool = False
+    ) -> int:
         if multivoices:
             sys.stderr.write("warning: multiple voices are no longer supported")
         bc: int = 0
         if len(text.strip()) < 1:
             raise ValueError("the text cannot be empty")
-        is_user_ssml:bool = "<speak" in text and "</speak>" in text
-        ssml:str = ""
+        is_user_ssml: bool = "<speak" in text and "</speak>" in text
+        ssml: str = ""
         async with aiohttp.ClientSession(headers=self.headers) as session:
             ws = await session.ws_connect(
                 self.endpoint
@@ -321,7 +369,7 @@ class MSSpeech:
                         "Content-Type": "application/json; charset=utf-8",
                         "Path": "speech.config",
                     },
-                    json.dumps(self.synthesis_config)
+                    json.dumps(self.synthesis_config),
                 ).decode("UTF8")
             )
             if not is_user_ssml:
@@ -367,15 +415,15 @@ class MSSpeech:
                 speak_element_open = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"
                 speak_element_close = "</speak>"
                 voice_element_open = """
-    <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}%'>
+    <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}'>
                 """.strip().format(
                     voiceName=self.voiceName,
                     pitch=self._int_to_str(self.pitch),
                     rate=self._int_to_str(self.rate),
-                    volume=self._int_to_str(self.volume),
+                    volume=self._float_to_str(self.volume),
                 )
                 voice_element_close = "</prosody></voice>"
-                if (await self.get_voice())["Locale"][0:2].lower() == "ru":
+                if (await self.get_voice())["Locale"][0:2].lower() == "ru":  # type: ignore
                     for k, v in {
                         "'": "ъ",
                     }.items():
@@ -384,17 +432,17 @@ class MSSpeech:
                 if multivoices:
                     text = await self.parse_multivoices(
                         text,
-                        call_from_synthesize_function = True,
-                        open_voice_tag_if_needed = voice_element_open,
-                        close_voice_tag_if_needed = voice_element_close,
-                        default_pitch = self.pitch,
-                        default_rate = self.rate,
-                        default_volume = self.volume,
+                        call_from_synthesize_function=True,
+                        open_voice_tag_if_needed=voice_element_open,
+                        close_voice_tag_if_needed=voice_element_close,
+                        default_pitch=self.pitch,
+                        default_rate=self.rate,
+                        default_volume=self.volume,
                     )
-                if (await self.get_voice())["Locale"][0:2].lower() == "uk":
+                if (await self.get_voice())["Locale"][0:2].lower() == "uk":  # type: ignore
                     for k, v in {"ў": "у", "Ў": "У"}.items():
                         text = text.replace(k, v)
-                if (await self.get_voice())["Locale"][0:2].lower() == "ru":
+                if (await self.get_voice())["Locale"][0:2].lower() == "ru":  # type: ignore
                     for k, v in {
                         "ў": "у",
                         "Ў": "У",
@@ -404,8 +452,19 @@ class MSSpeech:
                         "Ў": "У",
                     }.items():
                         text = text.replace(k, v)
-                ssml = speak_element_open + voice_element_open + text + voice_element_close + speak_element_close
-                ssml = re.sub(r"\<voice[^>]+\>\<prosody[^>]+>[\s\r\n]{0,}\</prosody\>\</voice>", "", ssml, flags = re.MULTILINE)
+                ssml = (
+                    speak_element_open
+                    + voice_element_open
+                    + text
+                    + voice_element_close
+                    + speak_element_close
+                )
+                ssml = re.sub(
+                    r"\<voice[^>]+\>\<prosody[^>]+>[\s\r\n]{0,}\</prosody\>\</voice>",
+                    "",
+                    ssml,
+                    flags=re.MULTILINE,
+                )
             elif is_user_ssml:
                 ssml = text
             await ws.send_str(
