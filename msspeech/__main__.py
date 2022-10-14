@@ -24,9 +24,9 @@ async def a_main(voice_name, text, filename, rate, pitch, volume):
 @click.argument("voice_name")
 @click.argument("text")
 @click.option("--filename", default="msspeech.mp3", help="Audio file name.")
-@click.option("--rate", default=0, help="Speech rate (from -100 to +100 or 0).")
-@click.option("--pitch", default=0, help="voice pitch (from -100 to +100 or 0).")
-@click.option("--volume", default=1.0, help="voice volume.")
+@click.option("--rate", type=click.IntRange(-100, 100, clamp=True), default=0, help="Speech rate (from -100 to +100 or 0).")
+@click.option("--pitch", type=click.IntRange(-100, 100, clamp=True), default=0, help="voice pitch (from -100 to +100 or 0).")
+@click.option("--volume", type=click.FloatRange(0.1, 1.0, clamp=True), default=1.0, help="voice volume.")
 def main(voice_name, text, filename="msspeech.mp3", rate=0, pitch=0, volume=1.0):
     """Fetch generated tts sounds from msspeech."""
     try:
