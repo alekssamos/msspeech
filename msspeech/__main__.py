@@ -30,8 +30,7 @@ async def a_main(voice_name, text, filename, rate, pitch, volume):
 def main(voice_name, text, filename="msspeech.mp3", rate=0, pitch=0, volume=1.0):
     """Fetch generated tts sounds from msspeech."""
     try:
-        loop = asyncio.get_event_loop()
-        click.echo(loop.run_until_complete(a_main(
+        click.echo(asyncio.run(a_main(
             voice_name=voice_name,
             text=text,
             filename=filename,
