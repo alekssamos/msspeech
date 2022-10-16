@@ -1,7 +1,8 @@
 import asyncio
-from typing import Generator, Tuple
+from typing import AsyncGenerator, Generator, Tuple
 from aiohttp.test_utils import TestClient, TestServer
 import pytest
+import pytest_asyncio
 from msspeech import MSSpeech
 
 
@@ -45,8 +46,8 @@ def mss(monkeypatch)->Generator[MSSpeech, None, None]:
     yield mss
 
 
-@pytest.fixture
-def cli_srv_mss(monkeypatch) -> Generator[Tuple[TestClient, TestServer,MSSpeech], None, None]:
+@pytest_asyncio.fixture
+async def cli_srv_mss(monkeypatch) -> AsyncGenerator[Tuple[TestClient, TestServer,MSSpeech], None]:
     "Create and return mock client and server for msspeech API and return mocked MSSpeech class instance"
     from aiohttp import web
     from unittest.mock import mock_open, patch
@@ -124,6 +125,7 @@ def cli_srv_mss(monkeypatch) -> Generator[Tuple[TestClient, TestServer,MSSpeech]
         )
 
     test_server = TestServer(app)
+    await test_server.start_server()
     test_client = TestClient(test_server)
     monkeypatch.setattr("msspeech.os.path.isfile", lambda x: False)
     monkeypatch.setattr("msspeech._voices_list", [])
@@ -132,6 +134,6 @@ def cli_srv_mss(monkeypatch) -> Generator[Tuple[TestClient, TestServer,MSSpeech]
         f"{test_server.scheme}://{test_server.host}:{test_server.port}",
     )
     monkeypatch.setattr("msspeech.MSSpeech.trustedclienttoken", "testtoken")
-    with patch(target="msspeech.MSSpeech.open", new=mock_open()):
+    with patch('builtins.open', new_callable=mock_open):
         yield (test_client, test_server, MSSpeech())
-    test_client.close()
+    await test_client.close()
