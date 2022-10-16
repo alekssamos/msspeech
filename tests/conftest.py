@@ -46,8 +46,8 @@ def mss(monkeypatch)->Generator[MSSpeech, None, None]:
 
 
 @pytest.fixture
-def mss_cli_srv(monkeypatch) -> Generator[Tuple[TestClient, TestServer], None, None]:
-    "Create and return mock client and server form msspeech API"
+def cli_srv_mss(monkeypatch) -> Generator[Tuple[TestClient, TestServer,MSSpeech], None, None]:
+    "Create and return mock client and server for msspeech API and return mocked MSSpeech class instance"
     from aiohttp import web
     from unittest.mock import mock_open
     import json
@@ -133,5 +133,5 @@ def mss_cli_srv(monkeypatch) -> Generator[Tuple[TestClient, TestServer], None, N
         f"{test_server.scheme}://{test_server.host}:{test_server.port}",
     )
     monkeypatch.setattr("msspeech.MSSpeech.trustedclienttoken", "testtoken")
-    yield (test_client, test_server)
+    yield (test_client, test_server, MSSpeech())
     test_client.close()
