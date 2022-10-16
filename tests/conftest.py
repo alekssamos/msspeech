@@ -123,6 +123,7 @@ async def cli_srv_mss(monkeypatch) -> AsyncGenerator[Tuple[TestClient, TestServe
                 ]"""
             )
         )
+    app.add_routes(routes)
 
     test_server = TestServer(app)
     await test_server.start_server()
