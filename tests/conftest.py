@@ -53,7 +53,6 @@ async def cli_srv_mss(
     "Create and return mock client and server for msspeech API and return mocked MSSpeech class instance"
     from aiohttp import web
     from unittest.mock import mock_open, patch
-    import json
 
     @web.middleware
     async def check_request(request, handler):
