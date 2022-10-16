@@ -104,6 +104,7 @@ async def cli_srv_mss(
                         "ContentCategories": ["News", "Novel"],
                         "VoicePersonalities": ["Positive", "Confident"],
                     },
+                  },
                   {
                     "Name": "Microsoft Server Speech Text to Speech Voice (en-US, GuyNeural)",
                     "ShortName": "en-US-GuyNeural",
