@@ -66,7 +66,7 @@ def cli_srv() -> Tuple[TestClient, TestServer]:
     routes = web.RouteTableDef()
 
     @routes.get("/consumer/speech/synthesize/readaloud/voices/list")
-    def get_voices_list_handler():
+    async def get_voices_list_handler(request):
         return web.json_response(
             json.loads(
                 """[
