@@ -70,8 +70,7 @@ async def cli_srv_mss(
     async def get_voices_list_handler(request):
         "Returns a list of 3 voices"
         return web.json_response(
-            json.loads(
-                """[
+                [
             {
                 "Name": "Microsoft Server Speech Text to Speech Voice (en-US, JennyNeural)",
                 "ShortName": "en-US-JennyNeural",
@@ -119,8 +118,7 @@ async def cli_srv_mss(
                 },
             },
 
-                ]"""
-            )
+                ]
         )
 
     app.add_routes(routes)
