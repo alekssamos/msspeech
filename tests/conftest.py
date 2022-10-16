@@ -7,7 +7,7 @@ from msspeech import MSSpeech
 
 
 @pytest.fixture
-def mss(monkeypatch)->Generator[MSSpeech, None, None]:
+def mss(monkeypatch) -> Generator[MSSpeech, None, None]:
     "Creating an object from a MSSpeech class and set 2 english voices in to list"
 
     async def fake_get_voices_list(obj):
@@ -47,7 +47,9 @@ def mss(monkeypatch)->Generator[MSSpeech, None, None]:
 
 
 @pytest_asyncio.fixture
-async def cli_srv_mss(monkeypatch) -> AsyncGenerator[Tuple[TestClient, TestServer,MSSpeech], None]:
+async def cli_srv_mss(
+    monkeypatch,
+) -> AsyncGenerator[Tuple[TestClient, TestServer, MSSpeech], None]:
     "Create and return mock client and server for msspeech API and return mocked MSSpeech class instance"
     from aiohttp import web
     from unittest.mock import mock_open, patch
@@ -119,10 +121,11 @@ async def cli_srv_mss(monkeypatch) -> AsyncGenerator[Tuple[TestClient, TestServe
                         "Passion"
                       ]
                     }
-                  }
+                  },
                 ]"""
             )
         )
+
     app.add_routes(routes)
 
     test_server = TestServer(app)
@@ -135,6 +138,6 @@ async def cli_srv_mss(monkeypatch) -> AsyncGenerator[Tuple[TestClient, TestServe
         f"{test_server.scheme}://{test_server.host}:{test_server.port}/",
     )
     monkeypatch.setattr("msspeech.MSSpeech.trustedclienttoken", "testtoken")
-    with patch('builtins.open', new_callable=mock_open):
+    with patch("builtins.open", new_callable=mock_open):
         yield (test_client, test_server, MSSpeech())
     await test_client.close()
