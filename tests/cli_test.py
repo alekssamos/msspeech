@@ -1,6 +1,6 @@
 from click.testing import CliRunner
 from msspeech.__main__ import main
-from mock import AsyncMock
+from mock import AsyncMock  # type: ignore
 import pytest
 
 
