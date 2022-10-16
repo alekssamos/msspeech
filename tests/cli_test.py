@@ -1,7 +1,6 @@
 from click.testing import CliRunner
 from msspeech.__main__ import main
 from mock import AsyncMock
-from random import randint
 import pytest
 
 
@@ -12,7 +11,7 @@ def test_help():
         assert x in result.output
     assert result.exit_code == 0
 
-def test_error(mss):
+def test_error():
     runner = CliRunner()
     result = runner.invoke(main, ['error'])
     assert result.exit_code != 0
