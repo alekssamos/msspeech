@@ -126,7 +126,7 @@ def cli_srv_mss(monkeypatch) -> Generator[Tuple[TestClient, TestServer,MSSpeech]
     test_server = TestServer(app)
     test_client = TestClient(test_server)
     monkeypatch.setattr("msspeech.os.path.isfile", lambda x: False)
-    monkeypatch.setattr("msspeech.open", mock_open)
+    monkeypatch.setattr("open", mock_open)
     monkeypatch.setattr("msspeech._voices_list", [])
     monkeypatch.setattr(
         "msspeech.MSSpeech.endpoint",
