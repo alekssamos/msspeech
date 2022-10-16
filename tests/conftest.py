@@ -49,7 +49,7 @@ def mss(monkeypatch)->Generator[MSSpeech, None, None]:
 def cli_srv_mss(monkeypatch) -> Generator[Tuple[TestClient, TestServer,MSSpeech], None, None]:
     "Create and return mock client and server for msspeech API and return mocked MSSpeech class instance"
     from aiohttp import web
-    from unittest.mock import mock_open
+    from unittest.mock import mock_open, patch
     import json
 
     @web.middleware
@@ -126,12 +126,12 @@ def cli_srv_mss(monkeypatch) -> Generator[Tuple[TestClient, TestServer,MSSpeech]
     test_server = TestServer(app)
     test_client = TestClient(test_server)
     monkeypatch.setattr("msspeech.os.path.isfile", lambda x: False)
-    monkeypatch.setattr("open", mock_open)
     monkeypatch.setattr("msspeech._voices_list", [])
     monkeypatch.setattr(
         "msspeech.MSSpeech.endpoint",
         f"{test_server.scheme}://{test_server.host}:{test_server.port}",
     )
     monkeypatch.setattr("msspeech.MSSpeech.trustedclienttoken", "testtoken")
-    yield (test_client, test_server, MSSpeech())
+    with patch(target="msspeech.MSSpeech.open", new=mock_open()):
+        yield (test_client, test_server, MSSpeech())
     test_client.close()
