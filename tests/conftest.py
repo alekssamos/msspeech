@@ -131,7 +131,7 @@ async def cli_srv_mss(monkeypatch) -> AsyncGenerator[Tuple[TestClient, TestServe
     monkeypatch.setattr("msspeech._voices_list", [])
     monkeypatch.setattr(
         "msspeech.MSSpeech.endpoint",
-        f"{test_server.scheme}://{test_server.host}:{test_server.port}",
+        f"{test_server.scheme}://{test_server.host}:{test_server.port}/",
     )
     monkeypatch.setattr("msspeech.MSSpeech.trustedclienttoken", "testtoken")
     with patch('builtins.open', new_callable=mock_open):
