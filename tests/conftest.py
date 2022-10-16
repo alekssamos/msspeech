@@ -1,12 +1,12 @@
 import asyncio
-from typing import Tuple
+from typing import Generator, Tuple
 from aiohttp.test_utils import TestClient, TestServer
 import pytest
 from msspeech import MSSpeech
 
 
 @pytest.fixture
-def mss(monkeypatch):
+def mss(monkeypatch)->Generator[MSSpeech, None, None]:
     "Creating an object from a MSSpeech class and set 2 english voices in to list"
 
     async def fake_get_voices_list(obj):
@@ -46,7 +46,7 @@ def mss(monkeypatch):
 
 
 @pytest.fixture
-def mss_cli_srv(monkeypatch) -> Tuple[TestClient, TestServer]:
+def mss_cli_srv(monkeypatch) -> Generator[Tuple[TestClient, TestServer], None, None]:
     "Create and return mock client and server form msspeech API"
     from aiohttp import web
     from unittest.mock import mock_open
