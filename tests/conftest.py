@@ -83,10 +83,10 @@ async def cli_srv_mss(
     sp_config,
     aiohttp_client,
     aiohttp_server,
+    tmp_path,
 ) -> AsyncGenerator[Tuple[TestClient, TestServer, MSSpeech], None]:
     "Create and return mock client and server for msspeech API and return mocked MSSpeech class instance"
     from aiohttp import web
-    from unittest.mock import mock_open, patch
     import json
 
     @web.middleware
@@ -200,6 +200,7 @@ async def cli_srv_mss(
         f"{test_server.scheme}://{test_server.host}:{test_server.port}/",
     )
     monkeypatch.setattr("msspeech.MSSpeech.trustedclienttoken", "testtoken")
-    with patch("builtins.open", new_callable=mock_open):
-        yield (test_client, test_server, MSSpeech())
+    monkeypatch.setattr("msspeech.msspeech_dir", str(tmp_path))
+    monkeypatch.chdir(tmp_path)
+    yield (test_client, test_server, MSSpeech())
     await test_client.close()
