@@ -173,7 +173,7 @@ async def cli_srv_mss(
                         await ws.send_str("""Content-Type:application/json\r\nPath:qwe.rty\r\n\r\n{"something":"not_used_for_me"}""")
                     if "Content-Type:application/ssml+xml" in headers and "Path:ssml" in headers:
                         for x in [
-                            "<speak", "<voice", "<prosody>",
+                            "<speak", "<voice", "</prosody>",
                             "</speak>", "</voice>", "</prosody>",
                         ]:
                             assert x in body
