@@ -16,4 +16,4 @@ async def test_synthesize_api(cli_srv_mss):
     filename = "test.opus"
     await mss.synthesize("hi!", filename)
     with open(filename, "rb") as f:
-        assert fp.read() == b"theaudiofile"
+        assert f.read() == b"theaudiofile"
