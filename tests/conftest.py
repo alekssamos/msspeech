@@ -81,6 +81,8 @@ async def cli_srv_mss(
     monkeypatch,
     sp_audio,
     sp_config,
+    aiohttp_client,
+    aiohttp_server,
 ) -> AsyncGenerator[Tuple[TestClient, TestServer, MSSpeech], None]:
     "Create and return mock client and server for msspeech API and return mocked MSSpeech class instance"
     from aiohttp import web
@@ -188,9 +190,9 @@ async def cli_srv_mss(
 
     app.add_routes(routes)
 
-    test_server = TestServer(app)
+    test_server = await aiohttp_server(app)
     await test_server.start_server()
-    test_client = TestClient(test_server)
+    test_client = await aiohttp_client(test_server)
     monkeypatch.setattr("msspeech.os.path.isfile", lambda x: False)
     monkeypatch.setattr("msspeech._voices_list", [])
     monkeypatch.setattr(
