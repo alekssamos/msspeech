@@ -178,7 +178,7 @@ async def cli_srv_mss(
                         ]:
                             assert x in body
                         await ws.send_bytes(sp_audio)
-                        ws.send_str("""Content-Type:application/json\r\nPath:qwe.rty\r\n\r\n{"something":"not_used_for_me"}""")
+                        await ws.send_str("""Content-Type:application/json\r\nPath:qwe.rty\r\n\r\n{"something":"not_used_for_me"}""")
                         await ws.send_str("""Content-Type:application/json\r\nPath:qwe.rty\r\n\r\n{}""")
             elif msg.type == aiohttp.WSMsgType.ERROR:
                 print('ws connection closed with exception %s' %
