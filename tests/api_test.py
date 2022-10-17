@@ -13,4 +13,7 @@ async def test_synthesize_api(cli_srv_mss):
     client, server, mss = cli_srv_mss
     vn = (await mss.get_voices_by_substring("Guy"))[0]["Name"]
     await mss.set_voice(vn)
-    await mss.synthesize("hi!", "test.opus")
+    filename = "test.opus"
+    await mss.synthesize("hi!", filename)
+    with open(filename, "rb") as f:
+        assert fp.read() == b"theaudiofile"
