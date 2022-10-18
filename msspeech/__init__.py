@@ -10,6 +10,7 @@ from typing import Any, List, Dict, Tuple, Optional, Union
 from urllib.parse import urlencode
 import aiohttp
 import json
+import math
 import ssl
 
 bytes_or_str = Union[str, bytes]
@@ -72,15 +73,18 @@ class MSSpeech:
         """Create class instance"""
 
     @staticmethod
+    def _normalize_volume(vol:float)->int:
+        return math.ceil(vol*100)
+
+    @staticmethod
     def _int_to_str(i: int) -> str:
         return "+" + str(i) if i >= 0 else str(i)
 
-    @staticmethod
-    def _float_to_str(f: float) -> str:
-        return "+" + str(f) if f > 0 else str(f)
-
     async def set_pitch(self, pitch: int) -> None:
-        self.pitch = int(pitch)
+        if abs(int(pitch)) <= 100:
+            self.pitch = int(pitch)
+        else:
+            raise ValueError("The pitch must be a negative or positive integer in the range from -100 to +100 or 0")
 
     async def set_volume(self, volume: float) -> None:
         "Set the speech volume"
@@ -91,7 +95,10 @@ class MSSpeech:
 
     async def set_rate(self, rate: int) -> None:
         "Set the speech rate"
-        self.rate = int(rate)
+        if abs(int(rate)) <= 100:
+            self.rate = int(rate)
+        else:
+            raise ValueError("The rate must be a negative or positive integer in the range from -100 to +100 or 0")
 
     async def get_pitch(self) -> int:
         "Get the speech pitch"
@@ -193,7 +200,7 @@ class MSSpeech:
                             text_from_tag=text_from_tag,
                             pitch=default_pitch,
                             rate=self._int_to_str(default_rate),
-                            volume=self._float_to_str(default_volume),
+                            volume=self._normalize_volume(default_volume),
                         ).strip()
                         + open_voice_tag_if_needed
                     )
@@ -420,7 +427,7 @@ class MSSpeech:
                     voiceName=self.voiceName,
                     pitch=self._int_to_str(self.pitch),
                     rate=self._int_to_str(self.rate),
-                    volume=self._float_to_str(self.volume),
+                    volume=self._normalize_volume(self.volume),
                 )
                 voice_element_close = "</prosody></voice>"
                 if (await self.get_voice())["Locale"][0:2].lower() == "ru":  # type: ignore

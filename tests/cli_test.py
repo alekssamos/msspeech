@@ -37,7 +37,7 @@ def test_call_synthesize_clamp(monkeypatch, r, p, v):
     args, kwargs = am.call_args_list[0]
     assert abs(kwargs["rate"]) <= 100
     assert abs(kwargs["pitch"]) <= 100
-    assert kwargs["volume"] >= 0.1 <= 1.0
+    assert kwargs["volume"] >= 0.1 and kwargs["volume"] <= 1.0
     assert kwargs["voice_name"] == voice_name
     assert kwargs["text"] == text
 
