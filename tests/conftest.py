@@ -166,6 +166,10 @@ async def cli_srv_mss(
                 if msg.data == 'close':
                     await ws.close()
                 else:
+                    if "ssml error" in msg.data:
+                        await ws.send_str('1007')
+                        await ws.close()
+                        return ws
                     headers, body = msg.data.split("\r\n\r\n", 1)
                     if "Content-Type:application/json" in headers and "Path:speech.config" in headers:
                         body = json.loads(body)
