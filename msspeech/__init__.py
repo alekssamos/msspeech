@@ -26,7 +26,10 @@ def ireplace(old, repl, text):
 
 
 class MSSpeechError(Exception):
-    pass
+    code = 0
+    def __init__(self, msg, code = 0):
+        super().__init__(msg)
+        self.code = code
 
 
 _voices_list: list_of_voices = []
@@ -344,6 +347,8 @@ class MSSpeech:
                 MSSpeechError,
                 asyncio.exceptions.TimeoutError,
             ) as e:
+                if getattr(e, "code", 0) == 1007:
+                    raise
                 import sys
 
                 sys.stderr.write(
@@ -498,10 +503,11 @@ class MSSpeech:
                 ):
                     await ws.close()
                     break
-                if isinstance(msg.data, int):
+                if isinstance(msg.data, int) or str(msg.data).isdigit():
                     await ws.close()
                     raise MSSpeechError(
-                        self.errors.get(msg.data, "unknown error #" + str(msg.data))
+                        self.errors.get(int(msg.data), "unknown error #" + str(msg.data)),
+                        code = int(msg.data)
                     )
                     break
                 resp = self._extract_response(msg.data)
