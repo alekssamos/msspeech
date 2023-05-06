@@ -337,7 +337,7 @@ class MSSpeech:
         for rpcount in range(1, rplimit + 1):
             try:
                 res = await asyncio.wait_for(
-                    self._synthesize(text, filename_or_buffer, multivoices), 240
+                    self._synthesize(text, filename_or_buffer, multivoices), 500
                 )
                 return res
             except (
