@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "msspeech"
-version = "3.7.11"
+version = "3.7.12"
 description = "not official API for Microsoft speech synthesis from Microsoft Edge web browser read aloud"
 authors = ["Alexey <aleks-samos@yandex.ru>"]
 readme  = "README.md"
@@ -9,27 +9,27 @@ include = ["msspeech/voices_list.json"]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<3.12"
-aiohttp = "^3.8.1"
-aiofiles = "^0.8.0"
-click = "^8.0.2"
+aiohttp = ">3.8.1"
+aiofiles = ">0.8.0"
+click = ">8.0.2"
 
 [tool.poetry.dev-dependencies]
-black = "23.3.0"
-flake8 = "^3.9.2"
-mypy = "^0.991"
-mypy-extensions = "^0.4.3"
-pycodestyle = "^2.7.0"
-pyflakes = "^2.3.1"
-pylint = "^2.10.2"
-pytest = "^7.3.1"
-pytest-aiohttp = "^1.0.4"
-typing-extensions = "^4.3.0"
+black = ">=23.3.0"
+flake8 = ">=3.9.2"
+mypy = ">=0.991"
+mypy-extensions = ">=0.4.3"
+pycodestyle = ">=2.7.0"
+pyflakes = ">=2.3.1"
+pylint = ">=2.10.2"
+pytest = ">=7.3.1"
+pytest-aiohttp = ">=1.0.4"
+typing-extensions = ">=4.3.0"
 pyinstaller = [
-    {version = "^5.4", python = ">=3.8,<3.12"}
+    {version = ">5.4", python = ">=3.8,<3.12"}
 ]
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^2.20.0"
+pre-commit = ">2.20.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
