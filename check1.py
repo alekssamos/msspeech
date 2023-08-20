@@ -20,7 +20,7 @@ async def main():
         text: str = f.read()
     text = "В новой версии вернули Димана, а Дашу нет!"
     print("waiting...")
-    await mss.set_rate(1.0)
+    await mss.set_rate(10)
     await mss.set_pitch(0)
     await mss.set_volume(1.0)
     await mss.synthesize(text.strip(), filename)
