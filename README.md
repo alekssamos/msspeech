@@ -80,9 +80,9 @@ async def main():
 	# with open("s.txt", encoding="UTF8") as f: text:str = f.read()
 	text = "Или написать текст здесь"
 	print("waiting...")
-	await mss.set_rate(1)
+	await mss.set_rate(10)
 	await mss.set_pitch(0)
-	await mss.set_volume(1)
+	await mss.set_volume(1.0)
 	await mss.synthesize(text.strip(), filename)
 	print("*"*10)
 	print("SUCCESS! OK!")
