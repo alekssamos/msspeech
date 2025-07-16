@@ -4,8 +4,8 @@ import sys
 import re
 import asyncio
 import aiofiles  # type: ignore
-import os, os.path
-import html
+import os
+import os.path
 from typing import Any, List, Dict, Tuple, Optional, Union
 from urllib.parse import urlencode
 import aiohttp
@@ -27,7 +27,8 @@ def ireplace(old, repl, text):
 
 class MSSpeechError(Exception):
     code = 0
-    def __init__(self, msg, code = 0):
+
+    def __init__(self, msg, code=0):
         super().__init__(msg)
         self.code = code
 
@@ -76,8 +77,8 @@ class MSSpeech:
         """Create class instance"""
 
     @staticmethod
-    def _normalize_volume(vol:float)->int:
-        return math.ceil(vol*100)
+    def _normalize_volume(vol: float) -> int:
+        return math.ceil(vol * 100)
 
     @staticmethod
     def _int_to_str(i: int) -> str:
@@ -87,7 +88,9 @@ class MSSpeech:
         if abs(int(pitch)) <= 100:
             self.pitch = int(pitch)
         else:
-            raise ValueError("The pitch must be a negative or positive integer in the range from -100 to +100 or 0")
+            raise ValueError(
+                "The pitch must be a negative or positive integer in the range from -100 to +100 or 0"
+            )
 
     async def set_volume(self, volume: float) -> None:
         "Set the speech volume"
@@ -101,7 +104,9 @@ class MSSpeech:
         if abs(int(rate)) <= 100:
             self.rate = int(rate)
         else:
-            raise ValueError("The rate must be a negative or positive integer in the range from -100 to +100 or 0")
+            raise ValueError(
+                "The rate must be a negative or positive integer in the range from -100 to +100 or 0"
+            )
 
     async def get_pitch(self) -> int:
         "Get the speech pitch"
@@ -128,7 +133,7 @@ class MSSpeech:
         voices: List[Dict] = await self.get_voices_list()
         voiceNames: List = [v["Name"] for v in voices if "FriendlyName" in v]
         voiceShortNames: List = [v["ShortName"] for v in voices if "ShortName" in v]
-        if not voiceName in voiceNames + voiceShortNames:
+        if voiceName not in voiceNames + voiceShortNames:
             raise ValueError("Unknown voice " + voiceName)
         self.voiceName = (await self.get_voices_by_substring(voiceName))[0]["Name"]
 
@@ -337,7 +342,7 @@ class MSSpeech:
         for rpcount in range(1, rplimit + 1):
             try:
                 res = await asyncio.wait_for(
-                    self._synthesize(text, filename_or_buffer, multivoices), 500
+                    self._synthesize(text, filename_or_buffer, multivoices), 400
                 )
                 return res
             except (
@@ -362,163 +367,170 @@ class MSSpeech:
     async def _synthesize(
         self, text: str, filename_or_buffer: Any, multivoices: bool = False
     ) -> int:
+        bc: int = 0
+        f: Any = None
         if multivoices:
             sys.stderr.write("warning: multiple voices are no longer supported")
-        bc: int = 0
-        if len(text.strip()) < 1:
-            raise ValueError("the text cannot be empty")
-        is_user_ssml: bool = "<speak" in text and "</speak>" in text
-        ssml: str = ""
-        async with aiohttp.ClientSession(headers=self.headers) as session:
-            ws = await session.ws_connect(
-                self.endpoint
-                + "consumer/speech/synthesize/readaloud/edge/v1?"
-                + urlencode({"trustedclienttoken": self.trustedclienttoken})
-            )
-            await ws.send_str(
-                self._build_request(
-                    {
-                        "Content-Type": "application/json; charset=utf-8",
-                        "Path": "speech.config",
-                    },
-                    json.dumps(self.synthesis_config),
-                ).decode("UTF8")
-            )
-            if not is_user_ssml:
-                text = text.replace("\r\n", "\n").replace("\r", "\n")
-                text = re.sub(r"([\w])[-][\r\n]([\w])", r"\1\2", text)
-                text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
-                text = re.sub(r"[ \t]{2,}", r" ", text)
-                text = re.sub(r"([\w])([.!?,])([\w])", r"\1\2 \3", text)
-                CHARACTER_TO_ESCAPE = {
-                    "<": "&lt;",
-                    ">": "&gt;",
-                    "&": "&amp;",
-                    '"': "&quot;",
-                    "'": "&apos;",
-                }
-                ESCAPE_TO_CHARACTER = {
-                    "&lt;": "<",
-                    "&gt;": ">",
-                    "&amp;": "&",
-                    "&quot;": '"',
-                    "&apos;": "'",
-                }
-                STANDARD_CONVERSION = {
-                    "‘": "'",
-                    "’": "'",
-                    "‛": "'",
-                    "‚": "'",
-                    "′": "'",
-                    "“": '"',
-                    "”": '"',
-                    "„": '"',
-                    "‟": '"',
-                    "″": '"',
-                }
+        try:
+            if len(text.strip()) < 1:
+                raise ValueError("the text cannot be empty")
+            is_user_ssml: bool = "<speak" in text and "</speak>" in text
+            ssml: str = ""
+            async with aiohttp.ClientSession(headers=self.headers) as session:
+                ws = await session.ws_connect(
+                    self.endpoint
+                    + "consumer/speech/synthesize/readaloud/edge/v1?"
+                    + urlencode({"trustedclienttoken": self.trustedclienttoken})
+                )
+                await ws.send_str(
+                    self._build_request(
+                        {
+                            "Content-Type": "application/json; charset=utf-8",
+                            "Path": "speech.config",
+                        },
+                        json.dumps(self.synthesis_config),
+                    ).decode("UTF8")
+                )
+                if not is_user_ssml:
+                    text = text.replace("\r\n", "\n").replace("\r", "\n")
+                    text = re.sub(r"([\w])[-][\r\n]([\w])", r"\1\2", text)
+                    text = re.sub(r"([^\n])[\n]([^\n])", r"\1 \2", text)
+                    text = re.sub(r"[ \t]{2,}", r" ", text)
+                    text = re.sub(r"([\w])([.!?,])([\w])", r"\1\2 \3", text)
+                    CHARACTER_TO_ESCAPE = {
+                        "<": " ",
+                        ">": " ",
+                        "&": " ",
+                        '"': " ",
+                        "'": " ",
+                    }
+                    ESCAPE_TO_CHARACTER = {
+                        "&lt;": "<",
+                        "&gt;": ">",
+                        "&amp;": "&",
+                        "&quot;": '"',
+                        "&apos;": "'",
+                    }
+                    STANDARD_CONVERSION = {
+                        "‘": "'",
+                        "’": "'",
+                        "‛": "'",
+                        "‚": "'",
+                        "′": "'",
+                        "“": '"',
+                        "”": '"',
+                        "„": '"',
+                        "‟": '"',
+                        "″": '"',
+                    }
 
-                for k, v in STANDARD_CONVERSION.items():
-                    text = text.replace(k, v)
-                for k, v in CHARACTER_TO_ESCAPE.items():
-                    text = text.replace(k, v)
-                for c in range(0, 32):
-                    if c not in [9, 10, 13]:
-                        text = text.replace(chr(c), " ")
-                speak_element_open = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"
-                speak_element_close = "</speak>"
-                voice_element_open = """
-    <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}'>
-                """.strip().format(
-                    voiceName=self.voiceName,
-                    pitch=self._int_to_str(self.pitch),
-                    rate=self._int_to_str(self.rate),
-                    volume=self._normalize_volume(self.volume),
-                )
-                voice_element_close = "</prosody></voice>"
-                if (await self.get_voice())["Locale"][0:2].lower() == "ru":  # type: ignore
-                    for k, v in {
-                        "'": "ъ",
-                    }.items():
+                    for k, v in STANDARD_CONVERSION.items():
                         text = text.replace(k, v)
-                multivoices = False
-                if multivoices:
-                    text = await self.parse_multivoices(
-                        text,
-                        call_from_synthesize_function=True,
-                        open_voice_tag_if_needed=voice_element_open,
-                        close_voice_tag_if_needed=voice_element_close,
-                        default_pitch=self.pitch,
-                        default_rate=self.rate,
-                        default_volume=self.volume,
+                    for k, v in CHARACTER_TO_ESCAPE.items():
+                        text = text.replace(k, v)
+                    for c in range(0, 32):
+                        if c not in [9, 10, 13]:
+                            text = text.replace(chr(c), " ")
+                    speak_element_open = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"
+                    speak_element_close = "</speak>"
+                    voice_element_open = """
+        <voice  name='{voiceName}'><prosody pitch='{pitch}Hz' rate ='{rate}%' volume='{volume}'>
+                    """.strip().format(
+                        voiceName=self.voiceName,
+                        pitch=self._int_to_str(self.pitch),
+                        rate=self._int_to_str(self.rate),
+                        volume=self._normalize_volume(self.volume),
                     )
-                if (await self.get_voice())["Locale"][0:2].lower() == "uk":  # type: ignore
-                    for k, v in {"ў": "у", "Ў": "У"}.items():
-                        text = text.replace(k, v)
-                if (await self.get_voice())["Locale"][0:2].lower() == "ru":  # type: ignore
-                    for k, v in {
-                        "ў": "у",
-                        "Ў": "У",
-                        "і": "и",
-                        "І": "И",
-                        "ў": "у",
-                        "Ў": "У",
-                    }.items():
-                        text = text.replace(k, v)
-                ssml = (
-                    speak_element_open
-                    + voice_element_open
-                    + text
-                    + voice_element_close
-                    + speak_element_close
-                )
-                ssml = re.sub(
-                    r"\<voice[^>]+\>\<prosody[^>]+>[\s\r\n]{0,}\</prosody\>\</voice>",
-                    "",
-                    ssml,
-                    flags=re.MULTILINE,
-                )
-            elif is_user_ssml:
-                ssml = text
-            await ws.send_str(
-                self._build_request(
-                    {
-                        "X-RequestId": "586bb1cb2bbe2e68bb1e7617113bee75",
-                        "Content-Type": "application/ssml+xml",
-                        "Path": "ssml",
-                    },
-                    ssml,
-                ).decode("UTF8")
-            )
-            f: Any = None
-            while True:
-                msg = await ws.receive()
-                if (
-                    f is not None
-                    and msg.type == aiohttp.WSMsgType.text
-                    and "json" in msg.data
-                    and len(json.loads(self._extract_response(msg.data)[1])) == 0
-                ) or (
-                    msg.type == aiohttp.WSMsgType.closed
-                    or msg.type == aiohttp.WSMsgType.error
-                ):
-                    await ws.close()
-                    break
-                if isinstance(msg.data, int) or str(msg.data).isdigit():
-                    await ws.close()
-                    raise MSSpeechError(
-                        self.errors.get(int(msg.data), "unknown error #" + str(msg.data)),
-                        code = int(msg.data)
+                    voice_element_close = "</prosody></voice>"
+                    if (await self.get_voice())["Locale"][0:2].lower() == "ru":  # type: ignore
+                        for k, v in {
+                            "'": "ъ",
+                        }.items():
+                            text = text.replace(k, v)
+                    multivoices = False
+                    if multivoices:
+                        text = await self.parse_multivoices(
+                            text,
+                            call_from_synthesize_function=True,
+                            open_voice_tag_if_needed=voice_element_open,
+                            close_voice_tag_if_needed=voice_element_close,
+                            default_pitch=self.pitch,
+                            default_rate=self.rate,
+                            default_volume=self.volume,
+                        )
+                    if (await self.get_voice())["Locale"][0:2].lower() == "uk":  # type: ignore
+                        for k, v in {"ў": "у", "Ў": "У"}.items():
+                            text = text.replace(k, v)
+                    if (await self.get_voice())["Locale"][0:2].lower() == "ru":  # type: ignore
+                        for k, v in {
+                            "ў": "у",
+                            "Ў": "У",
+                            "і": "и",
+                            "І": "И",
+                            "ў": "у",
+                            "Ў": "У",
+                        }.items():
+                            text = text.replace(k, v)
+                    ssml = (
+                        speak_element_open
+                        + voice_element_open
+                        + text
+                        + voice_element_close
+                        + speak_element_close
                     )
-                    break
-                resp = self._extract_response(msg.data)
-                if isinstance(resp[1], bytes):
-                    if f is None:
-                        if isinstance(filename_or_buffer, str):
-                            f = await aiofiles.open(filename_or_buffer, "wb")
-                        else:
-                            f = filename_or_buffer
-                    bc += await f.write(resp[1])
-            if f is not None and isinstance(filename_or_buffer, str):
-                await f.close()
-            f = None
-            return bc
+                    ssml = re.sub(
+                        r"\<voice[^>]+\>\<prosody[^>]+>[\s\r\n]{0,}\</prosody\>\</voice>",
+                        "",
+                        ssml,
+                        flags=re.MULTILINE,
+                    )
+                elif is_user_ssml:
+                    ssml = text
+                await ws.send_str(
+                    self._build_request(
+                        {
+                            "X-RequestId": "586bb1cb2bbe2e68bb1e7617113bee75",
+                            "Content-Type": "application/ssml+xml",
+                            "Path": "ssml",
+                        },
+                        ssml,
+                    ).decode("UTF8")
+                )
+                while True:
+                    msg = await ws.receive()
+                    if (
+                        f is not None
+                        and msg.type == aiohttp.WSMsgType.text
+                        and "json" in msg.data
+                        and len(json.loads(self._extract_response(msg.data)[1])) == 0
+                    ) or (
+                        msg.type == aiohttp.WSMsgType.closed
+                        or msg.type == aiohttp.WSMsgType.error
+                    ):
+                        await ws.close()
+                        break
+                    if isinstance(msg.data, int) or str(msg.data).isdigit():
+                        await ws.close()
+                        with open("text_with_errors_1007.txt", "wb") as fperror: fperror.write( text.encode() )
+                        raise MSSpeechError(
+                            self.errors.get(
+                                int(msg.data), "unknown error #" + str(msg.data)
+                            ),
+                            code=int(msg.data),
+                        )
+                        break
+                    resp = self._extract_response(msg.data)
+                    if isinstance(resp[1], bytes):
+                        if f is None:
+                            if isinstance(filename_or_buffer, str):
+                                f = await aiofiles.open(filename_or_buffer, "wb")
+                            else:
+                                f = filename_or_buffer
+                        bc += await f.write(resp[1])
+                        await f.flush()
+        finally:
+                if f is not None:
+                    await f.close()
+                    f = None
+                    filename_or_buffer = None
+        return bc

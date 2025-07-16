@@ -13,8 +13,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -25,7 +24,16 @@
     "Locale": "af-ZA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Willem Online (Natural) - Afrikaans (South Africa)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sq-AL, AnilaNeural)",
@@ -34,7 +42,16 @@
     "Locale": "sq-AL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Anila Online (Natural) - Albanian (Albania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sq-AL, IlirNeural)",
@@ -43,7 +60,16 @@
     "Locale": "sq-AL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ilir Online (Natural) - Albanian (Albania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (am-ET, AmehaNeural)",
@@ -52,7 +78,16 @@
     "Locale": "am-ET",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ameha Online (Natural) - Amharic (Ethiopia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (am-ET, MekdesNeural)",
@@ -68,8 +103,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -80,7 +114,16 @@
     "Locale": "ar-DZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Amina Online (Natural) - Arabic (Algeria)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-DZ, IsmaelNeural)",
@@ -89,7 +132,16 @@
     "Locale": "ar-DZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ismael Online (Natural) - Arabic (Algeria)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-BH, AliNeural)",
@@ -98,7 +150,16 @@
     "Locale": "ar-BH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ali Online (Natural) - Arabic (Bahrain)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-BH, LailaNeural)",
@@ -107,7 +168,16 @@
     "Locale": "ar-BH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Laila Online (Natural) - Arabic (Bahrain)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-EG, SalmaNeural)",
@@ -123,8 +193,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -135,7 +204,16 @@
     "Locale": "ar-EG",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Shakir Online (Natural) - Arabic (Egypt)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-IQ, BasselNeural)",
@@ -144,7 +222,16 @@
     "Locale": "ar-IQ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Bassel Online (Natural) - Arabic (Iraq)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-IQ, RanaNeural)",
@@ -153,7 +240,16 @@
     "Locale": "ar-IQ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Rana Online (Natural) - Arabic (Iraq)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-JO, SanaNeural)",
@@ -162,7 +258,16 @@
     "Locale": "ar-JO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Sana Online (Natural) - Arabic (Jordan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-JO, TaimNeural)",
@@ -171,7 +276,16 @@
     "Locale": "ar-JO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Taim Online (Natural) - Arabic (Jordan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-KW, FahedNeural)",
@@ -180,7 +294,16 @@
     "Locale": "ar-KW",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Fahed Online (Natural) - Arabic (Kuwait)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-KW, NouraNeural)",
@@ -189,7 +312,16 @@
     "Locale": "ar-KW",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Noura Online (Natural) - Arabic (Kuwait)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-LB, LaylaNeural)",
@@ -198,7 +330,16 @@
     "Locale": "ar-LB",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Layla Online (Natural) - Arabic (Lebanon)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-LB, RamiNeural)",
@@ -207,7 +348,16 @@
     "Locale": "ar-LB",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Rami Online (Natural) - Arabic (Lebanon)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-LY, ImanNeural)",
@@ -216,7 +366,16 @@
     "Locale": "ar-LY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Iman Online (Natural) - Arabic (Libya)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-LY, OmarNeural)",
@@ -225,7 +384,16 @@
     "Locale": "ar-LY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Omar Online (Natural) - Arabic (Libya)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-MA, JamalNeural)",
@@ -234,7 +402,16 @@
     "Locale": "ar-MA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Jamal Online (Natural) - Arabic (Morocco)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-MA, MounaNeural)",
@@ -243,7 +420,16 @@
     "Locale": "ar-MA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Mouna Online (Natural) - Arabic (Morocco)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-OM, AbdullahNeural)",
@@ -252,7 +438,16 @@
     "Locale": "ar-OM",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Abdullah Online (Natural) - Arabic (Oman)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-OM, AyshaNeural)",
@@ -261,7 +456,16 @@
     "Locale": "ar-OM",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Aysha Online (Natural) - Arabic (Oman)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-QA, AmalNeural)",
@@ -270,7 +474,16 @@
     "Locale": "ar-QA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Amal Online (Natural) - Arabic (Qatar)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-QA, MoazNeural)",
@@ -279,7 +492,16 @@
     "Locale": "ar-QA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Moaz Online (Natural) - Arabic (Qatar)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-SA, HamedNeural)",
@@ -288,7 +510,16 @@
     "Locale": "ar-SA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Hamed Online (Natural) - Arabic (Saudi Arabia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-SA, ZariyahNeural)",
@@ -304,8 +535,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -316,7 +546,16 @@
     "Locale": "ar-SY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Amany Online (Natural) - Arabic (Syria)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-SY, LaithNeural)",
@@ -325,7 +564,16 @@
     "Locale": "ar-SY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Laith Online (Natural) - Arabic (Syria)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-TN, HediNeural)",
@@ -334,7 +582,16 @@
     "Locale": "ar-TN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Hedi Online (Natural) - Arabic (Tunisia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-TN, ReemNeural)",
@@ -343,7 +600,16 @@
     "Locale": "ar-TN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Reem Online (Natural) - Arabic (Tunisia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-AE, FatimaNeural)",
@@ -352,7 +618,16 @@
     "Locale": "ar-AE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Fatima Online (Natural) - Arabic (United Arab Emirates)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-AE, HamdanNeural)",
@@ -361,7 +636,16 @@
     "Locale": "ar-AE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Hamdan Online (Natural) - Arabic (United Arab Emirates)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-YE, MaryamNeural)",
@@ -370,7 +654,16 @@
     "Locale": "ar-YE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Maryam Online (Natural) - Arabic (Yemen)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ar-YE, SalehNeural)",
@@ -379,25 +672,52 @@
     "Locale": "ar-YE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Saleh Online (Natural) - Arabic (Yemen)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (az-AZ, BabekNeural)",
     "ShortName": "az-AZ-BabekNeural",
-    "Gender": "Female",
+    "Gender": "Male",
     "Locale": "az-AZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Babek Online (Natural) - Azerbaijani (Azerbaijan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (az-AZ, BanuNeural)",
     "ShortName": "az-AZ-BanuNeural",
-    "Gender": "Male",
+    "Gender": "Female",
     "Locale": "az-AZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Banu Online (Natural) - Azerbaijani (Azerbaijan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (bn-BD, NabanitaNeural)",
@@ -413,8 +733,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -425,7 +744,16 @@
     "Locale": "bn-BD",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Pradeep Online (Natural) - Bangla (Bangladesh)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (bn-IN, BashkarNeural)",
@@ -434,7 +762,16 @@
     "Locale": "bn-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Bashkar Online (Natural) - Bangla (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (bn-IN, TanishaaNeural)",
@@ -450,8 +787,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (bs-BA, VesnaNeural)",
+    "ShortName": "bs-BA-VesnaNeural",
+    "Gender": "Female",
+    "Locale": "bs-BA",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Vesna Online (Natural) - Bosnian (Bosnia and Herzegovina)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -462,16 +816,16 @@
     "Locale": "bs-BA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Goran Online (Natural) - Bosnian (Bosnia)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (bs-BA, VesnaNeural)",
-    "ShortName": "bs-BA-VesnaNeural",
-    "Gender": "Female",
-    "Locale": "bs-BA",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Vesna Online (Natural) - Bosnian (Bosnia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (bg-BG, BorislavNeural)",
@@ -480,7 +834,16 @@
     "Locale": "bg-BG",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Borislav Online (Natural) - Bulgarian (Bulgaria)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (bg-BG, KalinaNeural)",
@@ -496,8 +859,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -515,8 +877,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -527,24 +888,6 @@
     "Locale": "my-MM",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Thiha Online (Natural) - Burmese (Myanmar)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (ca-ES, EnricNeural)",
-    "ShortName": "ca-ES-EnricNeural",
-    "Gender": "Male",
-    "Locale": "ca-ES",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Enric Online (Natural) - Catalan (Spain)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (ca-ES, JoanaNeural)",
-    "ShortName": "ca-ES-JoanaNeural",
-    "Gender": "Female",
-    "Locale": "ca-ES",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Joana Online (Natural) - Catalan (Spain)",
     "Status": "GA",
     "VoiceTag": {
       "ContentCategories": [
@@ -552,8 +895,43 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (ca-ES, EnricNeural)",
+    "ShortName": "ca-ES-EnricNeural",
+    "Gender": "Male",
+    "Locale": "ca-ES",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Enric Online (Natural) - Catalan",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (ca-ES, JoanaNeural)",
+    "ShortName": "ca-ES-JoanaNeural",
+    "Gender": "Female",
+    "Locale": "ca-ES",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Joana Online (Natural) - Catalan",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -564,15 +942,6 @@
     "Locale": "zh-HK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft HiuGaai Online (Natural) - Chinese (Cantonese Traditional)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (zh-HK, HiuMaanNeural)",
-    "ShortName": "zh-HK-HiuMaanNeural",
-    "Gender": "Female",
-    "Locale": "zh-HK",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft HiuMaan Online (Natural) - Chinese (Hong Kong)",
     "Status": "GA",
     "VoiceTag": {
       "ContentCategories": [
@@ -580,8 +949,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (zh-HK, HiuMaanNeural)",
+    "ShortName": "zh-HK-HiuMaanNeural",
+    "Gender": "Female",
+    "Locale": "zh-HK",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft HiuMaan Online (Natural) - Chinese (Hong Kong SAR)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -591,8 +977,17 @@
     "Gender": "Male",
     "Locale": "zh-HK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft WanLung Online (Natural) - Chinese (Hong Kong)",
-    "Status": "GA"
+    "FriendlyName": "Microsoft WanLung Online (Natural) - Chinese (Hong Kong SAR)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (zh-CN, XiaoxiaoNeural)",
@@ -703,6 +1098,23 @@
     }
   },
   {
+    "Name": "Microsoft Server Speech Text to Speech Voice (zh-CN-liaoning, XiaobeiNeural)",
+    "ShortName": "zh-CN-liaoning-XiaobeiNeural",
+    "Gender": "Female",
+    "Locale": "zh-CN-liaoning",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Xiaobei Online (Natural) - Chinese (Northeastern Mandarin)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Dialect"
+      ],
+      "VoicePersonalities": [
+        "Humorous"
+      ]
+    }
+  },
+  {
     "Name": "Microsoft Server Speech Text to Speech Voice (zh-TW, HsiaoChenNeural)",
     "ShortName": "zh-TW-HsiaoChenNeural",
     "Gender": "Female",
@@ -716,8 +1128,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -728,7 +1139,16 @@
     "Locale": "zh-TW",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft YunJhe Online (Natural) - Chinese (Taiwan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (zh-TW, HsiaoYuNeural)",
@@ -737,7 +1157,33 @@
     "Locale": "zh-TW",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft HsiaoYu Online (Natural) - Chinese (Taiwanese Mandarin)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (zh-CN-shaanxi, XiaoniNeural)",
+    "ShortName": "zh-CN-shaanxi-XiaoniNeural",
+    "Gender": "Female",
+    "Locale": "zh-CN-shaanxi",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Xiaoni Online (Natural) - Chinese (Zhongyuan Mandarin Shaanxi)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Dialect"
+      ],
+      "VoicePersonalities": [
+        "Bright"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (hr-HR, GabrijelaNeural)",
@@ -753,8 +1199,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -765,7 +1210,16 @@
     "Locale": "hr-HR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Srecko Online (Natural) - Croatian (Croatia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (cs-CZ, AntoninNeural)",
@@ -774,7 +1228,16 @@
     "Locale": "cs-CZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Antonin Online (Natural) - Czech (Czech)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (cs-CZ, VlastaNeural)",
@@ -790,8 +1253,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -809,8 +1271,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -821,7 +1282,16 @@
     "Locale": "da-DK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Jeppe Online (Natural) - Danish (Denmark)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (nl-BE, ArnaudNeural)",
@@ -830,7 +1300,16 @@
     "Locale": "nl-BE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Arnaud Online (Natural) - Dutch (Belgium)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (nl-BE, DenaNeural)",
@@ -846,8 +1325,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -865,8 +1343,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -877,7 +1354,16 @@
     "Locale": "nl-NL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Fenna Online (Natural) - Dutch (Netherlands)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (nl-NL, MaartenNeural)",
@@ -886,7 +1372,16 @@
     "Locale": "nl-NL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Maarten Online (Natural) - Dutch (Netherlands)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-AU, NatashaNeural)",
@@ -902,8 +1397,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -914,7 +1408,16 @@
     "Locale": "en-AU",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft William Online (Natural) - English (Australia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-CA, ClaraNeural)",
@@ -930,8 +1433,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -942,7 +1444,34 @@
     "Locale": "en-CA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Liam Online (Natural) - English (Canada)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-HK, YanNeural)",
+    "ShortName": "en-HK-YanNeural",
+    "Gender": "Female",
+    "Locale": "en-HK",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Yan Online (Natural) - English (Hong Kong SAR)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-HK, SamNeural)",
@@ -951,15 +1480,6 @@
     "Locale": "en-HK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Sam Online (Natural) - English (Hongkong)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (en-HK, YanNeural)",
-    "ShortName": "en-HK-YanNeural",
-    "Gender": "Female",
-    "Locale": "en-HK",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Yan Online (Natural) - English (Hongkong)",
     "Status": "GA",
     "VoiceTag": {
       "ContentCategories": [
@@ -967,8 +1487,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-IN, NeerjaExpressiveNeural)",
+    "ShortName": "en-IN-NeerjaExpressiveNeural",
+    "Gender": "Female",
+    "Locale": "en-IN",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Neerja Online (Natural) - English (India) (Preview)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -986,8 +1523,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -998,7 +1534,16 @@
     "Locale": "en-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Prabhat Online (Natural) - English (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-IE, ConnorNeural)",
@@ -1007,7 +1552,16 @@
     "Locale": "en-IE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Connor Online (Natural) - English (Ireland)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-IE, EmilyNeural)",
@@ -1023,8 +1577,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1035,7 +1588,16 @@
     "Locale": "en-KE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Asilia Online (Natural) - English (Kenya)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-KE, ChilembaNeural)",
@@ -1044,7 +1606,16 @@
     "Locale": "en-KE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Chilemba Online (Natural) - English (Kenya)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-NZ, MitchellNeural)",
@@ -1053,7 +1624,16 @@
     "Locale": "en-NZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Mitchell Online (Natural) - English (New Zealand)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-NZ, MollyNeural)",
@@ -1062,7 +1642,16 @@
     "Locale": "en-NZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Molly Online (Natural) - English (New Zealand)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-NG, AbeoNeural)",
@@ -1078,8 +1667,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1090,7 +1678,16 @@
     "Locale": "en-NG",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ezinne Online (Natural) - English (Nigeria)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-PH, JamesNeural)",
@@ -1099,7 +1696,16 @@
     "Locale": "en-PH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft James Online (Natural) - English (Philippines)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-PH, RosaNeural)",
@@ -1115,8 +1721,89 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, AvaNeural)",
+    "ShortName": "en-US-AvaNeural",
+    "Gender": "Female",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Ava Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Expressive",
+        "Caring",
+        "Pleasant",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, AndrewNeural)",
+    "ShortName": "en-US-AndrewNeural",
+    "Gender": "Male",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Andrew Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Warm",
+        "Confident",
+        "Authentic",
+        "Honest"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, EmmaNeural)",
+    "ShortName": "en-US-EmmaNeural",
+    "Gender": "Female",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Emma Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Cheerful",
+        "Clear",
+        "Conversational"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, BrianNeural)",
+    "ShortName": "en-US-BrianNeural",
+    "Gender": "Male",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Brian Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Approachable",
+        "Casual",
+        "Sincere"
       ]
     }
   },
@@ -1127,7 +1814,16 @@
     "Locale": "en-SG",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Luna Online (Natural) - English (Singapore)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-SG, WayneNeural)",
@@ -1136,7 +1832,16 @@
     "Locale": "en-SG",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Wayne Online (Natural) - English (Singapore)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-ZA, LeahNeural)",
@@ -1152,8 +1857,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1164,7 +1868,16 @@
     "Locale": "en-ZA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Luke Online (Natural) - English (South Africa)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-TZ, ElimuNeural)",
@@ -1173,7 +1886,16 @@
     "Locale": "en-TZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Elimu Online (Natural) - English (Tanzania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-TZ, ImaniNeural)",
@@ -1182,7 +1904,16 @@
     "Locale": "en-TZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Imani Online (Natural) - English (Tanzania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-GB, LibbyNeural)",
@@ -1191,7 +1922,16 @@
     "Locale": "en-GB",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Libby Online (Natural) - English (United Kingdom)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-GB, MaisieNeural)",
@@ -1200,7 +1940,16 @@
     "Locale": "en-GB",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Maisie Online (Natural) - English (United Kingdom)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-GB, RyanNeural)",
@@ -1209,7 +1958,16 @@
     "Locale": "en-GB",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-GB, SoniaNeural)",
@@ -1225,8 +1983,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1237,7 +1994,16 @@
     "Locale": "en-GB",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Thomas Online (Natural) - English (United Kingdom)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-US, AnaNeural)",
@@ -1246,7 +2012,37 @@
     "Locale": "en-US",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ana Online (Natural) - English (United States)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Cartoon",
+        "Conversation"
+      ],
+      "VoicePersonalities": [
+        "Cute"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, AndrewMultilingualNeural)",
+    "ShortName": "en-US-AndrewMultilingualNeural",
+    "Gender": "Male",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft AndrewMultilingual Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Warm",
+        "Confident",
+        "Authentic",
+        "Honest"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-US, AriaNeural)",
@@ -1268,13 +2064,84 @@
     }
   },
   {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, AvaMultilingualNeural)",
+    "ShortName": "en-US-AvaMultilingualNeural",
+    "Gender": "Female",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft AvaMultilingual Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Expressive",
+        "Caring",
+        "Pleasant",
+        "Friendly"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, BrianMultilingualNeural)",
+    "ShortName": "en-US-BrianMultilingualNeural",
+    "Gender": "Male",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft BrianMultilingual Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Approachable",
+        "Casual",
+        "Sincere"
+      ]
+    }
+  },
+  {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-US, ChristopherNeural)",
     "ShortName": "en-US-ChristopherNeural",
     "Gender": "Male",
     "Locale": "en-US",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Christopher Online (Natural) - English (United States)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "News",
+        "Novel"
+      ],
+      "VoicePersonalities": [
+        "Reliable",
+        "Authority"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, EmmaMultilingualNeural)",
+    "ShortName": "en-US-EmmaMultilingualNeural",
+    "Gender": "Female",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft EmmaMultilingual Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "Conversation",
+        "Copilot"
+      ],
+      "VoicePersonalities": [
+        "Cheerful",
+        "Clear",
+        "Conversational"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-US, EricNeural)",
@@ -1283,7 +2150,16 @@
     "Locale": "en-US",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Eric Online (Natural) - English (United States)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "News",
+        "Novel"
+      ],
+      "VoicePersonalities": [
+        "Rational"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (en-US, GuyNeural)",
@@ -1313,8 +2189,7 @@
     "Status": "GA",
     "VoiceTag": {
       "ContentCategories": [
-        "Conversation",
-        "News"
+        "General"
       ],
       "VoicePersonalities": [
         "Friendly",
@@ -1330,7 +2205,53 @@
     "Locale": "en-US",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Michelle Online (Natural) - English (United States)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "News",
+        "Novel"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Pleasant"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, RogerNeural)",
+    "ShortName": "en-US-RogerNeural",
+    "Gender": "Male",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Roger Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "News",
+        "Novel"
+      ],
+      "VoicePersonalities": [
+        "Lively"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (en-US, SteffanNeural)",
+    "ShortName": "en-US-SteffanNeural",
+    "Gender": "Male",
+    "Locale": "en-US",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Steffan Online (Natural) - English (United States)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "News",
+        "Novel"
+      ],
+      "VoicePersonalities": [
+        "Rational"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (et-EE, AnuNeural)",
@@ -1346,8 +2267,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1358,7 +2278,16 @@
     "Locale": "et-EE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Kert Online (Natural) - Estonian (Estonia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fil-PH, AngeloNeural)",
@@ -1367,7 +2296,16 @@
     "Locale": "fil-PH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Angelo Online (Natural) - Filipino (Philippines)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fil-PH, BlessicaNeural)",
@@ -1383,8 +2321,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1395,7 +2332,16 @@
     "Locale": "fi-FI",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Harri Online (Natural) - Finnish (Finland)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fi-FI, NooraNeural)",
@@ -1411,8 +2357,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1430,8 +2375,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1442,7 +2386,34 @@
     "Locale": "fr-BE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Gerard Online (Natural) - French (Belgium)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (fr-CA, ThierryNeural)",
+    "ShortName": "fr-CA-ThierryNeural",
+    "Gender": "Male",
+    "Locale": "fr-CA",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Thierry Online (Natural) - French (Canada)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fr-CA, AntoineNeural)",
@@ -1451,7 +2422,16 @@
     "Locale": "fr-CA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Antoine Online (Natural) - French (Canada)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fr-CA, JeanNeural)",
@@ -1460,7 +2440,16 @@
     "Locale": "fr-CA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Jean Online (Natural) - French (Canada)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fr-CA, SylvieNeural)",
@@ -1476,8 +2465,43 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, VivienneMultilingualNeural)",
+    "ShortName": "fr-FR-VivienneMultilingualNeural",
+    "Gender": "Female",
+    "Locale": "fr-FR",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft VivienneMultilingual Online (Natural) - French (France)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, RemyMultilingualNeural)",
+    "ShortName": "fr-FR-RemyMultilingualNeural",
+    "Gender": "Male",
+    "Locale": "fr-FR",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft RemyMultilingual Online (Natural) - French (France)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -1495,8 +2519,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1507,7 +2530,16 @@
     "Locale": "fr-FR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Eloise Online (Natural) - French (France)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, HenriNeural)",
@@ -1516,7 +2548,16 @@
     "Locale": "fr-FR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Henri Online (Natural) - French (France)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (fr-CH, ArianeNeural)",
@@ -1532,8 +2573,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1544,24 +2584,6 @@
     "Locale": "fr-CH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Fabrice Online (Natural) - French (Switzerland)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (gl-ES, RoiNeural)",
-    "ShortName": "gl-ES-RoiNeural",
-    "Gender": "Male",
-    "Locale": "gl-ES",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Roi Online (Natural) - Galician (Spain)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (gl-ES, SabelaNeural)",
-    "ShortName": "gl-ES-SabelaNeural",
-    "Gender": "Female",
-    "Locale": "gl-ES",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Sabela Online (Natural) - Galician (Spain)",
     "Status": "GA",
     "VoiceTag": {
       "ContentCategories": [
@@ -1569,8 +2591,43 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (gl-ES, RoiNeural)",
+    "ShortName": "gl-ES-RoiNeural",
+    "Gender": "Male",
+    "Locale": "gl-ES",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Roi Online (Natural) - Galician",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (gl-ES, SabelaNeural)",
+    "ShortName": "gl-ES-SabelaNeural",
+    "Gender": "Female",
+    "Locale": "gl-ES",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Sabela Online (Natural) - Galician",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -1581,7 +2638,16 @@
     "Locale": "ka-GE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Eka Online (Natural) - Georgian (Georgia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ka-GE, GiorgiNeural)",
@@ -1590,7 +2656,16 @@
     "Locale": "ka-GE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Giorgi Online (Natural) - Georgian (Georgia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (de-AT, IngridNeural)",
@@ -1606,8 +2681,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1618,7 +2692,52 @@
     "Locale": "de-AT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Jonas Online (Natural) - German (Austria)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (de-DE, SeraphinaMultilingualNeural)",
+    "ShortName": "de-DE-SeraphinaMultilingualNeural",
+    "Gender": "Female",
+    "Locale": "de-DE",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft SeraphinaMultilingual Online (Natural) - German (Germany)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (de-DE, FlorianMultilingualNeural)",
+    "ShortName": "de-DE-FlorianMultilingualNeural",
+    "Gender": "Male",
+    "Locale": "de-DE",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft FlorianMultilingual Online (Natural) - German (Germany)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (de-DE, AmalaNeural)",
@@ -1627,7 +2746,16 @@
     "Locale": "de-DE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Amala Online (Natural) - German (Germany)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (de-DE, ConradNeural)",
@@ -1636,7 +2764,16 @@
     "Locale": "de-DE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Conrad Online (Natural) - German (Germany)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (de-DE, KatjaNeural)",
@@ -1652,8 +2789,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1664,7 +2800,16 @@
     "Locale": "de-DE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Killian Online (Natural) - German (Germany)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (de-CH, JanNeural)",
@@ -1673,7 +2818,16 @@
     "Locale": "de-CH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Jan Online (Natural) - German (Switzerland)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (de-CH, LeniNeural)",
@@ -1689,8 +2843,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1708,8 +2861,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1720,7 +2872,16 @@
     "Locale": "el-GR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Nestoras Online (Natural) - Greek (Greece)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (gu-IN, DhwaniNeural)",
@@ -1736,8 +2897,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1748,7 +2908,16 @@
     "Locale": "gu-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Niranjan Online (Natural) - Gujarati (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (he-IL, AvriNeural)",
@@ -1757,7 +2926,16 @@
     "Locale": "he-IL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Avri Online (Natural) - Hebrew (Israel)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (he-IL, HilaNeural)",
@@ -1773,8 +2951,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1785,7 +2962,16 @@
     "Locale": "hi-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Madhur Online (Natural) - Hindi (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (hi-IN, SwaraNeural)",
@@ -1801,8 +2987,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1820,8 +3005,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1832,7 +3016,16 @@
     "Locale": "hu-HU",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Tamas Online (Natural) - Hungarian (Hungary)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (is-IS, GudrunNeural)",
@@ -1848,8 +3041,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1860,7 +3052,16 @@
     "Locale": "is-IS",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Gunnar Online (Natural) - Icelandic (Iceland)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (id-ID, ArdiNeural)",
@@ -1869,7 +3070,16 @@
     "Locale": "id-ID",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ardi Online (Natural) - Indonesian (Indonesia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (id-ID, GadisNeural)",
@@ -1885,8 +3095,79 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (iu-Latn-CA, SiqiniqNeural)",
+    "ShortName": "iu-Latn-CA-SiqiniqNeural",
+    "Gender": "Female",
+    "Locale": "iu-Latn-CA",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Siqiniq Online (Natural) - Inuktitut (Latin, Canada)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (iu-Latn-CA, TaqqiqNeural)",
+    "ShortName": "iu-Latn-CA-TaqqiqNeural",
+    "Gender": "Male",
+    "Locale": "iu-Latn-CA",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Taqqiq Online (Natural) - Inuktitut (Latin, Canada)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (iu-Cans-CA, SiqiniqNeural)",
+    "ShortName": "iu-Cans-CA-SiqiniqNeural",
+    "Gender": "Female",
+    "Locale": "iu-Cans-CA",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Siqiniq Online (Natural) - Inuktitut (Syllabics, Canada)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (iu-Cans-CA, TaqqiqNeural)",
+    "ShortName": "iu-Cans-CA-TaqqiqNeural",
+    "Gender": "Male",
+    "Locale": "iu-Cans-CA",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Taqqiq Online (Natural) - Inuktitut (Syllabics, Canada)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -1897,7 +3178,16 @@
     "Locale": "ga-IE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Colm Online (Natural) - Irish (Ireland)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ga-IE, OrlaNeural)",
@@ -1913,8 +3203,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (it-IT, GiuseppeMultilingualNeural)",
+    "ShortName": "it-IT-GiuseppeMultilingualNeural",
+    "Gender": "Male",
+    "Locale": "it-IT",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft GiuseppeMultilingual Online (Natural) - Italian (Italy)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -1925,7 +3232,16 @@
     "Locale": "it-IT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Diego Online (Natural) - Italian (Italy)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (it-IT, ElsaNeural)",
@@ -1941,8 +3257,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1953,7 +3268,16 @@
     "Locale": "it-IT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Isabella Online (Natural) - Italian (Italy)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ja-JP, KeitaNeural)",
@@ -1962,7 +3286,16 @@
     "Locale": "ja-JP",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Keita Online (Natural) - Japanese (Japan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ja-JP, NanamiNeural)",
@@ -1978,8 +3311,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -1990,7 +3322,16 @@
     "Locale": "jv-ID",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Dimas Online (Natural) - Javanese (Indonesia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (jv-ID, SitiNeural)",
@@ -2006,8 +3347,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2018,7 +3358,16 @@
     "Locale": "kn-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Gagan Online (Natural) - Kannada (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (kn-IN, SapnaNeural)",
@@ -2034,8 +3383,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2053,8 +3401,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2065,7 +3412,16 @@
     "Locale": "kk-KZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Daulet Online (Natural) - Kazakh (Kazakhstan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (km-KH, PisethNeural)",
@@ -2074,7 +3430,16 @@
     "Locale": "km-KH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Piseth Online (Natural) - Khmer (Cambodia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (km-KH, SreymomNeural)",
@@ -2090,8 +3455,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (ko-KR, HyunsuMultilingualNeural)",
+    "ShortName": "ko-KR-HyunsuMultilingualNeural",
+    "Gender": "Male",
+    "Locale": "ko-KR",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft HyunsuMultilingual Online (Natural) - Korean (Korea)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -2102,7 +3484,16 @@
     "Locale": "ko-KR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft InJoon Online (Natural) - Korean (Korea)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ko-KR, SunHiNeural)",
@@ -2118,8 +3509,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2130,7 +3520,16 @@
     "Locale": "lo-LA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Chanthavong Online (Natural) - Lao (Laos)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (lo-LA, KeomanyNeural)",
@@ -2146,8 +3545,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2165,8 +3563,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2177,7 +3574,16 @@
     "Locale": "lv-LV",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Nils Online (Natural) - Latvian (Latvia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (lt-LT, LeonasNeural)",
@@ -2186,7 +3592,16 @@
     "Locale": "lt-LT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Leonas Online (Natural) - Lithuanian (Lithuania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (lt-LT, OnaNeural)",
@@ -2202,8 +3617,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2213,16 +3627,7 @@
     "Gender": "Male",
     "Locale": "mk-MK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Aleksandar Online (Natural) - Macedonian (Republic of North Macedonia)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (mk-MK, MarijaNeural)",
-    "ShortName": "mk-MK-MarijaNeural",
-    "Gender": "Female",
-    "Locale": "mk-MK",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Marija Online (Natural) - Macedonian (Republic of North Macedonia)",
+    "FriendlyName": "Microsoft Aleksandar Online (Natural) - Macedonian (North Macedonia)",
     "Status": "GA",
     "VoiceTag": {
       "ContentCategories": [
@@ -2230,8 +3635,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (mk-MK, MarijaNeural)",
+    "ShortName": "mk-MK-MarijaNeural",
+    "Gender": "Female",
+    "Locale": "mk-MK",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Marija Online (Natural) - Macedonian (North Macedonia)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -2242,7 +3664,16 @@
     "Locale": "ms-MY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Osman Online (Natural) - Malay (Malaysia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ms-MY, YasminNeural)",
@@ -2258,8 +3689,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2270,7 +3700,16 @@
     "Locale": "ml-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Midhun Online (Natural) - Malayalam (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ml-IN, SobhanaNeural)",
@@ -2286,8 +3725,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2305,8 +3743,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2317,7 +3754,16 @@
     "Locale": "mt-MT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Joseph Online (Natural) - Maltese (Malta)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (mr-IN, AarohiNeural)",
@@ -2333,8 +3779,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2345,7 +3790,16 @@
     "Locale": "mr-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Manohar Online (Natural) - Marathi (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (mn-MN, BataaNeural)",
@@ -2354,7 +3808,16 @@
     "Locale": "mn-MN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Bataa Online (Natural) - Mongolian (Mongolia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (mn-MN, YesuiNeural)",
@@ -2363,7 +3826,16 @@
     "Locale": "mn-MN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Yesui Online (Natural) - Mongolian (Mongolia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ne-NP, HemkalaNeural)",
@@ -2372,7 +3844,16 @@
     "Locale": "ne-NP",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Hemkala Online (Natural) - Nepali (Nepal)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ne-NP, SagarNeural)",
@@ -2381,7 +3862,16 @@
     "Locale": "ne-NP",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Sagar Online (Natural) - Nepali (Nepal)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (nb-NO, FinnNeural)",
@@ -2390,7 +3880,16 @@
     "Locale": "nb-NO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Finn Online (Natural) - Norwegian (Bokmål Norway)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (nb-NO, PernilleNeural)",
@@ -2406,8 +3905,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2418,7 +3916,16 @@
     "Locale": "ps-AF",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft GulNawaz Online (Natural) - Pashto (Afghanistan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ps-AF, LatifaNeural)",
@@ -2434,8 +3941,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2453,8 +3959,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2465,7 +3970,16 @@
     "Locale": "fa-IR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Farid Online (Natural) - Persian (Iran)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (pl-PL, MarekNeural)",
@@ -2474,7 +3988,16 @@
     "Locale": "pl-PL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Marek Online (Natural) - Polish (Poland)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (pl-PL, ZofiaNeural)",
@@ -2490,8 +4013,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (pt-BR, ThalitaMultilingualNeural)",
+    "ShortName": "pt-BR-ThalitaMultilingualNeural",
+    "Gender": "Female",
+    "Locale": "pt-BR",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft ThalitaMultilingual Online (Natural) - Portuguese (Brazil)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -2502,7 +4042,16 @@
     "Locale": "pt-BR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Antonio Online (Natural) - Portuguese (Brazil)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (pt-BR, FranciscaNeural)",
@@ -2518,8 +4067,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2530,7 +4078,16 @@
     "Locale": "pt-PT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Duarte Online (Natural) - Portuguese (Portugal)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (pt-PT, RaquelNeural)",
@@ -2546,8 +4103,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2565,8 +4121,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2577,7 +4132,16 @@
     "Locale": "ro-RO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Emil Online (Natural) - Romanian (Romania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ru-RU, DmitryNeural)",
@@ -2586,7 +4150,16 @@
     "Locale": "ru-RU",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Dmitry Online (Natural) - Russian (Russia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ru-RU, SvetlanaNeural)",
@@ -2602,8 +4175,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2614,7 +4186,16 @@
     "Locale": "sr-RS",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Nicholas Online (Natural) - Serbian (Serbia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sr-RS, SophieNeural)",
@@ -2630,8 +4211,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2642,7 +4222,16 @@
     "Locale": "si-LK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Sameera Online (Natural) - Sinhala (Sri Lanka)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (si-LK, ThiliniNeural)",
@@ -2658,8 +4247,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2670,7 +4258,16 @@
     "Locale": "sk-SK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Lukas Online (Natural) - Slovak (Slovakia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sk-SK, ViktoriaNeural)",
@@ -2686,8 +4283,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2705,8 +4301,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2717,7 +4312,16 @@
     "Locale": "sl-SI",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Rok Online (Natural) - Slovenian (Slovenia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (so-SO, MuuseNeural)",
@@ -2726,7 +4330,16 @@
     "Locale": "so-SO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Muuse Online (Natural) - Somali (Somalia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (so-SO, UbaxNeural)",
@@ -2742,8 +4355,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2761,8 +4373,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -2773,7 +4384,16 @@
     "Locale": "es-AR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Tomas Online (Natural) - Spanish (Argentina)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-BO, MarceloNeural)",
@@ -2782,7 +4402,16 @@
     "Locale": "es-BO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Marcelo Online (Natural) - Spanish (Bolivia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-BO, SofiaNeural)",
@@ -2791,7 +4420,16 @@
     "Locale": "es-BO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Sofia Online (Natural) - Spanish (Bolivia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-CL, CatalinaNeural)",
@@ -2800,7 +4438,16 @@
     "Locale": "es-CL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Catalina Online (Natural) - Spanish (Chile)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-CL, LorenzoNeural)",
@@ -2809,7 +4456,16 @@
     "Locale": "es-CL",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Lorenzo Online (Natural) - Spanish (Chile)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, GonzaloNeural)",
@@ -2818,7 +4474,16 @@
     "Locale": "es-CO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Gonzalo Online (Natural) - Spanish (Colombia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, SalomeNeural)",
@@ -2834,8 +4499,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (es-ES, XimenaNeural)",
+    "ShortName": "es-ES-XimenaNeural",
+    "Gender": "Female",
+    "Locale": "es-ES",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Ximena Online (Natural) - Spanish (Colombia)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -2846,7 +4528,16 @@
     "Locale": "es-CR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Juan Online (Natural) - Spanish (Costa Rica)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-CR, MariaNeural)",
@@ -2855,7 +4546,16 @@
     "Locale": "es-CR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Maria Online (Natural) - Spanish (Costa Rica)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-CU, BelkysNeural)",
@@ -2864,7 +4564,16 @@
     "Locale": "es-CU",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Belkys Online (Natural) - Spanish (Cuba)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-CU, ManuelNeural)",
@@ -2873,7 +4582,16 @@
     "Locale": "es-CU",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Manuel Online (Natural) - Spanish (Cuba)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-DO, EmilioNeural)",
@@ -2882,7 +4600,16 @@
     "Locale": "es-DO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Emilio Online (Natural) - Spanish (Dominican Republic)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-DO, RamonaNeural)",
@@ -2891,7 +4618,16 @@
     "Locale": "es-DO",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ramona Online (Natural) - Spanish (Dominican Republic)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-EC, AndreaNeural)",
@@ -2900,7 +4636,16 @@
     "Locale": "es-EC",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Andrea Online (Natural) - Spanish (Ecuador)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-EC, LuisNeural)",
@@ -2909,7 +4654,16 @@
     "Locale": "es-EC",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Luis Online (Natural) - Spanish (Ecuador)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-SV, LorenaNeural)",
@@ -2918,7 +4672,16 @@
     "Locale": "es-SV",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Lorena Online (Natural) - Spanish (El Salvador)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-SV, RodrigoNeural)",
@@ -2927,7 +4690,16 @@
     "Locale": "es-SV",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Rodrigo Online (Natural) - Spanish (El Salvador)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-GQ, JavierNeural)",
@@ -2936,7 +4708,16 @@
     "Locale": "es-GQ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Javier Online (Natural) - Spanish (Equatorial Guinea)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-GQ, TeresaNeural)",
@@ -2945,7 +4726,16 @@
     "Locale": "es-GQ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Teresa Online (Natural) - Spanish (Equatorial Guinea)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-GT, AndresNeural)",
@@ -2954,7 +4744,16 @@
     "Locale": "es-GT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Andres Online (Natural) - Spanish (Guatemala)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-GT, MartaNeural)",
@@ -2963,7 +4762,16 @@
     "Locale": "es-GT",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Marta Online (Natural) - Spanish (Guatemala)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-HN, CarlosNeural)",
@@ -2972,7 +4780,16 @@
     "Locale": "es-HN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Carlos Online (Natural) - Spanish (Honduras)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-HN, KarlaNeural)",
@@ -2981,7 +4798,16 @@
     "Locale": "es-HN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Karla Online (Natural) - Spanish (Honduras)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-MX, DaliaNeural)",
@@ -2997,8 +4823,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3009,16 +4834,16 @@
     "Locale": "es-MX",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Jorge Online (Natural) - Spanish (Mexico)",
-    "Status": "GA"
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-MX, LorenzoEsCLNeural)",
-    "ShortName": "es-MX-LorenzoEsCLNeural",
-    "Gender": "Male",
-    "Locale": "es-MX",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft LorenzoEsCL Online (Natural) - Spanish (Mexico)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-NI, FedericoNeural)",
@@ -3027,7 +4852,16 @@
     "Locale": "es-NI",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Federico Online (Natural) - Spanish (Nicaragua)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-NI, YolandaNeural)",
@@ -3036,7 +4870,16 @@
     "Locale": "es-NI",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Yolanda Online (Natural) - Spanish (Nicaragua)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PA, MargaritaNeural)",
@@ -3045,7 +4888,16 @@
     "Locale": "es-PA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Margarita Online (Natural) - Spanish (Panama)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PA, RobertoNeural)",
@@ -3054,7 +4906,16 @@
     "Locale": "es-PA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Roberto Online (Natural) - Spanish (Panama)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PY, MarioNeural)",
@@ -3063,7 +4924,16 @@
     "Locale": "es-PY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Mario Online (Natural) - Spanish (Paraguay)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PY, TaniaNeural)",
@@ -3072,7 +4942,16 @@
     "Locale": "es-PY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Tania Online (Natural) - Spanish (Paraguay)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PE, AlexNeural)",
@@ -3081,7 +4960,16 @@
     "Locale": "es-PE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Alex Online (Natural) - Spanish (Peru)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PE, CamilaNeural)",
@@ -3090,7 +4978,16 @@
     "Locale": "es-PE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Camila Online (Natural) - Spanish (Peru)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PR, KarinaNeural)",
@@ -3099,7 +4996,16 @@
     "Locale": "es-PR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Karina Online (Natural) - Spanish (Puerto Rico)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-PR, VictorNeural)",
@@ -3108,7 +5014,16 @@
     "Locale": "es-PR",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Victor Online (Natural) - Spanish (Puerto Rico)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-ES, AlvaroNeural)",
@@ -3117,7 +5032,16 @@
     "Locale": "es-ES",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Alvaro Online (Natural) - Spanish (Spain)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-ES, ElviraNeural)",
@@ -3133,19 +5057,9 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (es-ES, ManuelEsCUNeural)",
-    "ShortName": "es-ES-ManuelEsCUNeural",
-    "Gender": "Male",
-    "Locale": "es-ES",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft ManuelEsCU Online (Natural) - Spanish (Spain)",
-    "Status": "GA"
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-US, AlonsoNeural)",
@@ -3154,7 +5068,16 @@
     "Locale": "es-US",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Alonso Online (Natural) - Spanish (United States)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-US, PalomaNeural)",
@@ -3163,7 +5086,16 @@
     "Locale": "es-US",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Paloma Online (Natural) - Spanish (United States)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-UY, MateoNeural)",
@@ -3172,7 +5104,16 @@
     "Locale": "es-UY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Mateo Online (Natural) - Spanish (Uruguay)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-UY, ValentinaNeural)",
@@ -3181,7 +5122,16 @@
     "Locale": "es-UY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Valentina Online (Natural) - Spanish (Uruguay)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-VE, PaolaNeural)",
@@ -3190,7 +5140,16 @@
     "Locale": "es-VE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Paola Online (Natural) - Spanish (Venezuela)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (es-VE, SebastianNeural)",
@@ -3199,7 +5158,16 @@
     "Locale": "es-VE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Sebastian Online (Natural) - Spanish (Venezuela)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (su-ID, JajangNeural)",
@@ -3208,7 +5176,16 @@
     "Locale": "su-ID",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Jajang Online (Natural) - Sundanese (Indonesia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (su-ID, TutiNeural)",
@@ -3224,8 +5201,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3236,7 +5212,16 @@
     "Locale": "sw-KE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Rafiki Online (Natural) - Swahili (Kenya)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sw-KE, ZuriNeural)",
@@ -3252,8 +5237,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3264,7 +5248,16 @@
     "Locale": "sw-TZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Daudi Online (Natural) - Swahili (Tanzania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sw-TZ, RehemaNeural)",
@@ -3273,7 +5266,16 @@
     "Locale": "sw-TZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Rehema Online (Natural) - Swahili (Tanzania)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sv-SE, MattiasNeural)",
@@ -3282,7 +5284,16 @@
     "Locale": "sv-SE",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Mattias Online (Natural) - Swedish (Sweden)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (sv-SE, SofieNeural)",
@@ -3298,8 +5309,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3317,8 +5327,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3329,7 +5338,16 @@
     "Locale": "ta-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Valluvar Online (Natural) - Tamil (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ta-MY, KaniNeural)",
@@ -3338,7 +5356,16 @@
     "Locale": "ta-MY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Kani Online (Natural) - Tamil (Malaysia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ta-MY, SuryaNeural)",
@@ -3347,7 +5374,16 @@
     "Locale": "ta-MY",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Surya Online (Natural) - Tamil (Malaysia)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ta-SG, AnbuNeural)",
@@ -3356,7 +5392,16 @@
     "Locale": "ta-SG",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Anbu Online (Natural) - Tamil (Singapore)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ta-SG, VenbaNeural)",
@@ -3365,7 +5410,16 @@
     "Locale": "ta-SG",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Venba Online (Natural) - Tamil (Singapore)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ta-LK, KumarNeural)",
@@ -3374,7 +5428,16 @@
     "Locale": "ta-LK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Kumar Online (Natural) - Tamil (Sri Lanka)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ta-LK, SaranyaNeural)",
@@ -3383,7 +5446,16 @@
     "Locale": "ta-LK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Saranya Online (Natural) - Tamil (Sri Lanka)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (te-IN, MohanNeural)",
@@ -3392,7 +5464,16 @@
     "Locale": "te-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Mohan Online (Natural) - Telugu (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (te-IN, ShrutiNeural)",
@@ -3408,8 +5489,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3420,7 +5500,16 @@
     "Locale": "th-TH",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Niwat Online (Natural) - Thai (Thailand)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (th-TH, PremwadeeNeural)",
@@ -3436,19 +5525,9 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
-  },
-  {
-    "Name": "Microsoft Server Speech Text to Speech Voice (tr-TR, AhmetNeural)",
-    "ShortName": "tr-TR-AhmetNeural",
-    "Gender": "Male",
-    "Locale": "tr-TR",
-    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
-    "FriendlyName": "Microsoft Ahmet Online (Natural) - Turkish (Turkey)",
-    "Status": "GA"
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (tr-TR, EmelNeural)",
@@ -3464,8 +5543,25 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
+      ]
+    }
+  },
+  {
+    "Name": "Microsoft Server Speech Text to Speech Voice (tr-TR, AhmetNeural)",
+    "ShortName": "tr-TR-AhmetNeural",
+    "Gender": "Male",
+    "Locale": "tr-TR",
+    "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+    "FriendlyName": "Microsoft Ahmet Online (Natural) - Turkish (Türkiye)",
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
       ]
     }
   },
@@ -3476,7 +5572,16 @@
     "Locale": "uk-UA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Ostap Online (Natural) - Ukrainian (Ukraine)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (uk-UA, PolinaNeural)",
@@ -3492,8 +5597,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3504,7 +5608,16 @@
     "Locale": "ur-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Gul Online (Natural) - Urdu (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ur-IN, SalmanNeural)",
@@ -3513,7 +5626,16 @@
     "Locale": "ur-IN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Salman Online (Natural) - Urdu (India)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ur-PK, AsadNeural)",
@@ -3522,7 +5644,16 @@
     "Locale": "ur-PK",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Asad Online (Natural) - Urdu (Pakistan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (ur-PK, UzmaNeural)",
@@ -3538,8 +5669,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3557,8 +5687,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3569,7 +5698,16 @@
     "Locale": "uz-UZ",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Sardor Online (Natural) - Uzbek (Uzbekistan)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (vi-VN, HoaiMyNeural)",
@@ -3585,8 +5723,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3597,7 +5734,16 @@
     "Locale": "vi-VN",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft NamMinh Online (Natural) - Vietnamese (Vietnam)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (cy-GB, AledNeural)",
@@ -3606,7 +5752,16 @@
     "Locale": "cy-GB",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Aled Online (Natural) - Welsh (United Kingdom)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   },
   {
     "Name": "Microsoft Server Speech Text to Speech Voice (cy-GB, NiaNeural)",
@@ -3622,8 +5777,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3641,8 +5795,7 @@
       ],
       "VoicePersonalities": [
         "Friendly",
-        "Positive",
-        "Personal Assistance"
+        "Positive"
       ]
     }
   },
@@ -3653,6 +5806,15 @@
     "Locale": "zu-ZA",
     "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
     "FriendlyName": "Microsoft Themba Online (Natural) - Zulu (South Africa)",
-    "Status": "GA"
+    "Status": "GA",
+    "VoiceTag": {
+      "ContentCategories": [
+        "General"
+      ],
+      "VoicePersonalities": [
+        "Friendly",
+        "Positive"
+      ]
+    }
   }
 ]
