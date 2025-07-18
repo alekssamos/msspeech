@@ -46,7 +46,7 @@ examples: -30, 40, 0
 The volume should be a fractional number from 0.1 to 1.0, but in fact it doesn't work for some reason.
 
 
-The maximum synthesize text length is approximately 31000 characters per request.
+The maximum synthesize text length is approximately 9000 characters per request.
 
 ### from CLI
 

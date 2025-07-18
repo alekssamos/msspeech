@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - run: pipx install poetry
     - name: Set up Python
@@ -47,7 +47,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - run: pipx install poetry
     - name: Set up Python x64 on ubuntu
@@ -76,7 +76,7 @@ jobs:
       run: poetry run pyinstaller -n msspeech --clean -F --noupx msspeech/__main__.py
 
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: exe_for_${{ matrix.os }}_${{ matrix.architecture }}
         path: dist/msspeech*
@@ -86,14 +86,14 @@ jobs:
     if: ${{ startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-') }}
     needs: ["build", "compile"]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: download releases files
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     - name: Display structure of downloaded files
       run: ls -R
 
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: exe_for_*/msspeech*
         fail_on_unmatched_files: true
